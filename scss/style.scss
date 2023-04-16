@@ -81,19 +81,19 @@ li {
   max-width: 1100px;
   width: 100%;
 
-  @include bq(tb) {
+  @include bq(tb-x) {
     max-width: none;
-    padding: 0 15%;
+    margin: 0 15%;
   }
 
   @include bq(tb-s) {
     max-width: none;
-    padding: 0 10%;
+    margin: 0 10%;
   }
 
   @include bq(sm-s) {
     max-width: none;
-    padding: 0 5%;
+    margin: 0 5%;
   }
 }
 
@@ -342,142 +342,153 @@ li {
 }
 
 .mv {
+  margin-top: 12vw;
   width: 100%;
+  height: 50vw;
+
   position: relative;
 
-  &__catch {
-    // height: 120vw;
+  z-index: 10;
 
-    position: absolute;
-    top: 18vw;
-    left: 10vw;
-
-    z-index: 888;
-
-    @include bq(sm) {
-      top: 65px;
-    }
-
-    &__main {
-      // border: 1px solid $sub;
-      color: $accent;
-      font-size: 4.5vw;
-      font-weight: bold;
-      text-shadow: 1px 1px 0 $sub, -1px -1px 0 $sub,
-                  -1px 1px 0 $sub, 1px -1px 0 $sub,
-                  0px 1px 0 $sub,  0-1px 0 $sub,
-                  -1px 0 0 $sub, 1px 0 0 $sub;
-
-      @include bq(sm-x) {
-        font-size: 8.5vw;
-      }
-    }
-
-    &__sub {
-      color: $base;
-      font-size: 2.3vw;
-      font-weight: bold;
-      text-shadow: 1px 1px 0 $sub, -1px -1px 0 $sub,
-                  -1px 1px 0 $sub, 1px -1px 0 $sub,
-                  0px 1px 0 $sub,  0-1px 0 $sub,
-                  -1px 0 0 $sub, 1px 0 0 $sub;
-
-      @include bq(sm-x) {
-        font-size: 5.5vw;
-      }
-    }
+  @include bq(sm-x) {
+    height: 125.51vw;
+    margin-top: 60px;
   }
 
-  &__strength {
-    // height: 120vw;
-    width: 42%;
+  &__text {
+    width: 100%;
+    height: 100%;
 
+    padding: 5vw;
     position: absolute;
-    top: 40vw;
-    left: 10vw;
-
-    z-index: 888;
+    top: 0;
 
     @include bq(sm-x) {
-      // position: initial;
-      top: 125vw;
-      left: 0;
-      width: 100%;
+      padding: 5vw;
     }
 
-    &__fix {
-      width: 100%;
+    &__catch {
+      z-index: 888;
 
-      background: $sub;
-      color: $base;
-      font-size: 1.6vw;
-      font-weight: normal;
-      display: block;
-      text-align: center;
+      @include bq(sm) {
+        top: 65px;
+      }
 
-      // width: 40vw;
-      padding: 0.5vw 0;
-      // margin-top: 1.4vw;
-      margin-bottom: 1.4vw;
+      &__main {
+        // border: 1px solid $sub;
+        color: $accent;
+        font-size: 4.5vw;
+        font-weight: bold;
+        text-shadow: 3px 3px 0 $sub;
+        // text-shadow: 1px 1px 0 $sub, -1px -1px 0 $sub,
+        //             -1px 1px 0 $sub, 1px -1px 0 $sub,
+        //             0px 1px 0 $sub,  0-1px 0 $sub,
+        //             -1px 0 0 $sub, 1px 0 0 $sub;
+
+        @include bq(sm-x) {
+          font-size: 8.5vw;
+          text-shadow: 1px 1px 0 $sub;
+        }
+      }
+
+      &__sub {
+        color: $base;
+        font-size: 2.3vw;
+        font-weight: bold;
+        text-shadow: 1px 1px 0 $sub, -1px -1px 0 $sub,
+                    -1px 1px 0 $sub, 1px -1px 0 $sub,
+                    0px 1px 0 $sub,  0-1px 0 $sub,
+                    -1px 0 0 $sub, 1px 0 0 $sub;
+
+        @include bq(sm-x) {
+          font-size: 5.5vw;
+        }
+      }
+    }
+
+    &__strength {
+      width: 50%;
+
+      z-index: 888;
 
       @include bq(sm-x) {
-        font-size: 3.5vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+
+        width: 100%;
+        margin-top: 40vw;
+      }
+
+      &__fix {
         width: 80%;
 
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-
-    &__list {
-      display: flex;
-      justify-content: space-between;
-
-      @include bq(sm-x) {
-        margin-top: 10vw;
-        margin-left: 10vw;
-        margin-right: 10vw;
-      }
-
-      &__item {
         background: $sub;
-        border-radius: 6.5vw;
         color: $base;
         font-size: 1.6vw;
         font-weight: normal;
         display: block;
         text-align: center;
 
-        width: 13vw;
-        height: 13vw;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        padding: 0.5vw 0;
+        margin-top: 1.4vw;
+        margin-bottom: 1.4vw;
 
         @include bq(sm-x) {
-          border-radius: 12.5vw;
-          font-size: 3vw;
-          width: 25vw;
-          height: 25vw;
+          font-size: 3.5vw;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      &__list {
+        display: flex;
+        justify-content: space-between;
+
+        @include bq(sm-x) {
+          margin-top: 2vw;
+          width: 100%;
         }
 
+        &__item {
+          background: $sub;
+          border-radius: 50%;
+          color: $base;
+          font-size: 1.6vw;
+          font-weight: normal;
+          display: block;
+          text-align: center;
+
+          width: 13vw;
+          height: 13vw;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          @include bq(sm-x) {
+            border-radius: 12.5vw;
+            font-size: 3vw;
+            width: 25vw;
+            height: 25vw;
+          }
+        }
       }
     }
   }
+
+
 
   &__img {
     width: 100%;
     height: 50vw;
 
-    position: absolute;
-    top: 12vw;
-
     @include bq(sm-x) {
-      height: 149.07vw;
-      top: 60px;
+      height: 125.51vw;
+      // top: 60px;
     }
 
     img {
@@ -501,6 +512,104 @@ li {
       /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
       @include bq(sm-x) {
         display: block !important;
+      }
+    }
+  }
+}
+
+.coupon {
+  background: lighten($color: $accent, $amount: 20%);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  height: 25vw;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 1100px;
+
+  @include bq(sm-x) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  &__img {
+    width: 25.48vw;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    color: $accent;
+    width: calc(100% - 25.48vw);
+    height: 100%;
+    padding: 2vw 4vw;
+
+    @include bq(tb-x) {
+      padding: 2vw 8vw;
+    }
+
+    &__headline {
+      font-size: 3.2vw;
+    }
+
+    &__detail {
+      display: flex;
+      justify-content: space-between;
+
+      .period {
+        font-size: 1.5vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+
+        span {
+          &:first-child {
+            border-top: 1px solid $accent;
+          }
+          &:last-child {
+            border-bottom: 1px solid $accent;
+          }
+        }
+      }
+
+      &__discount {
+        .price {
+          font-size: 4.56vw;
+          font-weight: bold;
+        }
+        &__fix {
+          font-size: 1.8vw;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &__code {
+      &__fix {
+        font-size: 1.8vw;
+        font-weight: bold;
+      }
+      .code {
+        font-size: 4.56vw;
+        font-weight: bold;
+      }
+    }
+
+    &__lead {
+      span {
+        font-size: 1vw;
       }
     }
   }
