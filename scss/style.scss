@@ -518,98 +518,161 @@ li {
 }
 
 .coupon {
-  background: lighten($color: $accent, $amount: 20%);
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  justify-content: space-between;
-  width: 100%;
-  height: 25vw;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-left: auto;
-  margin-right: auto;
-
-  max-width: 1100px;
+  margin: 100px 0;
 
   @include bq(sm-x) {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px 0;
   }
 
-  &__img {
-    width: 25.48vw;
-    height: 100%;
+  &__inner {
+    background: lighten($color: $accent, $amount: 20%);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 100%;
+    height: 25vw;
 
-    img {
-      width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 1100px;
+
+    &__img {
+      width: 25vw;
       height: 100%;
-    }
-  }
 
-  &__content {
-    color: $accent;
-    width: calc(100% - 25.48vw);
-    height: 100%;
-    padding: 2vw 4vw;
-
-    @include bq(tb-x) {
-      padding: 2vw 8vw;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
-    &__headline {
-      font-size: 3.2vw;
-    }
+    &__content {
+      color: $accent;
+      width: calc(100% - 25.48vw);
+      height: 100%;
+      padding: 1.8vw 3.5vw;
 
-    &__detail {
-      display: flex;
-      justify-content: space-between;
+      @include bq(tb-x) {
+        padding: 2vw 8vw;
+      }
 
-      .period {
-        font-size: 1.5vw;
+      &__headline {
+        font-size: 3.2vw;
+      }
+
+      &__detail {
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: center;
-        text-align: center;
+        justify-content: space-between;
 
-        span {
-          &:first-child {
-            border-top: 1px solid $accent;
+        .period {
+          font-size: 1.5vw;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+          text-align: center;
+
+          span {
+            &:first-child {
+              border-top: 1px solid $accent;
+            }
+            &:last-child {
+              border-bottom: 1px solid $accent;
+            }
           }
-          &:last-child {
-            border-bottom: 1px solid $accent;
+        }
+
+        &__discount {
+          .price {
+            font-size: 4.56vw;
+            font-weight: bold;
+          }
+          &__fix {
+            font-size: 1.8vw;
+            font-weight: bold;
           }
         }
       }
 
-      &__discount {
-        .price {
-          font-size: 4.56vw;
-          font-weight: bold;
-        }
+      &__code {
         &__fix {
           font-size: 1.8vw;
           font-weight: bold;
         }
+        .code {
+          font-size: 4.56vw;
+          font-weight: bold;
+        }
+      }
+
+      &__lead {
+        span {
+          font-size: 1vw;
+        }
       }
     }
 
-    &__code {
-      &__fix {
-        font-size: 1.8vw;
-        font-weight: bold;
-      }
-      .code {
-        font-size: 4.56vw;
-        font-weight: bold;
-      }
-    }
+  }
+}
 
-    &__lead {
-      span {
-        font-size: 1vw;
+.sec-title {
+  font-size: 2.4rem;/*48px*/
+  font-family: "Fredericka the Great", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 0.5rem;/*10px*/
+
+  &__sub {
+    font-size: 1.2rem;/*24px*/
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 5rem;/*100px*/
+  }
+}
+
+.worries {
+  margin: 5rem 0;
+
+  @include bq(sm-x) {
+    margin: 2.5rem 0;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin-bottom: 50px;
+
+    &__item {
+      width: 22%;
+      margin-bottom: 0;
+      text-align: center;
+
+      @include bq(tb-s) {
+        width: 47%;
+        margin-bottom: 20px;
+      }
+
+      &__img {
+        margin-bottom: 20px;
+
+        @include bq(tb-s) {
+          margin-bottom: 15px;
+        }
+      }
+
+      &__text {
+        font-size: 1.2rem;/*24px*/
+        font-weight: 700;
+        line-height: 1.6
       }
     }
   }
