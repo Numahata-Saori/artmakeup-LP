@@ -658,22 +658,20 @@ li {
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 2.5rem;
 
     &__item {
       width: 22%;
       margin-bottom: 0;
       text-align: center;
-      // position: relative;
 
       @include bq(tb-s) {
-        // width: 47%;
-        width: calc(50% - 3em);
-        margin-bottom: 20px;
+        width: 47%;
+        margin-bottom: 1rem;
       }
 
       &__img {
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
 
         @include bq(tb-s) {
           margin-bottom: 15px;
@@ -683,7 +681,7 @@ li {
       &__text {
         font-size: 1.2rem;/*24px*/
         font-weight: 700;
-        line-height: 1.6
+        line-height: 1.6;
       }
     }
   }
@@ -710,7 +708,7 @@ li {
       justify-content: space-between;
       flex-wrap: wrap;
       max-width: 100%;
-      margin-bottom: 50px;
+      margin-bottom: 2.5rem;
 
       @include bq(tb-s) {
         // flex-direction: column;
@@ -750,6 +748,7 @@ li {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    font-family: 'Noto Sans JP', sans-serif;
     max-width: 100%;
     padding-bottom: 5rem;
     // height: 30.13vw;
@@ -758,7 +757,7 @@ li {
       margin-bottom: 1rem;
     }
 
-    &:nth-child(2) {
+    &:last-child {
       padding-bottom: 0;
 
       @include bq(tb-s) {
@@ -804,6 +803,59 @@ li {
       &__info {
         font-size: 1rem;/*20px*/
         line-height: 1.6;
+      }
+    }
+  }
+}
+
+.ideal-eyeblow {
+  margin: 5rem 0;
+
+  @include bq(sm-x) {
+    margin: 2.5rem 0;
+  }
+
+  &__wrap {
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-bottom: 2.5rem;
+
+    &__item {
+      border: 1px solid $sub;
+      width: 24%;
+      height: auto;
+      margin-bottom: 0;
+      padding: 1.5rem;
+      text-align: center;
+
+      @include bq(tb-s) {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      &:last-child {
+        @include bq(tb-s) {
+          margin-bottom: 0;
+        }
+      }
+
+      &__title {
+        font-size: 1.2rem;/*24px*/
+        line-height: 1.6;
+        padding-bottom: 1rem;
+      }
+
+      &__img {
+        padding-bottom: 1rem;
+      }
+
+      &__text {
+        font-size: 1rem;/*20px*/
+        line-height: 1.6;
+        text-align: start;
       }
     }
   }

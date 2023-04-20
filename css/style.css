@@ -562,7 +562,7 @@ li {
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 2.5rem;
 }
 .worries__wrap__item {
   width: 22%;
@@ -571,12 +571,12 @@ li {
 }
 @media screen and (max-width: 800px) {
   .worries__wrap__item {
-    width: calc(50% - 3em);
-    margin-bottom: 20px;
+    width: 47%;
+    margin-bottom: 1rem;
   }
 }
 .worries__wrap__item__img {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 800px) {
   .worries__wrap__item__img {
@@ -609,7 +609,7 @@ li {
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 2.5rem;
 }
 @media screen and (max-width: 800px) {
   .art-make__technique__wrap {
@@ -638,6 +638,7 @@ li {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  font-family: "Noto Sans JP", sans-serif;
   max-width: 100%;
   padding-bottom: 5rem;
 }
@@ -646,11 +647,11 @@ li {
     margin-bottom: 1rem;
   }
 }
-.art-make__wrap:nth-child(2) {
+.art-make__wrap:last-child {
   padding-bottom: 0;
 }
 @media screen and (max-width: 800px) {
-  .art-make__wrap:nth-child(2) {
+  .art-make__wrap:last-child {
     flex-direction: column-reverse;
     margin-bottom: 0;
   }
@@ -690,6 +691,55 @@ li {
 .art-make__wrap__text__info {
   font-size: 1rem; /*20px*/
   line-height: 1.6;
+}
+
+.ideal-eyeblow {
+  margin: 5rem 0;
+}
+@media screen and (max-width: 600px) {
+  .ideal-eyeblow {
+    margin: 2.5rem 0;
+  }
+}
+.ideal-eyeblow__wrap {
+  font-family: "Noto Sans JP", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin-bottom: 2.5rem;
+}
+.ideal-eyeblow__wrap__item {
+  border: 1px solid #716A67;
+  width: 24%;
+  height: auto;
+  margin-bottom: 0;
+  padding: 1.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .ideal-eyeblow__wrap__item {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .ideal-eyeblow__wrap__item:last-child {
+    margin-bottom: 0;
+  }
+}
+.ideal-eyeblow__wrap__item__title {
+  font-size: 1.2rem; /*24px*/
+  line-height: 1.6;
+  padding-bottom: 1rem;
+}
+.ideal-eyeblow__wrap__item__img {
+  padding-bottom: 1rem;
+}
+.ideal-eyeblow__wrap__item__text {
+  font-size: 1rem; /*20px*/
+  line-height: 1.6;
+  text-align: start;
 }
 
 .footer {
