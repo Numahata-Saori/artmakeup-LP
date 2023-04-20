@@ -634,14 +634,6 @@ li {
   font-family: "Noto Sans JP", sans-serif;
   line-height: 1.6;
 }
-.art-make__ly:nth-child(2) {
-  padding-bottom: 0;
-}
-@media screen and (max-width: 800px) {
-  .art-make__ly:nth-child(2) {
-    flex-direction: row-reverse;
-  }
-}
 .art-make__wrap {
   display: flex;
   justify-content: space-between;

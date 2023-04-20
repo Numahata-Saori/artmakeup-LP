@@ -746,16 +746,6 @@ li {
     }
   }
 
-  &__ly {
-    &:nth-child(2) {
-      padding-bottom: 0;
-
-      @include bq(tb-s) {
-        flex-direction: row-reverse;
-      }
-    }
-  }
-
   &__wrap {
     display: flex;
     justify-content: space-between;
