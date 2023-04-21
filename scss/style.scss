@@ -86,15 +86,15 @@ li {
     padding: 0 3em;
   }
 
-  @include bq(tb-s) {
-    max-width: none;
-    padding: 0 3em;
-  }
+  // @include bq(tb-s) {
+  //   max-width: none;
+  //   padding: 0 3em;
+  // }
 
-  @include bq(sm-s) {
-    max-width: none;
-    padding: 0 3em;
-  }
+  // @include bq(sm-s) {
+  //   max-width: none;
+  //   padding: 0 3em;
+  // }
 }
 
 // .ja {
@@ -137,8 +137,9 @@ li {
       text-align: center;
 
       &__upper {
-        font-size: 2rem;
+        font-size: 2rem;/*40px*/
         font-weight: bold;
+        line-height: 1.2;
 
         @include bq(tb) {
           font-size: 1.6rem;
@@ -152,7 +153,7 @@ li {
       }
 
       &__lower {
-        font-size: 1.2rem;
+        font-size: 1.2rem;/*24px*/
         font-weight: bold;
       }
     }
@@ -162,7 +163,7 @@ li {
       font-size: 1.2rem;
       height: 100%;
       text-align: center;
-      margin: 5% 0;
+      // margin: 5% 0;
       padding: 2% 4%;
 
       display: flex;
@@ -809,7 +810,7 @@ li {
 }
 
 .ideal-eyeblow {
-  margin: 5rem 0;
+  padding: 5rem 0;
 
   @include bq(sm-x) {
     margin: 2.5rem 0;
@@ -856,6 +857,187 @@ li {
         font-size: 1rem;/*20px*/
         line-height: 1.6;
         text-align: start;
+      }
+    }
+  }
+}
+
+.our-strength {
+  background-color: $main;
+  padding: 5rem 0;
+
+  @include bq(sm-x) {
+    margin: 2.5rem 0;
+  }
+
+  &__inner {
+    max-width: 1100px;
+    margin: auto;
+
+    // @include bq(tb-s) {
+    //   flex-wrap: nowrap;
+    //   // overflow-x: scroll;
+    //   overflow-x: auto !important;
+    //   width: auto;
+    // }
+  }
+
+  &__wrap {
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+
+    @include bq(tb-s) {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      // overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      overflow: auto;
+      scroll-snap-type: x;/*横方向にスクロール*/
+      width: 100vw;
+    }
+
+    &__item {
+      display: flex;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: start;
+      -ms-align-items: start;
+      align-items: flex-start;
+      margin-bottom: 5rem;
+
+      @include bq(tb-s) {
+        display: block;
+        margin-bottom: 2.5rem;
+
+        scroll-snap-align: start;/*横方向にスクロール、スナップポイント*/
+        width: 100vw;
+        flex: none;
+      }
+
+      &__img {
+        display: block;
+        width: 58%;
+        height: 450px;
+        margin: 0;
+
+        @include bq(tb-s) {
+          width: calc(100vw - 3em);
+          height: 50vw;
+        }
+
+        &.odd-img {
+          // height: auto;
+          order: 1;
+
+          // @include bq(tb-s) {
+          //   margin-left: -3em;
+          // }
+        }
+
+        &.even-img {
+          // height: auto;
+          order: 2;
+
+          @include bq(tb-s) {
+            margin-left: 3em;
+          }
+        }
+
+        &.org-01 {
+          // height: 450px;
+          text-align: right;
+
+          @include bq(tb-s) {
+            width: 60vw;
+            height: auto;
+          }
+        }
+
+        img {
+          max-height: 100%;
+          width: 100%;
+          height: auto;
+          height: -webkit-fill-available;
+        }
+      }
+
+      &__text {
+        color: $sub;
+        background-color: $base;
+        letter-spacing: .18em;
+
+
+        flex: 1;
+
+        padding: 2.5rem;/*50px*/
+        position: relative;
+        z-index: 1;
+
+        &.strength-long {
+          height: 22rem;
+
+          @include bq(tb-s) {
+            height: 16rem;
+          }
+        }
+
+        &.strength-short {
+          height: 18rem;
+
+          @include bq(tb-s) {
+            height: 16rem;
+          }
+        }
+
+        @include bq(tb-s) {
+          width: calc(100vw - 3em);
+        }
+
+        &.odd-text {
+          margin: 4.5rem 0 0 -5rem;/*90px,0,0,-100px*/
+          order: 2;
+
+          @include bq(tb-s) {
+            margin: -0.5rem 0 0 3em;
+            // text-align: left;
+          }
+        }
+
+        &.even-text {
+          margin: 4.5rem -5rem 0 0;/*90px,-100px,0,0*/
+          order: 1;
+
+          @include bq(tb-s) {
+            margin: -0.5rem 3em 0 0;
+            // text-align: right;
+          }
+        }
+
+        &__num {
+          font-size: 3rem;/*60px*/
+          font-weight: 600;
+          font-family: "Montserrat", sans-serif;
+          line-height: 1;
+
+          position: absolute;
+          top: -1.5rem;
+        }
+
+        &__title {
+          font-size: 1.2rem;/*24px*/
+          font-weight: 600;
+          line-height: 1.6;
+
+          margin-bottom: 1em;
+        }
+
+        p {
+          font-size: 1rem;
+        }
       }
     }
   }
