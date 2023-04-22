@@ -980,7 +980,7 @@ li {
           height: 22rem;
 
           @include bq(tb-s) {
-            height: 16rem;
+            height: auto;
           }
         }
 
@@ -988,7 +988,7 @@ li {
           height: 18.5rem;
 
           @include bq(tb-s) {
-            height: 16rem;
+            height: auto;
           }
         }
 

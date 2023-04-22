@@ -827,7 +827,7 @@ li {
 }
 @media screen and (max-width: 800px) {
   .our-strength__wrap__item__text.strength-long {
-    height: 16rem;
+    height: auto;
   }
 }
 .our-strength__wrap__item__text.strength-short {
@@ -835,7 +835,7 @@ li {
 }
 @media screen and (max-width: 800px) {
   .our-strength__wrap__item__text.strength-short {
-    height: 16rem;
+    height: auto;
   }
 }
 @media screen and (max-width: 800px) {
