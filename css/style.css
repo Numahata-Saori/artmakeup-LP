@@ -809,7 +809,7 @@ li {
 }
 .our-strength__wrap__item__img img {
   max-height: 100%;
-  width: 100%;
+  width: auto;
   height: auto;
   height: -webkit-fill-available;
 }
@@ -831,7 +831,7 @@ li {
   }
 }
 .our-strength__wrap__item__text.strength-short {
-  height: 18rem;
+  height: 18.5rem;
 }
 @media screen and (max-width: 800px) {
   .our-strength__wrap__item__text.strength-short {
