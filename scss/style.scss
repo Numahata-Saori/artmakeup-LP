@@ -544,7 +544,7 @@ li {
     }
 
     &__img {
-      width: 18.23vw;
+      width: 30%;
       height: auto;
 
       img {
@@ -555,12 +555,18 @@ li {
 
     &__content {
       color: $accent;
-      width: calc(100% - 18.23vw);
-      height: 100%;
+      width: 70%;
+      height: auto;
       padding: 1.25vw 2.5vw;
 
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: space-between;
+
       @include bq(tb-x) {
-        padding: 2vw 8vw;
+        padding: 2vw 6vw;
       }
 
       @include bq(sm) {
@@ -568,7 +574,12 @@ li {
       }
 
       &__headline {
-        font-size: 2.5vw;/*48px*/
+        font-size: 2.4rem;/*48px*/
+        text-align: center;
+
+        @include bq(tb-x) {
+          font-size: 4vw;
+        }
       }
 
       &__detail {
@@ -576,13 +587,17 @@ li {
         justify-content: space-between;
 
         .period {
-          font-size: 1.2vw;
+          font-size: 1rem;/*20px*/
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
           align-content: center;
           justify-content: center;
           text-align: center;
+
+          @include bq(tb-s) {
+            font-size: 2vw;
+          }
 
           span {
             &:first-child {
@@ -596,30 +611,50 @@ li {
 
         &__discount {
           .price {
-            font-size: 2.5vw;/*48px*/
+            font-size: 2.4rem;/*48px*/
             font-weight: bold;
+
+            @include bq(sm-x) {
+              font-size: 4vw;
+            }
           }
           &__fix {
-            font-size: 1.8vw;
+            font-size: 1.2rem;/*24px*/
             font-weight: bold;
+
+            @include bq(sm-x) {
+              font-size: 2.5vw;
+            }
           }
         }
       }
 
       &__code {
         &__fix {
-          font-size: 1.2vw;
+          font-size: 1.2rem;/*24px*/
           font-weight: bold;
+
+          @include bq(tb-s) {
+            font-size: 2.5vw;
+          }
         }
         .code {
-          font-size: 2.5vw;/*48px*/
+          font-size: 2.4rem;/*48px*/
           font-weight: bold;
+
+          @include bq(sm-x) {
+            font-size: 4vw;
+          }
         }
       }
 
       &__lead {
         span {
-          font-size: 1vw;
+          font-size: 1rem;/*20px*/
+
+          @include bq(sm-x) {
+            font-size: 2.5vw;
+          }
         }
       }
     }
@@ -1037,6 +1072,109 @@ li {
         p {
           font-size: 1rem;
         }
+      }
+    }
+  }
+}
+
+.price {
+  padding: 5rem 0;
+  width: 100%;
+
+  @include bq(sm-x) {
+    margin: 2.5rem 0;
+  }
+
+  &__text {
+    font-size: 1rem;/*20px*/
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-bottom: 5rem;
+  }
+
+  table {
+    // border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  &__table01 {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-bottom: 2rem;
+
+    &__headline {
+      width: 100%;
+
+      thead {
+        background: $sub;
+        color: $base;
+
+        th {
+          padding: 0.5rem;/*10px*/
+          font-size: 1rem;/*20px*/
+        }
+      }
+    }
+
+    &__item01 {
+      width: 100%;
+
+      tbody {
+        tr {
+          border-bottom: $main solid 3px;
+
+          td {
+            padding: 0.5rem 0;/*10px 0*/
+            text-align: center;
+            width: 25%;
+
+            p {
+              text-align: center;
+              line-height: 2em;
+            }
+          }
+
+          th {
+            padding: 0.5rem 0;/*10px 0*/
+            text-align: center;
+            width: 25%;
+          }
+        }
+
+        .kinds {
+          td {
+            &:first-child {
+              background: lighten($main, 5%);
+            }
+
+            p {
+              background-color: $main;
+              margin-top: -15%;
+            }
+          }
+        }
+
+        .course {
+          th {
+            &:nth-child(odd) {/*奇数*/
+              background: $main;
+            }
+
+            &:nth-child(even) {
+              border-top: 0.2rem solid $main;
+              border-bottom: 0.2rem solid $main;
+            }
+          }
+        }
+
+        .num {
+          td {
+            font-size: 1.6rem;/*32px*/
+            font-weight: 700;
+            line-height: 1.6;
+
+            padding: 1.3rem 0;/*26px 0*/
+          }
+        }
+
       }
     }
   }

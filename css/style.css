@@ -453,7 +453,7 @@ li {
   }
 }
 .coupon__inner__img {
-  width: 18.23vw;
+  width: 30%;
   height: auto;
 }
 .coupon__inner__img img {
@@ -462,13 +462,18 @@ li {
 }
 .coupon__inner__content {
   color: #CF9F96;
-  width: calc(100% - 18.23vw);
-  height: 100%;
+  width: 70%;
+  height: auto;
   padding: 1.25vw 2.5vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
 }
 @media screen and (max-width: 1100px) {
   .coupon__inner__content {
-    padding: 2vw 8vw;
+    padding: 2vw 6vw;
   }
 }
 @media screen and (max-width: 430px) {
@@ -477,20 +482,31 @@ li {
   }
 }
 .coupon__inner__content__headline {
-  font-size: 2.5vw; /*48px*/
+  font-size: 2.4rem; /*48px*/
+  text-align: center;
+}
+@media screen and (max-width: 1100px) {
+  .coupon__inner__content__headline {
+    font-size: 4vw;
+  }
 }
 .coupon__inner__content__detail {
   display: flex;
   justify-content: space-between;
 }
 .coupon__inner__content__detail .period {
-  font-size: 1.2vw;
+  font-size: 1rem; /*20px*/
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .coupon__inner__content__detail .period {
+    font-size: 2vw;
+  }
 }
 .coupon__inner__content__detail .period span:first-child {
   border-top: 1px solid #CF9F96;
@@ -499,23 +515,48 @@ li {
   border-bottom: 1px solid #CF9F96;
 }
 .coupon__inner__content__detail__discount .price {
-  font-size: 2.5vw; /*48px*/
+  font-size: 2.4rem; /*48px*/
   font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  .coupon__inner__content__detail__discount .price {
+    font-size: 4vw;
+  }
 }
 .coupon__inner__content__detail__discount__fix {
-  font-size: 1.8vw;
+  font-size: 1.2rem; /*24px*/
   font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  .coupon__inner__content__detail__discount__fix {
+    font-size: 2.5vw;
+  }
 }
 .coupon__inner__content__code__fix {
-  font-size: 1.2vw;
+  font-size: 1.2rem; /*24px*/
   font-weight: bold;
+}
+@media screen and (max-width: 800px) {
+  .coupon__inner__content__code__fix {
+    font-size: 2.5vw;
+  }
 }
 .coupon__inner__content__code .code {
-  font-size: 2.5vw; /*48px*/
+  font-size: 2.4rem; /*48px*/
   font-weight: bold;
 }
+@media screen and (max-width: 600px) {
+  .coupon__inner__content__code .code {
+    font-size: 4vw;
+  }
+}
 .coupon__inner__content__lead span {
-  font-size: 1vw;
+  font-size: 1rem; /*20px*/
+}
+@media screen and (max-width: 600px) {
+  .coupon__inner__content__lead span {
+    font-size: 2.5vw;
+  }
 }
 
 .sec-title {
@@ -877,6 +918,79 @@ li {
 }
 .our-strength__wrap__item__text p {
   font-size: 1rem;
+}
+
+.price {
+  padding: 5rem 0;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .price {
+    margin: 2.5rem 0;
+  }
+}
+.price__text {
+  font-size: 1rem; /*20px*/
+  font-family: "Noto Sans JP", sans-serif;
+  margin-bottom: 5rem;
+}
+.price table {
+  border-spacing: 0;
+}
+.price__table01 {
+  font-family: "Noto Sans JP", sans-serif;
+  margin-bottom: 2rem;
+}
+.price__table01__headline {
+  width: 100%;
+}
+.price__table01__headline thead {
+  background: #716A67;
+  color: #fff;
+}
+.price__table01__headline thead th {
+  padding: 0.5rem; /*10px*/
+  font-size: 1rem; /*20px*/
+}
+.price__table01__item01 {
+  width: 100%;
+}
+.price__table01__item01 tbody tr {
+  border-bottom: #EAD7CC solid 3px;
+}
+.price__table01__item01 tbody tr td {
+  padding: 0.5rem 0; /*10px 0*/
+  text-align: center;
+  width: 25%;
+}
+.price__table01__item01 tbody tr td p {
+  text-align: center;
+  line-height: 2em;
+}
+.price__table01__item01 tbody tr th {
+  padding: 0.5rem 0; /*10px 0*/
+  text-align: center;
+  width: 25%;
+}
+.price__table01__item01 tbody .kinds td:first-child {
+  background: #f1e5de;
+}
+.price__table01__item01 tbody .kinds td p {
+  background-color: #EAD7CC;
+  margin-top: -15%;
+}
+.price__table01__item01 tbody .course th:nth-child(odd) { /*奇数*/
+  background: #EAD7CC;
+}
+.price__table01__item01 tbody .course th:nth-child(even) {
+  border-top: 0.2rem solid #EAD7CC;
+  border-bottom: 0.2rem solid #EAD7CC;
+}
+.price__table01__item01 tbody .num td {
+  font-size: 1.6rem; /*32px*/
+  font-weight: 700;
+  line-height: 1.6;
+  padding: 1.3rem 0; /*26px 0*/
 }
 
 .footer {
