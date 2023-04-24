@@ -13,21 +13,6 @@ html {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 14px;
-  }
-}
-@media screen and (max-width: 430px) {
-  html {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 400px) {
-  html {
-    font-size: 10px;
-  }
-}
 
 body {
   background: #fff;
@@ -937,9 +922,66 @@ li {
 .price table {
   border-spacing: 0;
 }
-.price__table01 {
+.price .teble-default {
   font-family: "Noto Sans JP", sans-serif;
-  margin-bottom: 2rem;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .price .teble-default tbody {
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 600px) {
+  .price .teble-default tbody tr {
+    width: 100%;
+    display: flex;
+  }
+}
+.price .teble-default tbody tr td {
+  padding: 0.5rem 0; /*10px 0*/
+  text-align: center;
+  width: 25%;
+}
+@media screen and (max-width: 600px) {
+  .price .teble-default tbody tr td {
+    padding: 1.5rem 0;
+    width: 100%;
+  }
+}
+.price .teble-default tbody tr td p {
+  font-size: 1rem; /*20px*/
+  font-weight: 700;
+  text-align: center;
+  line-height: 2em;
+}
+@media screen and (max-width: 600px) {
+  .price .teble-default tbody tr td p {
+    font-size: 3.5vw;
+  }
+}
+.price .teble-default tbody tr th {
+  font-size: 1rem; /*20px*/
+  font-weight: 700;
+  padding: 0.5rem 0; /*10px 0*/
+  text-align: center;
+  width: 25%;
+}
+@media screen and (max-width: 600px) {
+  .price .teble-default tbody tr th {
+    width: 33.33%;
+  }
+}
+.price .teble-default tbody .num td {
+  font-size: 1.6rem; /*32px*/
+  font-weight: 700;
+  line-height: 1.6;
+  padding: 1.3rem 0; /*26px 0*/
+}
+.price__table01 {
+  margin-bottom: 5rem; /*100px*/
 }
 .price__table01__headline {
   width: 100%;
@@ -952,45 +994,80 @@ li {
   padding: 0.5rem; /*10px*/
   font-size: 1rem; /*20px*/
 }
-.price__table01__item01 {
-  width: 100%;
-}
-.price__table01__item01 tbody tr {
-  border-bottom: #EAD7CC solid 3px;
-}
-.price__table01__item01 tbody tr td {
-  padding: 0.5rem 0; /*10px 0*/
-  text-align: center;
-  width: 25%;
-}
-.price__table01__item01 tbody tr td p {
-  text-align: center;
-  line-height: 2em;
-}
-.price__table01__item01 tbody tr th {
-  padding: 0.5rem 0; /*10px 0*/
-  text-align: center;
-  width: 25%;
-}
-.price__table01__item01 tbody .kinds td:first-child {
+.price__table01__item .kinds td:first-child {
   background: #f1e5de;
 }
-.price__table01__item01 tbody .kinds td p {
+.price__table01__item .kinds td p {
   background-color: #EAD7CC;
   margin-top: -15%;
 }
-.price__table01__item01 tbody .course th:nth-child(odd) { /*奇数*/
-  background: #EAD7CC;
+@media screen and (max-width: 600px) {
+  .price__table01__item .kinds td p {
+    margin-top: 0;
+  }
 }
-.price__table01__item01 tbody .course th:nth-child(even) {
-  border-top: 0.2rem solid #EAD7CC;
-  border-bottom: 0.2rem solid #EAD7CC;
+.price__table01__item .course th:nth-child(odd) { /*奇数*/
+  background: #f1e5de;
 }
-.price__table01__item01 tbody .num td {
+.price__table01__item .course th:nth-child(even) {
+  border-top: 0.2rem solid #f1e5de;
+  border-bottom: 0.2rem solid #f1e5de;
+}
+.price__table01__text {
+  font-size: 1rem; /*20px*/
+  line-height: 1.6;
+  margin-top: 2rem; /*40px*/
+}
+.price__table02__title {
+  text-align: center;
+  margin-bottom: 1rem; /*20px*/
+}
+.price__table02__title__trainee {
   font-size: 1.6rem; /*32px*/
+  font-family: "Noto Serif JP", serif;
   font-weight: 700;
   line-height: 1.6;
-  padding: 1.3rem 0; /*26px 0*/
+  margin-bottom: 1rem; /*20px*/
+}
+.price__table02__title__text {
+  font-size: 1rem; /*20px*/
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+.price__table02__headline {
+  width: 100%;
+}
+.price__table02__headline thead {
+  background: #fff;
+  color: #716A67;
+}
+.price__table02__headline thead th {
+  padding: 0.3rem 0.5rem; /*10px*/
+  font-size: 1rem; /*20px*/
+  border-top: 0.2rem solid #716A67;
+  border-bottom: 0.2rem solid #716A67;
+}
+.price__table02__item .kinds td {
+  border-top: 0.2rem solid #f1e5de;
+}
+.price__table02__item .kinds td:first-child {
+  background: #fff;
+}
+.price__table02__item .kinds td p {
+  background-color: #f1e5de;
+  margin-top: -7%;
+}
+@media screen and (max-width: 600px) {
+  .price__table02__item .kinds td p {
+    margin-top: 0;
+  }
+}
+.price__table02__item .course th:nth-child(odd) { /*奇数*/
+  border-top: 0.2rem solid #f1e5de;
+  border-bottom: 0.2rem solid #f1e5de;
+}
+.price__table02__item .course th:nth-child(even) {
+  background: #f1e5de;
 }
 
 .footer {
