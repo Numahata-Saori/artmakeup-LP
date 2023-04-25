@@ -1226,6 +1226,8 @@ li {
   }
 
   &__table02 {
+    margin-bottom: 5rem;/*100px*/
+
     &__title {
       text-align: center;
       margin-bottom: 1rem;/*20px*/
@@ -1295,6 +1297,178 @@ li {
           }
         }
       }
+    }
+  }
+
+  &__table03 {
+    // margin-bottom: 5rem;/*100px*/
+
+    &__title {
+      margin-bottom: 2rem;/*40px*/
+
+      &__trainee {
+        font-size: 1.6rem;/*32px*/
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        line-height: 1.6;
+
+        margin-bottom: 2rem;/*40px*/
+        text-align: center;
+      }
+
+      &__text {
+        font-size: 1rem;/*20px*/
+        font-family: 'Noto Sans JP', sans-serif;
+        line-height: 1.6;
+      }
+    }
+
+    &__wrap {
+      display: flex;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    &__item01 {
+      width: 50%;
+
+      tbody {
+        .headline {
+          background-color: $main;
+
+          td {
+            &:first-child {
+              background-color: $base;
+            }
+          }
+
+          th {
+            border-right: 0.2rem solid $base;
+            font-size: 1rem;/*20px*/
+            font-weight: 700;
+          }
+        }
+
+        .course {
+          th {
+            background-color: $sub;
+            color: $base;
+            border-right: 0.2rem solid $main;
+            border-bottom: 0.2rem solid $main;
+            font-size: 1rem;/*20px*/
+            font-weight: 700;
+          }
+
+          td {
+            background-color: $base;
+            color: $sub;
+            border-right: 0.2rem solid $main;
+            border-bottom: 0.2rem solid $main;
+            font-size: 1.2rem;/*24px*/
+            font-weight: 700;
+            padding: 0.5rem 0;/*10px 0*/
+
+            &:last-child {
+              border-right: 0.2rem solid $base;
+            }
+          }
+        }
+
+        tr {
+          td {
+            text-align: center;
+            width: 25%;
+          }
+
+          th {
+            text-align: center;
+            width: 25%;
+          }
+        }
+      }
+    }
+
+    &__item02 {
+      border-left: 0.4rem solid $accent;
+      border-right: 0.4rem solid $accent;
+      border-bottom: 0.4rem solid $accent;
+
+
+      width: 50%;
+
+      .headline-upper {
+        th {
+          background-color: $accent;
+          color: $base;
+          font-weight: 700;
+          padding: 0.5rem 0;/*10px 0*/
+        }
+      }
+
+      .headline-under {
+        th {
+          border-right: 0.2rem solid lighten($accent, 15%);
+          font-weight: 400;
+          padding: 0.5rem 0;/*10px 0*/
+
+          &:last-child {
+            border-right: 0;
+          }
+        }
+      }
+
+      .num {
+        td {
+          background-color: lighten($accent, 15%);
+          color: $sub;
+          border-right: 0.2rem solid $base;
+          border-bottom: 0.2rem solid $base;
+          font-weight: 700;
+          padding: 2rem 0;/*10px 0*/
+
+          &:first-child {
+            font-size: 1.4rem;/*28px*/
+          }
+
+          &:last-child {
+            border-right: 0;
+
+            p {
+              font-size: 1.2rem;/*24px*/
+
+              span {
+                font-size: 0.8rem;/*16px*/
+                padding-right: 0.5rem;/*10px*/
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          td {
+            border-bottom: 0;
+          }
+        }
+      }
+
+      tr {
+        td {
+          text-align: center;
+          width: 25%;
+        }
+        th {
+          text-align: center;
+          width: 25%;
+        }
+      }
+    }
+
+    &__text {
+      align-items: center;
+      font-size: 1rem;/*20px*/
+      font-family: 'Noto Sans JP', sans-serif;
+      line-height: 1.6;
+
+      margin-top: 2rem;/*40px*/
     }
   }
 }

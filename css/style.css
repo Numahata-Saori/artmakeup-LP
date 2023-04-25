@@ -1018,6 +1018,9 @@ li {
   line-height: 1.6;
   margin-top: 2rem; /*40px*/
 }
+.price__table02 {
+  margin-bottom: 5rem; /*100px*/
+}
 .price__table02__title {
   text-align: center;
   margin-bottom: 1rem; /*20px*/
@@ -1068,6 +1071,127 @@ li {
 }
 .price__table02__item .course th:nth-child(even) {
   background: #f1e5de;
+}
+.price__table03__title {
+  margin-bottom: 2rem; /*40px*/
+}
+.price__table03__title__trainee {
+  font-size: 1.6rem; /*32px*/
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 2rem; /*40px*/
+  text-align: center;
+}
+.price__table03__title__text {
+  font-size: 1rem; /*20px*/
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+.price__table03__wrap {
+  display: flex;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.price__table03__item01 {
+  width: 50%;
+}
+.price__table03__item01 tbody .headline {
+  background-color: #EAD7CC;
+}
+.price__table03__item01 tbody .headline td:first-child {
+  background-color: #fff;
+}
+.price__table03__item01 tbody .headline th {
+  border-right: 0.2rem solid #fff;
+  font-size: 1rem; /*20px*/
+  font-weight: 700;
+}
+.price__table03__item01 tbody .course th {
+  background-color: #716A67;
+  color: #fff;
+  border-right: 0.2rem solid #EAD7CC;
+  border-bottom: 0.2rem solid #EAD7CC;
+  font-size: 1rem; /*20px*/
+  font-weight: 700;
+}
+.price__table03__item01 tbody .course td {
+  background-color: #fff;
+  color: #716A67;
+  border-right: 0.2rem solid #EAD7CC;
+  border-bottom: 0.2rem solid #EAD7CC;
+  font-size: 1.2rem; /*24px*/
+  font-weight: 700;
+  padding: 0.5rem 0; /*10px 0*/
+}
+.price__table03__item01 tbody .course td:last-child {
+  border-right: 0.2rem solid #fff;
+}
+.price__table03__item01 tbody tr td {
+  text-align: center;
+  width: 25%;
+}
+.price__table03__item01 tbody tr th {
+  text-align: center;
+  width: 25%;
+}
+.price__table03__item02 {
+  border-left: 0.4rem solid #CF9F96;
+  border-right: 0.4rem solid #CF9F96;
+  border-bottom: 0.4rem solid #CF9F96;
+  width: 50%;
+}
+.price__table03__item02 .headline-upper th {
+  background-color: #CF9F96;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.5rem 0; /*10px 0*/
+}
+.price__table03__item02 .headline-under th {
+  border-right: 0.2rem solid #e7cfcb;
+  font-weight: 400;
+  padding: 0.5rem 0; /*10px 0*/
+}
+.price__table03__item02 .headline-under th:last-child {
+  border-right: 0;
+}
+.price__table03__item02 .num td {
+  background-color: #e7cfcb;
+  color: #716A67;
+  border-right: 0.2rem solid #fff;
+  border-bottom: 0.2rem solid #fff;
+  font-weight: 700;
+  padding: 2rem 0; /*10px 0*/
+}
+.price__table03__item02 .num td:first-child {
+  font-size: 1.4rem; /*28px*/
+}
+.price__table03__item02 .num td:last-child {
+  border-right: 0;
+}
+.price__table03__item02 .num td:last-child p {
+  font-size: 1.2rem; /*24px*/
+}
+.price__table03__item02 .num td:last-child p span {
+  font-size: 0.8rem; /*16px*/
+  padding-right: 0.5rem; /*10px*/
+}
+.price__table03__item02 .num:last-child td {
+  border-bottom: 0;
+}
+.price__table03__item02 tr td {
+  text-align: center;
+  width: 25%;
+}
+.price__table03__item02 tr th {
+  text-align: center;
+  width: 25%;
+}
+.price__table03__text {
+  align-items: center;
+  font-size: 1rem; /*20px*/
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+  margin-top: 2rem; /*40px*/
 }
 
 .footer {
