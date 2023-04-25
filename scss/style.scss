@@ -1324,65 +1324,80 @@ li {
     }
 
     &__wrap {
-      display: flex;
       font-family: 'Noto Sans JP', sans-serif;
+      display: flex;
+      align-items: flex-start;
+
     }
 
     &__item01 {
+      border-bottom: 0.4rem solid $base;
       width: 50%;
 
-      tbody {
-        .headline {
-          background-color: $main;
-
-          td {
-            &:first-child {
-              background-color: $base;
-            }
-          }
-
-          th {
-            border-right: 0.2rem solid $base;
-            font-size: 1rem;/*20px*/
-            font-weight: 700;
-          }
+      tr {
+        td {
+          text-align: center;
+          width: 25%;
         }
 
-        .course {
-          th {
-            background-color: $sub;
-            color: $base;
-            border-right: 0.2rem solid $main;
-            border-bottom: 0.2rem solid $main;
-            font-size: 1rem;/*20px*/
-            font-weight: 700;
-          }
+        th {
+          text-align: center;
+          width: 25%;
+        }
+      }
 
-          td {
+      .headline {
+        background-color: $main;
+
+        td {
+          &:first-child {
             background-color: $base;
-            color: $sub;
-            border-right: 0.2rem solid $main;
-            border-bottom: 0.2rem solid $main;
-            font-size: 1.2rem;/*24px*/
-            font-weight: 700;
-            padding: 0.5rem 0;/*10px 0*/
-
-            &:last-child {
-              border-right: 0.2rem solid $base;
-            }
+            // height: 4.6rem;
           }
         }
 
-        tr {
-          td {
-            text-align: center;
-            width: 25%;
+        th {
+          border-right: 0.2rem solid $base;
+          font-size: 1rem;/*20px*/
+          font-weight: 700;
+          height: 5rem;
+          padding: 0.5rem 0;
+        }
+      }
+
+      .num {
+        td {
+          background-color: $base;
+          color: $sub;
+          border-right: 0.2rem solid $main;
+          border-bottom: 0.2rem solid $main;
+          font-size: 1.2rem;/*24px*/
+          font-weight: 700;
+          height: 9rem;
+          padding: 0.5rem 0;/*10px 0*/
+
+          &:last-child {
+            border-right: 0.2rem solid $base;
           }
 
-          th {
-            text-align: center;
-            width: 25%;
+          .sub-text {
+            font-size: 0.8rem;/*16px*/
+            font-weight: 400;
+            line-height: 1.2;
           }
+        }
+
+        th {
+          background-color: $sub;
+          color: $base;
+          border-right: 0.2rem solid $main;
+          border-bottom: 0.2rem solid $main;
+          font-size: 1rem;/*20px*/
+          font-weight: 700;
+        }
+
+        .empty {
+          background-color: $base;
         }
       }
     }
@@ -1392,14 +1407,25 @@ li {
       border-right: 0.4rem solid $accent;
       border-bottom: 0.4rem solid $accent;
 
-
       width: 50%;
+
+      tr {
+        td {
+          text-align: center;
+          width: 25%;
+        }
+        th {
+          text-align: center;
+          width: 25%;
+        }
+      }
 
       .headline-upper {
         th {
           background-color: $accent;
           color: $base;
           font-weight: 700;
+          height: 2.5rem;
           padding: 0.5rem 0;/*10px 0*/
         }
       }
@@ -1408,6 +1434,7 @@ li {
         th {
           border-right: 0.2rem solid lighten($accent, 15%);
           font-weight: 400;
+          height: 2.5rem;
           padding: 0.5rem 0;/*10px 0*/
 
           &:last-child {
@@ -1419,11 +1446,15 @@ li {
       .num {
         td {
           background-color: lighten($accent, 15%);
-          color: $sub;
           border-right: 0.2rem solid $base;
           border-bottom: 0.2rem solid $base;
+          color: $sub;
           font-weight: 700;
-          padding: 2rem 0;/*10px 0*/
+          height: 9rem;
+          // padding: 2rem 0;/*10px 0*/
+
+          // display: flex;
+
 
           &:first-child {
             font-size: 1.4rem;/*28px*/
@@ -1441,6 +1472,12 @@ li {
               }
             }
           }
+
+          .sub-text {
+            font-size: 0.8rem;/*16px*/
+            font-weight: 400;
+            line-height: 1.2;
+          }
         }
 
         &:last-child {
@@ -1448,18 +1485,13 @@ li {
             border-bottom: 0;
           }
         }
+
+        .empty {
+          background-color: $base;
+        }
       }
 
-      tr {
-        td {
-          text-align: center;
-          width: 25%;
-        }
-        th {
-          text-align: center;
-          width: 25%;
-        }
-      }
+
     }
 
     &__text {

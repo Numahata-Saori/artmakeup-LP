@@ -1089,24 +1089,54 @@ li {
   line-height: 1.6;
 }
 .price__table03__wrap {
-  display: flex;
   font-family: "Noto Sans JP", sans-serif;
+  display: flex;
+  align-items: flex-start;
 }
 .price__table03__item01 {
+  border-bottom: 0.4rem solid #fff;
   width: 50%;
 }
-.price__table03__item01 tbody .headline {
+.price__table03__item01 tr td {
+  text-align: center;
+  width: 25%;
+}
+.price__table03__item01 tr th {
+  text-align: center;
+  width: 25%;
+}
+.price__table03__item01 .headline {
   background-color: #EAD7CC;
 }
-.price__table03__item01 tbody .headline td:first-child {
+.price__table03__item01 .headline td:first-child {
   background-color: #fff;
 }
-.price__table03__item01 tbody .headline th {
+.price__table03__item01 .headline th {
   border-right: 0.2rem solid #fff;
   font-size: 1rem; /*20px*/
   font-weight: 700;
+  height: 5rem;
+  padding: 0.5rem 0;
 }
-.price__table03__item01 tbody .course th {
+.price__table03__item01 .num td {
+  background-color: #fff;
+  color: #716A67;
+  border-right: 0.2rem solid #EAD7CC;
+  border-bottom: 0.2rem solid #EAD7CC;
+  font-size: 1.2rem; /*24px*/
+  font-weight: 700;
+  height: 9rem;
+  padding: 0.5rem 0; /*10px 0*/
+}
+.price__table03__item01 .num td:last-child {
+  border-right: 0.2rem solid #fff;
+}
+.price__table03__item01 .num td .sub-text {
+  font-size: 0.8rem; /*16px*/
+  font-weight: 400;
+  line-height: 1.2;
+}
+.price__table03__item01 .num th {
   background-color: #716A67;
   color: #fff;
   border-right: 0.2rem solid #EAD7CC;
@@ -1114,25 +1144,8 @@ li {
   font-size: 1rem; /*20px*/
   font-weight: 700;
 }
-.price__table03__item01 tbody .course td {
+.price__table03__item01 .num .empty {
   background-color: #fff;
-  color: #716A67;
-  border-right: 0.2rem solid #EAD7CC;
-  border-bottom: 0.2rem solid #EAD7CC;
-  font-size: 1.2rem; /*24px*/
-  font-weight: 700;
-  padding: 0.5rem 0; /*10px 0*/
-}
-.price__table03__item01 tbody .course td:last-child {
-  border-right: 0.2rem solid #fff;
-}
-.price__table03__item01 tbody tr td {
-  text-align: center;
-  width: 25%;
-}
-.price__table03__item01 tbody tr th {
-  text-align: center;
-  width: 25%;
 }
 .price__table03__item02 {
   border-left: 0.4rem solid #CF9F96;
@@ -1140,15 +1153,25 @@ li {
   border-bottom: 0.4rem solid #CF9F96;
   width: 50%;
 }
+.price__table03__item02 tr td {
+  text-align: center;
+  width: 25%;
+}
+.price__table03__item02 tr th {
+  text-align: center;
+  width: 25%;
+}
 .price__table03__item02 .headline-upper th {
   background-color: #CF9F96;
   color: #fff;
   font-weight: 700;
+  height: 2.5rem;
   padding: 0.5rem 0; /*10px 0*/
 }
 .price__table03__item02 .headline-under th {
   border-right: 0.2rem solid #e7cfcb;
   font-weight: 400;
+  height: 2.5rem;
   padding: 0.5rem 0; /*10px 0*/
 }
 .price__table03__item02 .headline-under th:last-child {
@@ -1156,11 +1179,11 @@ li {
 }
 .price__table03__item02 .num td {
   background-color: #e7cfcb;
-  color: #716A67;
   border-right: 0.2rem solid #fff;
   border-bottom: 0.2rem solid #fff;
+  color: #716A67;
   font-weight: 700;
-  padding: 2rem 0; /*10px 0*/
+  height: 9rem;
 }
 .price__table03__item02 .num td:first-child {
   font-size: 1.4rem; /*28px*/
@@ -1175,16 +1198,16 @@ li {
   font-size: 0.8rem; /*16px*/
   padding-right: 0.5rem; /*10px*/
 }
+.price__table03__item02 .num td .sub-text {
+  font-size: 0.8rem; /*16px*/
+  font-weight: 400;
+  line-height: 1.2;
+}
 .price__table03__item02 .num:last-child td {
   border-bottom: 0;
 }
-.price__table03__item02 tr td {
-  text-align: center;
-  width: 25%;
-}
-.price__table03__item02 tr th {
-  text-align: center;
-  width: 25%;
+.price__table03__item02 .num .empty {
+  background-color: #fff;
 }
 .price__table03__text {
   align-items: center;
