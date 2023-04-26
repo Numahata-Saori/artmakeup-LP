@@ -1328,21 +1328,49 @@ li {
       display: flex;
       align-items: flex-start;
 
+      @include bq(tb-s) {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        // overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        overflow: auto;
+        scroll-snap-type: x;/*横方向にスクロール*/
+        // width: 100vw;
+      }
+
     }
 
     &__item01 {
       border-bottom: 0.4rem solid $base;
       width: 50%;
 
+      @include bq(tb-s) {
+        display: block;
+
+        width: auto;
+        flex: none;
+        white-space: nowrap;
+      }
+
       tr {
         td {
           text-align: center;
           width: 25%;
+
+          @include bq(tb) {
+            width: 9rem;
+            white-space: nowrap;
+          }
         }
 
         th {
           text-align: center;
           width: 25%;
+
+          @include bq(tb) {
+            width: 9rem;
+            white-space: nowrap;
+          }
         }
       }
 
@@ -1361,7 +1389,12 @@ li {
           font-size: 1rem;/*20px*/
           font-weight: 700;
           height: 5rem;
-          padding: 0.5rem 0;
+          padding: 0.5rem;
+
+          @include bq(tb) {
+            // width: 9rem;
+            white-space: nowrap;
+          }
         }
       }
 
@@ -1374,7 +1407,7 @@ li {
           font-size: 1.2rem;/*24px*/
           font-weight: 700;
           height: 9rem;
-          padding: 0.5rem 0;/*10px 0*/
+          padding: 0.5rem;/*10px*/
 
           &:last-child {
             border-right: 0.2rem solid $base;
@@ -1394,6 +1427,7 @@ li {
           border-bottom: 0.2rem solid $main;
           font-size: 1rem;/*20px*/
           font-weight: 700;
+          padding: 0.5rem;/*10px*/
         }
 
         .empty {
@@ -1409,14 +1443,32 @@ li {
 
       width: 50%;
 
+      @include bq(tb-s) {
+        display: block;
+
+        width: auto;
+        flex: none;
+        white-space: nowrap;
+      }
+
       tr {
         td {
           text-align: center;
           width: 25%;
+
+          @include bq(tb) {
+            width: 9rem;
+            white-space: nowrap;
+          }
         }
         th {
           text-align: center;
           width: 25%;
+
+          @include bq(tb) {
+            width: 9rem;
+            white-space: nowrap;
+          }
         }
       }
 
@@ -1424,21 +1476,29 @@ li {
         th {
           background-color: $accent;
           color: $base;
+          font-size: 1rem;
           font-weight: 700;
           height: 2.5rem;
-          padding: 0.5rem 0;/*10px 0*/
+          padding: 0.5rem;/*10px*/
+          white-space: nowrap;
         }
       }
 
       .headline-under {
         th {
           border-right: 0.2rem solid lighten($accent, 15%);
+          font-size: 1rem;
           font-weight: 400;
           height: 2.5rem;
-          padding: 0.5rem 0;/*10px 0*/
+          padding: 0.5rem;/*10px*/
 
           &:last-child {
             border-right: 0;
+          }
+
+          @include bq(tb) {
+            // width: 9rem;
+            white-space: nowrap;
           }
         }
       }
@@ -1451,10 +1511,6 @@ li {
           color: $sub;
           font-weight: 700;
           height: 9rem;
-          // padding: 2rem 0;/*10px 0*/
-
-          // display: flex;
-
 
           &:first-child {
             font-size: 1.4rem;/*28px*/

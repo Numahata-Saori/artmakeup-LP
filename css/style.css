@@ -1093,17 +1093,46 @@ li {
   display: flex;
   align-items: flex-start;
 }
+@media screen and (max-width: 800px) {
+  .price__table03__wrap {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    scroll-snap-type: x; /*横方向にスクロール*/
+  }
+}
 .price__table03__item01 {
   border-bottom: 0.4rem solid #fff;
   width: 50%;
+}
+@media screen and (max-width: 800px) {
+  .price__table03__item01 {
+    display: block;
+    width: auto;
+    flex: none;
+    white-space: nowrap;
+  }
 }
 .price__table03__item01 tr td {
   text-align: center;
   width: 25%;
 }
+@media screen and (max-width: 960px) {
+  .price__table03__item01 tr td {
+    width: 9rem;
+    white-space: nowrap;
+  }
+}
 .price__table03__item01 tr th {
   text-align: center;
   width: 25%;
+}
+@media screen and (max-width: 960px) {
+  .price__table03__item01 tr th {
+    width: 9rem;
+    white-space: nowrap;
+  }
 }
 .price__table03__item01 .headline {
   background-color: #EAD7CC;
@@ -1116,7 +1145,12 @@ li {
   font-size: 1rem; /*20px*/
   font-weight: 700;
   height: 5rem;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
+}
+@media screen and (max-width: 960px) {
+  .price__table03__item01 .headline th {
+    white-space: nowrap;
+  }
 }
 .price__table03__item01 .num td {
   background-color: #fff;
@@ -1126,7 +1160,7 @@ li {
   font-size: 1.2rem; /*24px*/
   font-weight: 700;
   height: 9rem;
-  padding: 0.5rem 0; /*10px 0*/
+  padding: 0.5rem; /*10px*/
 }
 .price__table03__item01 .num td:last-child {
   border-right: 0.2rem solid #fff;
@@ -1143,6 +1177,7 @@ li {
   border-bottom: 0.2rem solid #EAD7CC;
   font-size: 1rem; /*20px*/
   font-weight: 700;
+  padding: 0.5rem; /*10px*/
 }
 .price__table03__item01 .num .empty {
   background-color: #fff;
@@ -1153,29 +1188,57 @@ li {
   border-bottom: 0.4rem solid #CF9F96;
   width: 50%;
 }
+@media screen and (max-width: 800px) {
+  .price__table03__item02 {
+    display: block;
+    width: auto;
+    flex: none;
+    white-space: nowrap;
+  }
+}
 .price__table03__item02 tr td {
   text-align: center;
   width: 25%;
+}
+@media screen and (max-width: 960px) {
+  .price__table03__item02 tr td {
+    width: 9rem;
+    white-space: nowrap;
+  }
 }
 .price__table03__item02 tr th {
   text-align: center;
   width: 25%;
 }
+@media screen and (max-width: 960px) {
+  .price__table03__item02 tr th {
+    width: 9rem;
+    white-space: nowrap;
+  }
+}
 .price__table03__item02 .headline-upper th {
   background-color: #CF9F96;
   color: #fff;
+  font-size: 1rem;
   font-weight: 700;
   height: 2.5rem;
-  padding: 0.5rem 0; /*10px 0*/
+  padding: 0.5rem; /*10px*/
+  white-space: nowrap;
 }
 .price__table03__item02 .headline-under th {
   border-right: 0.2rem solid #e7cfcb;
+  font-size: 1rem;
   font-weight: 400;
   height: 2.5rem;
-  padding: 0.5rem 0; /*10px 0*/
+  padding: 0.5rem; /*10px*/
 }
 .price__table03__item02 .headline-under th:last-child {
   border-right: 0;
+}
+@media screen and (max-width: 960px) {
+  .price__table03__item02 .headline-under th {
+    white-space: nowrap;
+  }
 }
 .price__table03__item02 .num td {
   background-color: #e7cfcb;
