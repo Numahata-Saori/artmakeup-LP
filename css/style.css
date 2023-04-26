@@ -1280,6 +1280,112 @@ li {
   margin-top: 2rem; /*40px*/
 }
 
+.treatment-flow {
+  background-color: #EAD7CC;
+  padding: 5rem 0;
+}
+@media screen and (max-width: 600px) {
+  .treatment-flow {
+    margin: 2.5rem 0;
+  }
+}
+
+.gallery {
+  padding: 5rem 0;
+}
+@media screen and (max-width: 600px) {
+  .gallery {
+    margin: 2.5rem 0;
+  }
+}
+
+.contact {
+  background-color: #EAD7CC;
+  padding: 5rem 0;
+}
+@media screen and (max-width: 600px) {
+  .contact {
+    margin: 2.5rem 0;
+  }
+}
+
+.store-info {
+  padding: 5rem 0;
+}
+@media screen and (max-width: 600px) {
+  .store-info {
+    margin: 2.5rem 0;
+  }
+}
+.store-info__wrap {
+  font-family: "Noto Sans JP", sans-serif;
+  width: 100%;
+}
+.store-info__wrap__title {
+  font-size: 1.6rem; /*32px*/
+  margin-bottom: 2rem; /*40px*/
+  text-align: center;
+}
+.store-info__wrap__info {
+  display: flex;
+  margin-bottom: 5rem; /*100px*/
+}
+@media screen and (max-width: 800px) {
+  .store-info__wrap__info {
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+}
+.store-info__wrap__info__img {
+  width: 45%;
+  height: 100%;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .store-info__wrap__info__img {
+    width: auto;
+    height: 50vw;
+    margin-bottom: 1.5rem;
+  }
+}
+.store-info__wrap__info__img img {
+  height: 100%;
+}
+.store-info__wrap__info__text {
+  font-size: 1.2rem; /*24px*/
+  width: 55%;
+  padding-left: 1.5rem;
+}
+@media screen and (max-width: 800px) {
+  .store-info__wrap__info__text {
+    width: auto;
+    padding-left: 0;
+  }
+}
+.store-info__wrap__info__text .address {
+  padding: 1rem;
+}
+.store-info__wrap__info__text .address p:not(:first-child) {
+  text-indent: 3em;
+}
+.store-info__wrap__info__text .tel {
+  padding: 1rem;
+}
+.store-info__wrap__info__text .time {
+  padding: 1rem;
+}
+.store-info__wrap__info__text .time p:not(:first-child) {
+  text-indent: 5em;
+}
+.store-info__wrap__info__text .access {
+  padding: 1rem;
+}
+.store-info__wrap__info__text .access p:not(:first-child) {
+  text-indent: 7em;
+}
+
 .footer {
   background-color: #716A67;
   color: #fff;
