@@ -105,7 +105,7 @@ li {
   background: $main;
   font-family: $japanese1;
   height: 12vw;
-  width: 100%;
+  width: 100vw;
   padding: 0 12vw;
   min-height: 60px;
 
@@ -191,6 +191,7 @@ li {
   /*ハンバーガーメニュー*/
   &__menu {
     position: absolute;
+    // position: static;
     top: 0;
     right: 0;
 
@@ -205,7 +206,8 @@ li {
       min-height: 60px;
 
       cursor: pointer;
-      position: fixed;
+      // position: fixed;
+      position: relative;
       top: 0;
       right: 0;
 
@@ -258,7 +260,7 @@ li {
         }
       }
 
-      &.active {
+      &.active2 {
         span {
           &:nth-of-type(1) {
             opacity:1;
@@ -1576,6 +1578,92 @@ li {
   @include bq(sm-x) {
     margin: 2.5rem 0;
   }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include bq(tb) {
+      display: block;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include bq(tb) {
+      display: block;
+      flex-wrap: nowrap;
+      justify-content:start
+
+      // display: flex;
+      // flex-wrap: wrap;
+      // justify-content: center;
+    }
+
+    &__item {
+      width: 30%;
+
+      @include bq(tb) {
+        width: 100%;
+      }
+
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+
+  // .swiper-container {
+
+  //   @include bq(tb){
+  //     position: relative;
+  //   }
+
+  //   .swiper-wrapper {
+  //     // display: flex;
+  //     // flex-wrap: wrap;
+  //     // justify-content: center;
+
+  //     @include bq(tb) {
+  //       display: flex;
+  //       width:100%;
+  //       // flex-wrap: nowrap;
+  //     }
+
+  //     .swiper-slide {
+  //       // width: 30%;
+
+  //       @include bq(tb) {
+  //         // width: 80%;
+  //         height: auto;
+  //         text-align: center;
+  //       }
+  //     }
+  //   }
+
+  //   .swiper-pagination {
+  //     display: none;
+
+  //     @include bq(tb) {
+  //       // display: block;
+  //       // position: static;
+
+  //       display: block;
+  //       position: absolute;
+  //       left: 0;
+  //       right: 0;
+  //       bottom: -20px;
+  //       text-align: center;
+  //     }
+  //   }
+  // }
+
 }
 
 .contact {
@@ -1715,4 +1803,8 @@ li {
   @include bq(sm-x) {
     display: block;
   }
+}
+
+@include bq(tb-s) {
+
 }
