@@ -159,7 +159,6 @@ li {
   min-width: 60px;
   min-height: 60px;
   cursor: pointer;
-  position: fixed;
   position: relative;
   top: 0;
   right: 0;
@@ -779,11 +778,6 @@ li {
 @media screen and (max-width: 800px) {
   .our-strength__wrap {
     flex-wrap: nowrap;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    overflow: auto;
-    scroll-snap-type: x; /*横方向にスクロール*/
-    width: 100vw;
   }
 }
 .our-strength__wrap__item {
@@ -797,8 +791,7 @@ li {
   .our-strength__wrap__item {
     display: block;
     margin-bottom: 2.5rem;
-    scroll-snap-align: start; /*横方向にスクロール、スナップポイント*/
-    width: 100vw;
+    width: 100%;
     flex: none;
   }
 }
@@ -877,6 +870,7 @@ li {
 @media screen and (max-width: 800px) {
   .our-strength__wrap__item__text.odd-text {
     margin: -0.5rem 0 0 3em;
+    width: auto;
   }
 }
 .our-strength__wrap__item__text.even-text {
@@ -886,6 +880,7 @@ li {
 @media screen and (max-width: 800px) {
   .our-strength__wrap__item__text.even-text {
     margin: -0.5rem 3em 0 0;
+    width: auto;
   }
 }
 .our-strength__wrap__item__text__num {

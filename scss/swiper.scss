@@ -53,3 +53,28 @@ $breakpoints: (
     }
   }
 }
+
+.our-strength {
+  .swiper-container {
+
+  @include bq(tb){
+    position: relative;
+  }
+
+  .swiper-wrapper {
+
+    @include bq(tb) {
+      display: flex;
+      width:100%;
+    }
+
+    .swiper-slide {
+
+      @include bq(tb) {
+        height: auto;
+        text-align: left;
+      }
+    }
+  }
+}
+}
