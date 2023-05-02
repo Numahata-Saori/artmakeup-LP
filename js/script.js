@@ -9,13 +9,13 @@ $(document).ready(function () {
     $("#g-nav").removeClass("panelactive");
   });
 
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const isMobile = window.matchMedia("(max-width: 430px)").matches;
 
   if (isMobile) {
     const swiper = new Swiper(".swiper-container", {
       slidesPerView: "auto",
       slidesPerGroup: 1,
-      spaceBetween: 10,
+      spaceBetween: 0,
       loop: true,
       pagination: {
         el: ".swiper-pagination",
@@ -26,6 +26,7 @@ $(document).ready(function () {
         disableOnInteraction: false,
       },
       touchStartPreventDefault: false,
+      allowTouchMove: false,
     });
   }
 });

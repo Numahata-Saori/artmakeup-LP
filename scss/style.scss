@@ -2,12 +2,12 @@
 
 // レスポンシブ用
 $breakpoints: (
-  "tb-x": "screen and (max-width: 1100px)",
-  "tb": "screen and (max-width: 960px)",
-  "tb-s": "screen and (max-width: 800px)",
-  "sm-x": "screen and (max-width: 600px)",
-  "sm": "screen and (max-width: 430px)",
-  "sm-s": "screen and (max-width: 400px)",
+  "tb-x": "screen and (max-width: 1024px)",
+  "tb": "screen and (max-width: 834px)",
+  "tb-s": "screen and (max-width: 768px)",
+  "sm-x": "screen and (max-width: 430px)",
+  "sm": "screen and (max-width: 375px)",
+  "sm-s": "screen and (max-width: 320px)",
 );
 @mixin bq($breakpoint) {
   @media #{map-get($breakpoints, $breakpoint)} {
@@ -31,10 +31,10 @@ html {
   font-size: 20px;
 }
 html {
-  @include bq(tb) {
+  @include bq(tb-x) {
     font-size: 18px;
   }
-  @include bq(tb-s) {
+  @include bq(sm-x) {
     font-size: 16px;
   }
   // @include bq(sm-x) {
@@ -899,7 +899,7 @@ li {
   }
 }
 
-.our-strength {
+.strength {
   background-color: $main;
   padding: 5rem 0;
 
@@ -918,7 +918,7 @@ li {
     flex-wrap: wrap;
     max-width: 100%;
 
-    @include bq(tb-s) {
+    @include bq(sm-x) {
       flex-wrap: nowrap;
       // overflow-x: scroll;
       // overflow-x: auto !important;
@@ -939,9 +939,10 @@ li {
       align-items: flex-start;
       margin-bottom: 5rem;
 
-      @include bq(tb-s) {
+      @include bq(sm-x) {
         display: block;
         margin-bottom: 2.5rem;
+        text-align: left;
 
         // scroll-snap-align: start;/*横方向にスクロール、スナップポイント*/
         width: 100%;
@@ -954,7 +955,7 @@ li {
         height: 450px;
         margin: 0;
 
-        @include bq(tb-s) {
+        @include bq(sm-x) {
           width: calc(100vw - 3em);
           height: 50vw;
         }
@@ -972,16 +973,15 @@ li {
           // height: auto;
           order: 2;
 
-          @include bq(tb-s) {
+          @include bq(sm-x) {
             margin-left: 3em;
           }
         }
 
         &.org-01 {
-          // height: 450px;
           text-align: right;
 
-          @include bq(tb-s) {
+          @include bq(sm-x) {
             width: 60vw;
             height: auto;
           }
@@ -1009,7 +1009,7 @@ li {
         &.strength-long {
           height: 22rem;
 
-          @include bq(tb-s) {
+          @include bq(sm-x) {
             height: auto;
           }
         }
@@ -1017,12 +1017,12 @@ li {
         &.strength-short {
           height: 18.5rem;
 
-          @include bq(tb-s) {
+          @include bq(sm-x) {
             height: auto;
           }
         }
 
-        @include bq(tb-s) {
+        @include bq(sm-x) {
           width: calc(100vw - 3em);
         }
 
@@ -1030,7 +1030,7 @@ li {
           margin: 4.5rem 0 0 -5rem;/*90px,0,0,-100px*/
           order: 2;
 
-          @include bq(tb-s) {
+          @include bq(sm-x) {
             margin: -0.5rem 0 0 3em;
             width: auto;
             // text-align: left;
@@ -1041,7 +1041,7 @@ li {
           margin: 4.5rem -5rem 0 0;/*90px,-100px,0,0*/
           order: 1;
 
-          @include bq(tb-s) {
+          @include bq(sm-x) {
             margin: -0.5rem 3em 0 0;
             width: auto;
             // text-align: right;
@@ -1558,12 +1558,107 @@ li {
   }
 }
 
-.treatment-flow {
+.flow {
   background-color: $main;
   padding: 5rem 0;
 
   @include bq(sm-x) {
     margin: 2.5rem 0;
+  }
+
+  &__wrap {
+    font-family: 'Noto Sans JP', sans-serif;
+    display: block;
+
+    @include bq(sm-x) {
+      display: flex;
+      flex-wrap: nowrap;
+      // width: 100%;
+      width: calc(100% - 2rem) !important;
+    }
+
+    &__item {
+      background-color: $base;
+      display: flex;
+      margin-bottom: 5rem;
+      padding: 2.5rem;/*50px*/
+      width: 100%;
+
+      @include bq(sm-x) {
+        display: block;
+        // flex: 1;
+        // flex-basis: 100%;
+        // flex-shrink: 1 !important;
+        padding: 1rem;/*20px*/
+        // width: calc(100% - 3em);
+        width: 100%;
+        // margin: 0 3rem;
+        // margin-left: -3em;
+        // margin-right: 6em !important;
+        margin-right: 3em !important;
+      }
+
+      &__img {
+        width: 52vw;
+        height: 21vw;
+
+        @include bq(sm-x) {
+          width: 100%;
+          height: 45vw;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__text {
+        padding-left: 1rem;
+
+        @include bq(sm-x) {
+          padding-top: 1rem;
+          padding-left: 0;
+          width: 100%;
+        }
+
+        &__title {
+          font-size: 1.6rem;/*32px*/
+          font-weight: 700;
+          margin-bottom: 1rem;/*20px*/
+          padding: 1em;
+
+          position: relative;
+
+          @include bq(sm-x) {
+            padding: 20px 0;
+            width: auto;
+          }
+
+          span {
+            position: relative;
+            z-index: 80;
+          }
+
+          &::before {
+            color: lighten($main, 2%);
+            font-size: 2.9rem;/*58px*/
+            font-weight: 700;
+
+            content: attr(data-number);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 70;
+          }
+        }
+
+        p {
+          font-size: 1.2rem;/*24px*/
+          text-align: start;
+        }
+      }
+    }
   }
 }
 
@@ -1579,7 +1674,7 @@ li {
     flex-wrap: wrap;
     justify-content: center;
 
-    @include bq(tb) {
+    @include bq(sm-x) {
       display: block;
       flex-wrap: nowrap;
     }
@@ -1590,7 +1685,7 @@ li {
     flex-wrap: wrap;
     justify-content: center;
 
-    @include bq(tb) {
+    @include bq(sm-x) {
       display: block;
       flex-wrap: nowrap;
       justify-content:start
@@ -1603,7 +1698,7 @@ li {
     &__item {
       width: 30%;
 
-      @include bq(tb) {
+      @include bq(sm-x) {
         width: 100%;
       }
 

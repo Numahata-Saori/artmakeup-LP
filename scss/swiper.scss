@@ -2,12 +2,12 @@
 
 // レスポンシブ用
 $breakpoints: (
-  "tb-x": "screen and (max-width: 1100px)",
-  "tb": "screen and (max-width: 960px)",
-  "tb-s": "screen and (max-width: 800px)",
-  "sm-x": "screen and (max-width: 600px)",
-  "sm": "screen and (max-width: 430px)",
-  "sm-s": "screen and (max-width: 400px)",
+  "tb-x": "screen and (max-width: 1024px)",
+  "tb": "screen and (max-width: 834px)",
+  "tb-s": "screen and (max-width: 768px)",
+  "sm-x": "screen and (max-width: 430px)",
+  "sm": "screen and (max-width: 375px)",
+  "sm-s": "screen and (max-width: 320px)",
 );
 @mixin bq($breakpoint) {
   @media #{map-get($breakpoints, $breakpoint)} {
@@ -17,20 +17,20 @@ $breakpoints: (
 
 .swiper-container {
 
-  @include bq(tb){
+  @include bq(sm-x){
     position: relative;
   }
 
   .swiper-wrapper {
 
-    @include bq(tb) {
+    @include bq(sm-x) {
       display: flex;
       width:100%;
     }
 
     .swiper-slide {
 
-      @include bq(tb) {
+      @include bq(sm-x) {
         height: auto;
         text-align: center;
       }
@@ -52,29 +52,4 @@ $breakpoints: (
       text-align: center;
     }
   }
-}
-
-.our-strength {
-  .swiper-container {
-
-  @include bq(tb){
-    position: relative;
-  }
-
-  .swiper-wrapper {
-
-    @include bq(tb) {
-      display: flex;
-      width:100%;
-    }
-
-    .swiper-slide {
-
-      @include bq(tb) {
-        height: auto;
-        text-align: left;
-      }
-    }
-  }
-}
 }
