@@ -1292,6 +1292,7 @@ li {
     height: 140vw !important;
     padding: 1rem; /*20px*/
     margin-right: 3em !important;
+    margin-bottom: 1rem;
   }
 }
 .flow__wrap__item__img {
