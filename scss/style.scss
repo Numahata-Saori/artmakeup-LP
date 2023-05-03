@@ -114,7 +114,7 @@ li {
   z-index: 999;
 
   @include bq(tb-s) {
-    padding-left: 0;
+    // padding-left: 0;
     padding-right: 12vw;
   }
 
@@ -908,8 +908,10 @@ li {
   }
 
   &__inner {
-    max-width: 1100px;
+    max-width: 1024px;
     margin: auto;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   &__wrap {
@@ -1570,6 +1572,10 @@ li {
     font-family: 'Noto Sans JP', sans-serif;
     display: block;
 
+    @include bq(tb) {
+      width: calc(100% - 5rem) !important;
+    }
+
     @include bq(sm-x) {
       display: flex;
       flex-wrap: nowrap;
@@ -1583,28 +1589,35 @@ li {
       margin-bottom: 5rem;
       padding: 2.5rem;/*50px*/
       width: 100%;
+      height: 25vw;
+
+      @include bq(tb-x) {
+        height: 50vw;
+      }
 
       @include bq(sm-x) {
         display: block;
+        height: 140vw !important;
         // flex: 1;
         // flex-basis: 100%;
         // flex-shrink: 1 !important;
         padding: 1rem;/*20px*/
         // width: calc(100% - 3em);
-        width: 100%;
-        // margin: 0 3rem;
-        // margin-left: -3em;
-        // margin-right: 6em !important;
         margin-right: 3em !important;
       }
 
       &__img {
         width: 52vw;
-        height: 21vw;
+        // height: 21vw;
+
+        @include bq(tb-x) {
+          width: 45%;
+          // height: 100%;
+        }
 
         @include bq(sm-x) {
           width: 100%;
-          height: 45vw;
+          // height: 45vw;
         }
 
         img {
@@ -1616,6 +1629,11 @@ li {
       &__text {
         padding-left: 1rem;
 
+        @include bq(tb-x) {
+          width: 50%;
+
+        }
+
         @include bq(sm-x) {
           padding-top: 1rem;
           padding-left: 0;
@@ -1625,7 +1643,7 @@ li {
         &__title {
           font-size: 1.6rem;/*32px*/
           font-weight: 700;
-          margin-bottom: 1rem;/*20px*/
+          // margin-bottom: 1rem;/*20px*/
           padding: 1em;
 
           position: relative;

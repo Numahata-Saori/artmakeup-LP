@@ -67,7 +67,6 @@ li {
 }
 @media screen and (max-width: 768px) {
   .header {
-    padding-left: 0;
     padding-right: 12vw;
   }
 }
@@ -746,8 +745,10 @@ li {
   padding: 5rem 0;
 }
 .strength__inner {
-  max-width: 1100px;
+  max-width: 1024px;
   margin: auto;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .strength__wrap {
   font-family: "Noto Sans JP", sans-serif;
@@ -1260,6 +1261,11 @@ li {
   font-family: "Noto Sans JP", sans-serif;
   display: block;
 }
+@media screen and (max-width: 834px) {
+  .flow__wrap {
+    width: calc(100% - 5rem) !important;
+  }
+}
 @media screen and (max-width: 430px) {
   .flow__wrap {
     display: flex;
@@ -1273,23 +1279,32 @@ li {
   margin-bottom: 5rem;
   padding: 2.5rem; /*50px*/
   width: 100%;
+  height: 25vw;
+}
+@media screen and (max-width: 1024px) {
+  .flow__wrap__item {
+    height: 50vw;
+  }
 }
 @media screen and (max-width: 430px) {
   .flow__wrap__item {
     display: block;
+    height: 140vw !important;
     padding: 1rem; /*20px*/
-    width: 100%;
     margin-right: 3em !important;
   }
 }
 .flow__wrap__item__img {
   width: 52vw;
-  height: 21vw;
+}
+@media screen and (max-width: 1024px) {
+  .flow__wrap__item__img {
+    width: 45%;
+  }
 }
 @media screen and (max-width: 430px) {
   .flow__wrap__item__img {
     width: 100%;
-    height: 45vw;
   }
 }
 .flow__wrap__item__img img {
@@ -1298,6 +1313,11 @@ li {
 }
 .flow__wrap__item__text {
   padding-left: 1rem;
+}
+@media screen and (max-width: 1024px) {
+  .flow__wrap__item__text {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 430px) {
   .flow__wrap__item__text {
@@ -1309,7 +1329,6 @@ li {
 .flow__wrap__item__text__title {
   font-size: 1.6rem; /*32px*/
   font-weight: 700;
-  margin-bottom: 1rem; /*20px*/
   padding: 1em;
   position: relative;
 }
