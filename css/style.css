@@ -566,11 +566,6 @@ li {
 .worries {
   margin: 5rem 0;
 }
-@media screen and (max-width: 430px) {
-  .worries {
-    margin: 2.5rem 0;
-  }
-}
 .worries__wrap {
   display: flex;
   justify-content: space-between;
@@ -606,11 +601,6 @@ li {
 .art-make {
   background-color: #EAD7CC;
   padding: 5rem 0;
-}
-@media screen and (max-width: 430px) {
-  .art-make {
-    padding: 2.5rem 0;
-  }
 }
 .art-make__technique__title {
   font-size: 2.4rem; /*48px*/
@@ -710,11 +700,6 @@ li {
 .ideal-eyeblow {
   padding: 5rem 0;
 }
-@media screen and (max-width: 430px) {
-  .ideal-eyeblow {
-    margin: 2.5rem 0;
-  }
-}
 .ideal-eyeblow__wrap {
   font-family: "Noto Sans JP", sans-serif;
   display: flex;
@@ -759,11 +744,6 @@ li {
 .strength {
   background-color: #EAD7CC;
   padding: 5rem 0;
-}
-@media screen and (max-width: 430px) {
-  .strength {
-    margin: 2.5rem 0;
-  }
 }
 .strength__inner {
   max-width: 1100px;
@@ -905,11 +885,6 @@ li {
 .price {
   padding: 5rem 0;
   width: 100%;
-}
-@media screen and (max-width: 430px) {
-  .price {
-    margin: 2.5rem 0;
-  }
 }
 .price__text {
   font-size: 1rem; /*20px*/
@@ -1281,11 +1256,6 @@ li {
   background-color: #EAD7CC;
   padding: 5rem 0;
 }
-@media screen and (max-width: 430px) {
-  .flow {
-    margin: 2.5rem 0;
-  }
-}
 .flow__wrap {
   font-family: "Noto Sans JP", sans-serif;
   display: block;
@@ -1371,11 +1341,6 @@ li {
 .gallery {
   padding: 5rem 0;
 }
-@media screen and (max-width: 430px) {
-  .gallery {
-    margin: 2.5rem 0;
-  }
-}
 .gallery__inner {
   display: flex;
   flex-wrap: wrap;
@@ -1415,24 +1380,65 @@ li {
 .contact {
   background-color: #EAD7CC;
   padding: 5rem 0;
+  text-align: center;
+}
+.contact__info {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact__info__text {
+  font-family: "Noto Sans JP", sans-serif;
+  margin-bottom: 2rem;
+}
+.contact__info__text p {
+  font-size: 1.2rem; /*24px*/
+}
+.contact__info__btn {
+  height: 150px;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+}
+.contact__info__btn img {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+.contact__hp-btn {
+  background-color: #fff;
+  border-radius: 2.5rem;
+  font-size: 1.6rem; /*32px*/
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  height: 5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 430px) {
-  .contact {
-    margin: 2.5rem 0;
+  .contact__hp-btn {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
 .store-info {
   padding: 5rem 0;
 }
-@media screen and (max-width: 430px) {
-  .store-info {
-    margin: 2.5rem 0;
-  }
-}
 .store-info__wrap {
   font-family: "Noto Sans JP", sans-serif;
   width: 100%;
+  margin-bottom: 5rem;
 }
 .store-info__wrap__title {
   font-size: 1.6rem; /*32px*/
@@ -1497,6 +1503,11 @@ li {
 }
 .store-info__wrap__info__text .access p:not(:first-child) {
   text-indent: 7em;
+}
+.store-info__map {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .footer {

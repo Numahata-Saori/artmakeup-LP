@@ -688,7 +688,7 @@ li {
   margin: 5rem 0;
 
   @include bq(sm-x) {
-    margin: 2.5rem 0;
+    // margin: 2.5rem 0;
   }
 
   &__wrap {
@@ -730,7 +730,7 @@ li {
   padding: 5rem 0;
 
   @include bq(sm-x) {
-    padding: 2.5rem 0;
+    // padding: 2.5rem 0;
   }
 
   &__technique {
@@ -850,7 +850,7 @@ li {
   padding: 5rem 0;
 
   @include bq(sm-x) {
-    margin: 2.5rem 0;
+    // margin: 2.5rem 0;
   }
 
   &__wrap {
@@ -904,7 +904,7 @@ li {
   padding: 5rem 0;
 
   @include bq(sm-x) {
-    margin: 2.5rem 0;
+    // margin: 2.5rem 0;
   }
 
   &__inner {
@@ -1079,7 +1079,7 @@ li {
   width: 100%;
 
   @include bq(sm-x) {
-    margin: 2.5rem 0;
+    // margin: 2.5rem 0;
   }
 
   &__text {
@@ -1563,7 +1563,7 @@ li {
   padding: 5rem 0;
 
   @include bq(sm-x) {
-    margin: 2.5rem 0;
+    // margin: 2.5rem 0;
   }
 
   &__wrap {
@@ -1666,7 +1666,7 @@ li {
   padding: 5rem 0;
 
   @include bq(sm-x) {
-    margin: 2.5rem 0;
+    // margin: 2.5rem 0;
   }
 
   &__inner {
@@ -1759,9 +1759,63 @@ li {
 .contact {
   background-color: $main;
   padding: 5rem 0;
+  text-align: center;
 
   @include bq(sm-x) {
-    margin: 2.5rem 0;
+    // margin: 2.5rem 0;
+  }
+
+  &__info {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__text {
+      font-family: 'Noto Sans JP', sans-serif;
+      margin-bottom: 2rem;
+
+      p {
+        font-size: 1.2rem;/*24px*/
+      }
+    }
+
+    &__btn {
+      height: 150px;
+      width: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 5rem;
+
+      img {
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &__hp-btn {
+    background-color: $base;
+    border-radius: 2.5rem;
+    font-size: 1.6rem;/*32px*/
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    height: 5rem;
+    width: fit-content;
+    text-align: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include bq(sm-x) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
 }
 
@@ -1769,12 +1823,13 @@ li {
   padding: 5rem 0;
 
   @include bq(sm-x) {
-    margin: 2.5rem 0;
+    // margin: 2.5rem 0;
   }
 
   &__wrap {
     font-family: 'Noto Sans JP', sans-serif;
     width: 100%;
+    margin-bottom: 5rem;
 
     &__title {
       font-size: 1.6rem;/*32px*/
@@ -1855,6 +1910,12 @@ li {
         }
       }
     }
+  }
+
+  &__map {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
