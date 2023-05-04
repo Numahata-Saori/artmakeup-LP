@@ -1519,6 +1519,11 @@ li {
 .store-info__wrap__info__text .address p:not(:first-child) {
   text-indent: 3em;
 }
+@media screen and (max-width: 430px) {
+  .store-info__wrap__info__text .address p:not(:first-child) {
+    text-indent: 0;
+  }
+}
 .store-info__wrap__info__text .tel {
   padding: 1rem;
 }
@@ -1528,11 +1533,21 @@ li {
 .store-info__wrap__info__text .time p:not(:first-child) {
   text-indent: 5em;
 }
+@media screen and (max-width: 430px) {
+  .store-info__wrap__info__text .time p:not(:first-child) {
+    text-indent: 0;
+  }
+}
 .store-info__wrap__info__text .access {
   padding: 1rem;
 }
 .store-info__wrap__info__text .access p:not(:first-child) {
   text-indent: 7em;
+}
+@media screen and (max-width: 430px) {
+  .store-info__wrap__info__text .access p:not(:first-child) {
+    text-indent: 0;
+  }
 }
 .store-info__map {
   width: 100%;

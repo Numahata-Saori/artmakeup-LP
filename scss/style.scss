@@ -1910,6 +1910,10 @@ li {
           p {
             &:not(:first-child) {
               text-indent: 3em;
+
+              @include bq(sm-x) {
+                text-indent: 0;
+              }
             }
           }
         }
@@ -1924,6 +1928,10 @@ li {
           p {
             &:not(:first-child) {
               text-indent: 5em;
+
+              @include bq(sm-x) {
+                text-indent: 0;
+              }
             }
           }
         }
@@ -1934,6 +1942,10 @@ li {
           p {
             &:not(:first-child) {
               text-indent: 7em;
+
+              @include bq(sm-x) {
+                text-indent: 0;
+              }
             }
           }
         }
