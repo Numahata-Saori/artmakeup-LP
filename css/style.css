@@ -754,6 +754,12 @@ li {
     margin-right: 5%;
   }
 }
+@media screen and (max-width: 430px) {
+  .strength__inner {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .strength__wrap {
   font-family: "Noto Sans JP", sans-serif;
   display: flex;
@@ -775,7 +781,7 @@ li {
 @media screen and (max-width: 430px) {
   .strength__wrap__item {
     display: block;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     text-align: left;
     width: 100%;
     flex: none;
@@ -786,9 +792,6 @@ li {
   width: 58%;
   height: 450px;
   margin: 0;
-}
-.strength__wrap__item__img:first-child {
-  width: 50%;
 }
 @media screen and (max-width: 430px) {
   .strength__wrap__item__img {
@@ -865,6 +868,11 @@ li {
 .strength__wrap__item__text.odd-text-first {
   margin: 4.5rem 0 0 -2rem;
 }
+@media screen and (max-width: 430px) {
+  .strength__wrap__item__text.odd-text-first {
+    margin: -0.5rem 0 0 3em;
+  }
+}
 .strength__wrap__item__text.even-text {
   margin: 4.5rem -5rem 0 0; /*90px,-100px,0,0*/
   order: 1;
@@ -940,11 +948,6 @@ li {
   text-align: center;
   line-height: 2em;
 }
-@media screen and (max-width: 430px) {
-  .price .teble-default tbody tr td p {
-    font-size: 3.5vw;
-  }
-}
 .price .teble-default tbody tr th {
   font-size: 1rem; /*20px*/
   font-weight: 700;
@@ -962,6 +965,11 @@ li {
   font-weight: 700;
   line-height: 1.6;
   padding: 1.3rem 0; /*26px 0*/
+}
+@media screen and (max-width: 430px) {
+  .price .teble-default tbody .num td {
+    font-size: 1.2rem;
+  }
 }
 .price__table01 {
   margin-bottom: 5rem; /*100px*/
@@ -1014,6 +1022,11 @@ li {
   font-weight: 700;
   line-height: 1.6;
   margin-bottom: 1rem; /*20px*/
+}
+@media screen and (max-width: 430px) {
+  .price__table02__title__trainee {
+    font-size: 1.4rem;
+  }
 }
 .price__table02__title__text {
   font-size: 1rem; /*20px*/
