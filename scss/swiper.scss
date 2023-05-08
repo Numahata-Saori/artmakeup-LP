@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+// レスポンシブ用
+$breakpoints: (
+  "tb-x": "screen and (max-width: 1024px)",
+  "tb": "screen and (max-width: 834px)",
+  "tb-s": "screen and (max-width: 768px)",
+  "sm-x": "screen and (max-width: 430px)",
+  "sm": "screen and (max-width: 375px)",
+  "sm-s": "screen and (max-width: 320px)",
+);
+@mixin bq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+.swiper-container {
+
+  @include bq(sm-x){
+    position: relative;
+  }
+
+  .swiper-wrapper {
+
+    @include bq(sm-x) {
+      display: flex;
+      width:100%;
+    }
+
+    .swiper-slide {
+
+      @include bq(sm-x) {
+        height: auto;
+        text-align: center;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    display: none;
+
+    @include bq(tb) {
+      // display: block;
+      // position: static;
+
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -20px;
+      text-align: center;
+    }
+  }
+}
