@@ -982,6 +982,17 @@
   </section>
 
   <section class="contact" id="contact">
+
+    <?php
+      $args = array(
+        'post_type' => 'custom', // 投稿タイプ
+        'category_name' => 'contact-setup', //カテゴリ
+      );
+      $the_query = new WP_Query($args); // カスタムフィールドを取得
+      if($the_query->have_posts()) : // 1件以上存在するかどうか
+    ?>
+    <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
+
     <div class="ly-cont">
       <h4 class="sec-title">CONTACT</h4>
       <div class="sec-title__sub">お問い合わせ</div>
@@ -993,24 +1004,40 @@
         </div>
 
         <div class="contact__info__btn">
-          <a href="https://line.me/R/ti/p/@726sxdkz"><img src="<?php echo get_template_directory_uri(); ?>/img/line-btn-default.jpeg" alt=""></a>
+          <a href="https://line.me/R/ti/p/@726sxdkz"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_line' ,true)); ?>" alt=""></a>
         </div>
       </div>
 
       <a class="contact__hp-btn" href="https://miuexbeautymedical.jp/">公式HPはこちら</a>
     </div>
+
+    <?php endwhile; // 投稿のループ終了 ?>
+    <?php endif; // 投稿の条件分岐を終了 ?>
+    <?php wp_reset_postdata(); // 使用した投稿データをリセット ?>
+
   </section>
 
   <section class="store-info" id="store-info">
+
+    <?php
+      $args = array(
+        'post_type' => 'custom', // 投稿タイプ
+        'category_name' => 'storeinfo-setup', //カテゴリ
+      );
+      $the_query = new WP_Query($args); // カスタムフィールドを取得
+      if($the_query->have_posts()) : // 1件以上存在するかどうか
+    ?>
+    <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
+
     <div class="ly-cont">
       <h4 class="sec-title">STORE INFORMATION</h4>
       <div class="sec-title__sub">店舗情報</div>
 
       <div class="store-info__wrap">
-        <h5 class="store-info__wrap__title">miuex札幌中央店</h5>
+        <h5 class="store-info__wrap__title"><?php the_field('store_name'); ?></h5>
         <div class="store-info__wrap__info">
           <div class="store-info__wrap__info__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/store-info.jpg" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_store' ,true)); ?>" alt="">
           </div>
 
           <div class="store-info__wrap__info__text">
@@ -1044,6 +1071,11 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.255706194112!2d141.34615547627257!3d43.05708929078106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b298529441193%3A0x3b6cf756452ecc15!2z44CSMDYwLTAwNjIg5YyX5rW36YGT5pyt5bmM5biC5Lit5aSu5Yy65Y2X77yS5p2h6KW_77yW5LiB55uu77yVIOWcn-iCpeODk-ODqw!5e0!3m2!1sja!2sjp!4v1683131686561!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
+
+    <?php endwhile; // 投稿のループ終了 ?>
+    <?php endif; // 投稿の条件分岐を終了 ?>
+    <?php wp_reset_postdata(); // 使用した投稿データをリセット ?>
+
   </section>
 </main>
 
