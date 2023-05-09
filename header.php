@@ -7,12 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?php bloginfo('name') ?></title>
 
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
 
-  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
 
   <!-- Googlefont -->
@@ -24,7 +25,7 @@
 
 </head>
 
-<body>
+<body <?php body_class() ?>>
   <!-- headerは常に表示 -->
   <header class="header" id="header">
     <div class="header__wrap">
