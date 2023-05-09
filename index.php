@@ -2,6 +2,7 @@
 
 <main>
   <section class="mv">
+
     <?php
       $args = array(
         'post_type' => 'custom', // 投稿タイプ
@@ -42,6 +43,7 @@
   </section>
 
   <section class="coupon">
+
     <?php
       $args = array(
         'post_type' => 'custom', // 投稿タイプ
@@ -91,6 +93,17 @@
   </section>
 
   <section class="worries">
+
+    <?php
+      $args = array(
+        'post_type' => 'custom', // 投稿タイプ
+        'category_name' => 'worries-setup', //カテゴリ
+      );
+      $the_query = new WP_Query($args); // カスタムフィールドを取得
+      if($the_query->have_posts()) : // 1件以上存在するかどうか
+    ?>
+    <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
+
     <div class="ly-cont">
       <h4 class="sec-title">WORRIES</h4>
       <div class="sec-title__sub">眉のこんなお悩みありませんか？</div>
@@ -98,25 +111,25 @@
       <ul class="worries__wrap">
         <li class="worries__wrap__item">
           <div class="worries__wrap__item__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/worries-default_1-1.png" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries1' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">眉メイクが苦手</div>
         </li>
         <li class="worries__wrap__item">
           <div class="worries__wrap__item__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/worries-default_1-2.png" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries2' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">自分に合う<br>眉デザインが<br>わからない</div>
         </li>
         <li class="worries__wrap__item">
           <div class="worries__wrap__item__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/worries-default_1-3.png" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries3' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">すっぴんに<br>自身が持てない…</div>
         </li>
         <li class="worries__wrap__item">
           <div class="worries__wrap__item__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/worries-default_1-4.png" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries4' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">温泉やプールが<br>おっくう…</div>
         </li>
@@ -127,33 +140,49 @@
       <ul class="worries__wrap">
         <li class="worries__wrap__item">
           <div class="worries__wrap__item__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/worries-default_2-1.png" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries_solving1' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">朝メイクの<br>時短に</div>
         </li>
         <li class="worries__wrap__item">
           <div class="worries__wrap__item__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/worries-default_2-2.png" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries_solving2' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">メイク直しが<br>簡単に！</div>
         </li>
         <li class="worries__wrap__item">
           <div class="worries__wrap__item__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/worries-default_2-3.png" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries_solving3' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">すっぴんに<br>自身！</div>
         </li>
         <li class="worries__wrap__item">
           <div class="worries__wrap__item__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/worries-default_2-4.png" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries_solving4' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">汗をかいても<br>落ちない</div>
         </li>
       </ul>
     </div>
+
+    <?php endwhile; // 投稿のループ終了 ?>
+    <?php endif; // 投稿の条件分岐を終了 ?>
+    <?php wp_reset_postdata(); // 使用した投稿データをリセット ?>
+
   </section>
 
   <section class="art-make">
+
+    <?php
+      $args = array(
+        'post_type' => 'custom', // 投稿タイプ
+        'category_name' => 'artmake-setup', //カテゴリ
+      );
+      $the_query = new WP_Query($args); // カスタムフィールドを取得
+      if($the_query->have_posts()) : // 1件以上存在するかどうか
+    ?>
+    <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
+
     <div class="ly-cont">
       <h4 class="sec-title">ABOUT ART MAKE</h4>
       <div class="sec-title__sub">3D眉アートメイク</div>
@@ -163,7 +192,7 @@
         <ul class="art-make__technique__wrap">
           <li class="art-make__technique__wrap__item">
             <div class="art-make__technique__wrap__item__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/eyebrow_2d.png" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_artmake_2d' ,true)); ?>" alt="">
             </div>
             <div class="art-make__technique__wrap__item__text">
               現代の技法は昔のように海苔を貼ったような仕上がりにはならず、メイクで描いたような仕上がりになります。
@@ -172,7 +201,7 @@
 
           <li class="art-make__technique__wrap__item">
             <div class="art-make__technique__wrap__item__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/eyebrow_3d.png" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_artmake_3d' ,true)); ?>" alt="">
             </div>
             <div class="art-make__technique__wrap__item__text">
               値段は少々高めだが、眉毛を一本一本丁寧に描いていく今主流の毛並み眉。まるで本物の眉毛を再現できます。
@@ -181,7 +210,7 @@
 
           <li class="art-make__technique__wrap__item">
             <div class="art-make__technique__wrap__item__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/eyebrow_4d.png" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_artmake_4d' ,true)); ?>" alt="">
             </div>
             <div class="art-make__technique__wrap__item__text">
               3D+パウダー技法<br>毛並みのみよりメイク感も出て、より白眉毛と馴染んだ仕上がりになります。
@@ -193,7 +222,7 @@
       <div>
         <div class="art-make__wrap">
           <div class="art-make__wrap__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/artmake-info-default_1.jpeg" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_artmake_info1' ,true)); ?>" alt="">
           </div>
 
           <div class="art-make__wrap__text">
@@ -217,14 +246,30 @@
           </div>
 
           <div class="art-make__wrap__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/artmake-info-default_2.jpg" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_artmake_info2' ,true)); ?>" alt="">
           </div>
         </div>
       </div>
     </div>
+
+    <?php endwhile; // 投稿のループ終了 ?>
+    <?php endif; // 投稿の条件分岐を終了 ?>
+    <?php wp_reset_postdata(); // 使用した投稿データをリセット ?>
+
   </section>
 
   <section class="ideal-eyeblow" id="ideal-eyeblow">
+
+    <?php
+      $args = array(
+        'post_type' => 'custom', // 投稿タイプ
+        'category_name' => 'eyeblow-setup', //カテゴリ
+      );
+      $the_query = new WP_Query($args); // カスタムフィールドを取得
+      if($the_query->have_posts()) : // 1件以上存在するかどうか
+    ?>
+    <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
+
     <div class="ly-cont">
       <h4 class="sec-title">IDEAL EYEBLOW</h4>
       <div class="sec-title__sub">理想の眉</div>
@@ -233,7 +278,7 @@
         <li class="ideal-eyeblow__wrap__item">
           <div class="ideal-eyeblow__wrap__item__title">ナチュラル眉</div>
           <div class="ideal-eyeblow__wrap__item__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/eyeblow-natural.png" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_eyeblow_natural' ,true)); ?>" alt="">
           </div>
           <div class="ideal-eyeblow__wrap__item__text">
             ご自身の自眉を生かして、自然な眉ラインを再現したデザインです。女性らしい柔らかな印象を与えます。
@@ -243,7 +288,7 @@
         <li class="ideal-eyeblow__wrap__item">
           <div class="ideal-eyeblow__wrap__item__title">アーチ眉</div>
           <div class="ideal-eyeblow__wrap__item__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/eyeblow-arch.png" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_eyeblow_arch' ,true)); ?>" alt="">
           </div>
           <div class="ideal-eyeblow__wrap__item__text">
             眉山を黒目の中心にもってきて目尻を長めにしたアーチ型のデザインです。優しくフェミニンな印象に。
@@ -253,7 +298,7 @@
         <li class="ideal-eyeblow__wrap__item">
           <div class="ideal-eyeblow__wrap__item__title">ストレート眉</div>
           <div class="ideal-eyeblow__wrap__item__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/eyeblow-straight.png" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_eyeblow_straight' ,true)); ?>" alt="">
           </div>
           <div class="ideal-eyeblow__wrap__item__text">
             まるで韓流スターのような太いストレートな眉デザインです。幼く凜々しい印象を与え、小顔効果も期待できます。
@@ -263,7 +308,7 @@
         <li class="ideal-eyeblow__wrap__item">
           <div class="ideal-eyeblow__wrap__item__title">ハンサム眉</div>
           <div class="ideal-eyeblow__wrap__item__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/eyeblow-handsome.png" alt="">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_eyeblow_handsome' ,true)); ?>" alt="">
           </div>
           <div class="ideal-eyeblow__wrap__item__text">
             眉山を黒目の外側高めにもってきて、目尻は細く短めのデザインです。キリッとしたクールな印象を与えます。
@@ -271,9 +316,25 @@
         </li>
       </ul>
     </div>
+
+    <?php endwhile; // 投稿のループ終了 ?>
+    <?php endif; // 投稿の条件分岐を終了 ?>
+    <?php wp_reset_postdata(); // 使用した投稿データをリセット ?>
+
   </section>
 
   <section class="strength" id="strength">
+
+    <?php
+      $args = array(
+        'post_type' => 'custom', // 投稿タイプ
+        'category_name' => 'strength-setup', //カテゴリ
+      );
+      $the_query = new WP_Query($args); // カスタムフィールドを取得
+      if($the_query->have_posts()) : // 1件以上存在するかどうか
+    ?>
+    <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
+
     <div>
       <div class="ly-cont">
         <h4 class="sec-title">OUR STRENGTH</h4>
@@ -284,7 +345,7 @@
         <ul class="strength__wrap swiper-wrapper">
           <li class="strength__wrap__item swiper-slide">
             <div class="strength__wrap__item__img odd-img org-01">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/strength-default_01.jpg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_strength1' ,true)); ?>" alt="">
             </div>
             <div class="strength__wrap__item__text odd-text strength-long odd-text-first">
               <i class="strength__wrap__item__text__num">01</i>
@@ -299,7 +360,7 @@
 
           <li class="strength__wrap__item swiper-slide">
             <div class="strength__wrap__item__img even-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/strength-default_02.jpeg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_strength2' ,true)); ?>" alt="">
             </div>
             <div class="strength__wrap__item__text even-text strength-short">
               <i class="strength__wrap__item__text__num">02</i>
@@ -312,7 +373,7 @@
 
           <li class="strength__wrap__item swiper-slide">
             <div class="strength__wrap__item__img odd-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/strength-default_03.jpeg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_strength3' ,true)); ?>" alt="">
             </div>
             <div class="strength__wrap__item__text odd-text strength-short">
               <i class="strength__wrap__item__text__num">03</i>
@@ -326,7 +387,7 @@
 
           <li class="strength__wrap__item swiper-slide">
             <div class="strength__wrap__item__img even-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/strength-default_04.jpeg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_strength4' ,true)); ?>" alt="">
             </div>
             <div class="strength__wrap__item__text even-text strength-short">
               <i class="strength__wrap__item__text__num">04</i>
@@ -340,7 +401,7 @@
 
           <li class="strength__wrap__item swiper-slide">
             <div class="strength__wrap__item__img odd-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/strength-default_05.jpeg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_strength5' ,true)); ?>" alt="">
             </div>
             <div class="strength__wrap__item__text odd-text strength-short">
               <i class="strength__wrap__item__text__num">05</i>
@@ -354,7 +415,7 @@
 
           <li class="strength__wrap__item swiper-slide">
             <div class="strength__wrap__item__img even-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/strength-default_06.jpeg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_strength6' ,true)); ?>" alt="">
             </div>
             <div class="strength__wrap__item__text even-text strength-short">
               <i class="strength__wrap__item__text__num">06</i>
@@ -368,7 +429,7 @@
 
           <li class="strength__wrap__item swiper-slide">
             <div class="strength__wrap__item__img odd-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/strength-default_07.jpeg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_strength7' ,true)); ?>" alt="">
             </div>
             <div class="strength__wrap__item__text odd-text strength-short">
               <i class="strength__wrap__item__text__num">07</i>
@@ -382,7 +443,7 @@
 
           <li class="strength__wrap__item swiper-slide">
             <div class="strength__wrap__item__img even-img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/strength-default_08.jpg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_strength8' ,true)); ?>" alt="">
             </div>
             <div class="strength__wrap__item__text even-text strength-short">
               <i class="strength__wrap__item__text__num">08</i>
@@ -399,33 +460,49 @@
         <div class="swiper-pagination"></div>
       </div>
     </div>
+
+    <?php endwhile; // 投稿のループ終了 ?>
+    <?php endif; // 投稿の条件分岐を終了 ?>
+    <?php wp_reset_postdata(); // 使用した投稿データをリセット ?>
+
   </section>
 
   <section class="coupon">
+
+    <?php
+      $args = array(
+        'post_type' => 'custom', // 投稿タイプ
+        'category_name' => 'coupon-setup', //カテゴリ
+      );
+      $the_query = new WP_Query($args); // カスタムフィールドを取得
+      if($the_query->have_posts()) : // 1件以上存在するかどうか
+    ?>
+    <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
+
     <div class="coupon__inner">
       <div class="coupon__inner__img">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/coupon-default.jpg" alt="">
+        <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_coupon' ,true)); ?>" alt="">
       </div>
 
       <div class="coupon__inner__content">
         <div class="coupon__inner__content__headline">
-          <span>モニターキャンペーン開催中!!</span>
+          <span><?php the_field('coupon_headline'); ?></span>
         </div>
 
         <div class="coupon__inner__content__detail">
           <div class="period">
-            <span>2023年5月31日までに</span>
+            <span><?php the_field('coupon_period'); ?>までに</span>
             <span>ご予約の方限定</span>
           </div>
           <div class="coupon__inner__content__detail__discount">
-            <span class="price">￥10,000 </span>
+            <span class="price"><?php the_field('coupon_discount'); ?></span>
             <span class="coupon__inner__content__detail__discount__fix">OFF</span>
           </div>
         </div>
 
         <div class="coupon__inner__content__code">
           <span class="coupon__inner__content__code__fix">クーボンコード：</span>
-          <span class="code">IDO-000003</span>
+          <span class="code"><?php the_field('coupon_code'); ?></span>
         </div>
 
         <div class="coupon__inner__content__lead">
@@ -434,16 +511,31 @@
       </div>
     </div>
 
+    <?php endwhile; // 投稿のループ終了 ?>
+    <?php endif; // 投稿の条件分岐を終了 ?>
+    <?php wp_reset_postdata(); // 使用した投稿データをリセット ?>
+
   </section>
 
   <section class="price" id="price">
+
+    <?php
+      $args = array(
+        'post_type' => 'custom', // 投稿タイプ
+        'category_name' => 'price-setup', //カテゴリ
+      );
+      $the_query = new WP_Query($args); // カスタムフィールドを取得
+      if($the_query->have_posts()) : // 1件以上存在するかどうか
+    ?>
+    <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
+
     <div class="ly-cont">
       <h4 class="sec-title">PEICE</h4>
-      <div class="sec-title__sub">当院の特徴</div>
+      <div class="sec-title__sub">料金表</div>
 
       <div class="price__text">
         <p>アートメイクは通常2回以上で完成する施術になります。</p>
-        <p>1回めは土台作りで定着率は50％前後です。</p>　
+        <p>1回めは土台作りで定着率は50％前後です。</p>
         <p>2回めの施術の際にデザインや色の変更、長さや足りない箇所の修正をさせていただきます。</p>
       </div>
 
@@ -467,9 +559,9 @@
               <th>修正(1回)</th>
             </tr>
             <tr class="num">
-              <td>¥66,000</td>
-              <td>¥110,000</td>
-              <td>¥66,000</td>
+              <td>¥<?php the_field('pro_3d_1time'); ?></td>
+              <td>¥<?php the_field('pro_3d_2time'); ?></td>
+              <td>¥<?php the_field('pro_3d_retouch'); ?></td>
             </tr>
           </tbody>
         </table>
@@ -487,15 +579,15 @@
               <th>修正(1回)</th>
             </tr>
             <tr class="num">
-              <td>¥77,000</td>
-              <td>¥132,000</td>
-              <td>¥77,000</td>
+              <td>¥<?php the_field('pro_4d_1time'); ?></td>
+              <td>¥<?php the_field('pro_4d_2time'); ?></td>
+              <td>¥<?php the_field('pro_4d_retouch'); ?></td>
             </tr>
           </tbody>
         </table>
 
         <div class="price__table01__text">
-          <p>※2回コースの方が1回コースに比べ¥22,000お得になっております。</p>
+          <p>※2回コースの方が1回コースに比べ¥<?php the_field('pro_notes1_price'); ?>お得になっております。</p>
           <p>※2Dと3Dは同一料金です。</p>
         </div>
       </div>
@@ -526,9 +618,9 @@
               <th>3回コース</th>
             </tr>
             <tr class="num">
-              <td>¥33,000</td>
-              <td>¥63,000</td>
-              <td>¥94,000</td>
+              <td>¥<?php the_field('trainee_pine_1time'); ?></td>
+              <td>¥<?php the_field('trainee_pine_2time'); ?></td>
+              <td>¥<?php the_field('trainee_pine_3time'); ?></td>
             </tr>
           </tbody>
         </table>
@@ -547,9 +639,9 @@
               <th>3回コース</th>
             </tr>
             <tr class="num">
-              <td>¥22,000</td>
-              <td>¥42,000</td>
-              <td>¥63,000</td>
+              <td>¥<?php the_field('trainee_bamboo_1time'); ?></td>
+              <td>¥<?php the_field('trainee_bamboo_2time'); ?></td>
+              <td>¥<?php the_field('trainee_bamboo_3time'); ?></td>
             </tr>
           </tbody>
         </table>
@@ -568,9 +660,9 @@
               <th>3回コース</th>
             </tr>
             <tr class="num">
-              <td>¥11,000</td>
-              <td>¥18,000</td>
-              <td>¥18,000</td>
+              <td>¥<?php the_field('trainee_plum_1time'); ?></td>
+              <td>¥<?php the_field('trainee_plum_2time'); ?></td>
+              <td>¥<?php the_field('trainee_plum_3time'); ?></td>
             </tr>
           </tbody>
         </table>
@@ -641,39 +733,39 @@
               </tr>
 
               <tr class="num">
-                <td>¥66,000</td>
+                <td>¥<?php the_field('pro_3d_1time'); ?></td>
                 <td>
-                  <p><span>梅</span>¥11,000</p>
-                  <p><span>竹</span>¥22,000</p>
-                  <p><span>松</span>¥33,000</p>
+                  <p><span>梅</span>¥<?php the_field('trainee_plum_1time'); ?></p>
+                  <p><span>竹</span>¥<?php the_field('trainee_bamboo_1time'); ?></p>
+                  <p><span>松</span>¥<?php the_field('trainee_pine_1time'); ?></p>
                 </td>
               </tr>
 
               <tr class="num">
-                <td>¥11,000</td>
+                <td>¥<?php the_field('pro_3d_2time'); ?></td>
                 <td>
-                  <p><span>梅</span>¥18,000</p>
-                  <p><span>竹</span>¥42,000</p>
-                  <p><span>松</span>¥63,000</p>
+                  <p><span>梅</span>¥<?php the_field('trainee_plum_2time'); ?></p>
+                  <p><span>竹</span>¥<?php the_field('trainee_bamboo_2time'); ?></p>
+                  <p><span>松</span>¥<?php the_field('trainee_pine_2time'); ?></p>
                 </td>
               </tr>
 
               <tr class="num">
                 <td>
-                  <p>¥11,000</p>
+                  <p>¥<?php the_field('pro_3d_3time'); ?></p>
                   <p class="sub-text">※ご紹介をした方のみ</p>
                 </td>
                 <td>
-                  <p><span>梅</span>¥28,000</p>
-                  <p><span>竹</span>¥62,000</p>
-                  <p><span>松</span>¥94,000</p>
+                  <p><span>梅</span>¥<?php the_field('trainee_plum_3time'); ?></p>
+                  <p><span>竹</span>¥<?php the_field('trainee_bamboo_3time'); ?></p>
+                  <p><span>松</span>¥<?php the_field('trainee_pine_3time'); ?></p>
                 </td>
               </tr>
 
               <tr class="num">
                 <td>
                   <p class="sub-text">★アートメイクし放題★<br>当店オリジナル</p>
-                  <p>¥130,000</p>
+                  <p>¥<?php the_field('pro_3d_unlimited'); ?></p>
                   <p class="sub-text">※有効期限2年</p>
                 </td>
                 <td class="empty"></td>
@@ -690,9 +782,25 @@
       </div>
 
     </div>
+
+    <?php endwhile; // 投稿のループ終了 ?>
+    <?php endif; // 投稿の条件分岐を終了 ?>
+    <?php wp_reset_postdata(); // 使用した投稿データをリセット ?>
+
   </section>
 
   <section class="flow" id="flow">
+
+    <?php
+      $args = array(
+        'post_type' => 'custom', // 投稿タイプ
+        'category_name' => 'flow-setup', //カテゴリ
+      );
+      $the_query = new WP_Query($args); // カスタムフィールドを取得
+      if($the_query->have_posts()) : // 1件以上存在するかどうか
+    ?>
+    <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
+
     <div class="ly-cont">
       <h4 class="sec-title">TREATMENT FLOW</h4>
       <div class="sec-title__sub">施術の流れ</div>
@@ -701,7 +809,7 @@
         <ul class="flow__wrap swiper-wrapper">
           <li class="flow__wrap__item swiper-slide">
             <div class="flow__wrap__item__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/treatment/treatment_1.jpg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow1' ,true)); ?>" alt="">
             </div>
             <div class="flow__wrap__item__text">
               <h5 class="flow__wrap__item__text__title" data-number="01"><span>事前問診票記入</span></h5>
@@ -711,7 +819,7 @@
 
           <li class="flow__wrap__item swiper-slide">
             <div class="flow__wrap__item__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/treatment/treatment_2.jpg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow2' ,true)); ?>" alt="">
             </div>
             <div class="flow__wrap__item__text">
               <h5 class="flow__wrap__item__text__title" data-number="02"><span>オンライン診療</span></h5>
@@ -723,7 +831,7 @@
 
           <li class="flow__wrap__item swiper-slide">
             <div class="flow__wrap__item__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/treatment/treatment_3.jpg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow3' ,true)); ?>" alt="">
             </div>
             <div class="flow__wrap__item__text">
               <h5 class="flow__wrap__item__text__title" data-number="03"><span>来店特約</span></h5>
@@ -735,7 +843,7 @@
 
           <li class="flow__wrap__item swiper-slide">
             <div class="flow__wrap__item__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/treatment/treatment_4.jpg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow4' ,true)); ?>" alt="">
             </div>
             <div class="flow__wrap__item__text">
               <h5 class="flow__wrap__item__text__title" data-number="04"><span>来店</span></h5>
@@ -746,7 +854,7 @@
 
           <li class="flow__wrap__item swiper-slide">
             <div class="flow__wrap__item__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/treatment/treatment_5.jpg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow5' ,true)); ?>" alt="">
             </div>
             <div class="flow__wrap__item__text">
               <h5 class="flow__wrap__item__text__title" data-number="05"><span>カウンセリング</span></h5>
@@ -756,7 +864,7 @@
 
           <li class="flow__wrap__item swiper-slide">
             <div class="flow__wrap__item__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/treatment/treatment_6.jpg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow6' ,true)); ?>" alt="">
             </div>
             <div class="flow__wrap__item__text">
               <h5 class="flow__wrap__item__text__title" data-number="06"><span>デザインカラー決め</span></h5>
@@ -766,7 +874,7 @@
 
           <li class="flow__wrap__item swiper-slide">
             <div class="flow__wrap__item__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/treatment/treatment_7.jpg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow7' ,true)); ?>" alt="">
             </div>
             <div class="flow__wrap__item__text">
               <h5 class="flow__wrap__item__text__title" data-number="07"><span>麻酔</span></h5>
@@ -776,7 +884,7 @@
 
           <li class="flow__wrap__item swiper-slide">
             <div class="flow__wrap__item__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/treatment/treatment_8.png" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow8' ,true)); ?>" alt="">
             </div>
             <div class="flow__wrap__item__text">
               <h5 class="flow__wrap__item__text__title" data-number="08"><span>施術</span></h5>
@@ -788,7 +896,7 @@
 
           <li class="flow__wrap__item swiper-slide">
             <div class="flow__wrap__item__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/treatment/treatment_9.jpg" alt="">
+              <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow9' ,true)); ?>" alt="">
             </div>
             <div class="flow__wrap__item__text">
               <h5 class="flow__wrap__item__text__title" data-number="09"><span>アフターケア</span></h5>
@@ -800,9 +908,25 @@
         <div class="swiper-pagination"></div>
       </div>
     </div>
+
+    <?php endwhile; // 投稿のループ終了 ?>
+    <?php endif; // 投稿の条件分岐を終了 ?>
+    <?php wp_reset_postdata(); // 使用した投稿データをリセット ?>
+
   </section>
 
   <section class="gallery">
+
+    <?php
+      $args = array(
+        'post_type' => 'custom', // 投稿タイプ
+        'category_name' => 'gallery-setup', //カテゴリ
+      );
+      $the_query = new WP_Query($args); // カスタムフィールドを取得
+      if($the_query->have_posts()) : // 1件以上存在するかどうか
+    ?>
+    <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
+
     <div class="ly-cont">
       <h4 class="sec-title">GALLERY</h4>
       <div class="sec-title__sub">施術例</div>
@@ -810,39 +934,39 @@
       <div class="gallery__inner swiper-container">
         <ul class="gallery__wrap swiper-wrapper">
           <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery/example_13.jpg" alt=""></a>
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery1' ,true)); ?>" alt=""></a>
           </li>
 
           <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery/example_12.jpg" alt=""></a>
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery2' ,true)); ?>" alt=""></a>
           </li>
 
           <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery/example_11.jpg" alt=""></a>
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery3' ,true)); ?>" alt=""></a>
           </li>
 
           <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery/example_10.jpg" alt=""></a>
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery4' ,true)); ?>" alt=""></a>
           </li>
 
           <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery/example_9.jpg" alt=""></a>
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery5' ,true)); ?>" alt=""></a>
           </li>
 
           <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery/example_8.jpg" alt=""></a>
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery6' ,true)); ?>" alt=""></a>
           </li>
 
           <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery/example_7.jpg" alt=""></a>
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery7' ,true)); ?>" alt=""></a>
           </li>
 
           <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery/example_6.jpg" alt=""></a>
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery8' ,true)); ?>" alt=""></a>
           </li>
 
           <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo get_template_directory_uri(); ?>/img/gallery/example_4.jpg" alt=""></a>
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery9' ,true)); ?>" alt=""></a>
           </li>
         </ul>
 
@@ -850,6 +974,11 @@
       </div>
 
     </div>
+
+    <?php endwhile; // 投稿のループ終了 ?>
+    <?php endif; // 投稿の条件分岐を終了 ?>
+    <?php wp_reset_postdata(); // 使用した投稿データをリセット ?>
+
   </section>
 
   <section class="contact" id="contact">

@@ -78,7 +78,7 @@ li {
 .ly-cont {
   margin: 0 auto;
 
-  max-width: 1100px;
+  max-width: 1024px;
   width: 100%;
 
   @include bq(tb-x) {
@@ -1636,7 +1636,7 @@ li {
       }
 
       &__img {
-        width: 52vw;
+        width: 45%;
         // height: 21vw;
 
         @include bq(tb-x) {
@@ -1657,6 +1657,7 @@ li {
 
       &__text {
         padding-left: 1rem;
+        width: 50%;
 
         @include bq(tb-x) {
           width: 50%;
