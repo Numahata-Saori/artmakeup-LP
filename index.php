@@ -5,7 +5,7 @@
 
     <?php
       $args = array(
-        'post_type' => 'custom', // 投稿タイプ
+        'post_type' => 'post', // 投稿タイプ
         'category_name' => 'mv-setup', //カテゴリ
       );
       $the_query = new WP_Query($args); // カスタムフィールドを取得
@@ -46,7 +46,7 @@
 
     <?php
       $args = array(
-        'post_type' => 'custom', // 投稿タイプ
+        'post_type' => 'post', // 投稿タイプ
         'category_name' => 'coupon-setup', //カテゴリ
       );
       $the_query = new WP_Query($args); // カスタムフィールドを取得
@@ -96,7 +96,7 @@
 
     <?php
       $args = array(
-        'post_type' => 'custom', // 投稿タイプ
+        'post_type' => 'post', // 投稿タイプ
         'category_name' => 'worries-setup', //カテゴリ
       );
       $the_query = new WP_Query($args); // カスタムフィールドを取得
@@ -175,7 +175,7 @@
 
     <?php
       $args = array(
-        'post_type' => 'custom', // 投稿タイプ
+        'post_type' => 'post', // 投稿タイプ
         'category_name' => 'artmake-setup', //カテゴリ
       );
       $the_query = new WP_Query($args); // カスタムフィールドを取得
@@ -262,7 +262,7 @@
 
     <?php
       $args = array(
-        'post_type' => 'custom', // 投稿タイプ
+        'post_type' => 'post', // 投稿タイプ
         'category_name' => 'eyeblow-setup', //カテゴリ
       );
       $the_query = new WP_Query($args); // カスタムフィールドを取得
@@ -327,7 +327,7 @@
 
     <?php
       $args = array(
-        'post_type' => 'custom', // 投稿タイプ
+        'post_type' => 'post', // 投稿タイプ
         'category_name' => 'strength-setup', //カテゴリ
       );
       $the_query = new WP_Query($args); // カスタムフィールドを取得
@@ -471,7 +471,7 @@
 
     <?php
       $args = array(
-        'post_type' => 'custom', // 投稿タイプ
+        'post_type' => 'post', // 投稿タイプ
         'category_name' => 'coupon-setup', //カテゴリ
       );
       $the_query = new WP_Query($args); // カスタムフィールドを取得
@@ -521,7 +521,7 @@
 
     <?php
       $args = array(
-        'post_type' => 'custom', // 投稿タイプ
+        'post_type' => 'post', // 投稿タイプ
         'category_name' => 'price-setup', //カテゴリ
       );
       $the_query = new WP_Query($args); // カスタムフィールドを取得
@@ -793,7 +793,7 @@
 
     <?php
       $args = array(
-        'post_type' => 'custom', // 投稿タイプ
+        'post_type' => 'post', // 投稿タイプ
         'category_name' => 'flow-setup', //カテゴリ
       );
       $the_query = new WP_Query($args); // カスタムフィールドを取得
@@ -919,7 +919,7 @@
 
     <?php
       $args = array(
-        'post_type' => 'custom', // 投稿タイプ
+        'post_type' => 'post', // 投稿タイプ
         'category_name' => 'gallery-setup', //カテゴリ
       );
       $the_query = new WP_Query($args); // カスタムフィールドを取得
@@ -985,7 +985,7 @@
 
     <?php
       $args = array(
-        'post_type' => 'custom', // 投稿タイプ
+        'post_type' => 'post', // 投稿タイプ
         'category_name' => 'contact-setup', //カテゴリ
       );
       $the_query = new WP_Query($args); // カスタムフィールドを取得
@@ -1021,7 +1021,7 @@
 
     <?php
       $args = array(
-        'post_type' => 'custom', // 投稿タイプ
+        'post_type' => 'post', // 投稿タイプ
         'category_name' => 'storeinfo-setup', //カテゴリ
       );
       $the_query = new WP_Query($args); // カスタムフィールドを取得
