@@ -1222,7 +1222,7 @@ li {
   white-space: nowrap;
 }
 .price__table03__item02 .headline-under th {
-  border-right: 0.2rem solid #e7cfcb;
+  border-right: 0.2rem solid #efdfdc;
   font-size: 1rem;
   font-weight: 400;
   height: 2.5rem;
@@ -1237,7 +1237,7 @@ li {
   }
 }
 .price__table03__item02 .num td {
-  background-color: #e7cfcb;
+  background-color: #efdfdc;
   border-right: 0.2rem solid #fff;
   border-bottom: 0.2rem solid #fff;
   color: #716A67;
@@ -1368,7 +1368,7 @@ li {
   z-index: 80;
 }
 .flow__wrap__item__text__title::before {
-  color: #edddd3;
+  color: #f1e5de;
   font-size: 2.9rem; /*58px*/
   font-weight: 700;
   content: attr(data-number);

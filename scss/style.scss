@@ -86,20 +86,7 @@ li {
     padding: 0 3em;
   }
 
-  // @include bq(tb-s) {
-  //   max-width: none;
-  //   padding: 0 3em;
-  // }
-
-  // @include bq(sm-s) {
-  //   max-width: none;
-  //   padding: 0 3em;
-  // }
 }
-
-// .ja {
-//   font-family: $japanese1;
-// }
 
 .header {
   background: $main;
@@ -1040,10 +1027,6 @@ li {
           margin: 4.5rem 0 0 -5rem;/*90px,0,0,-100px*/
           order: 2;
 
-          // &:first-child {
-          //   margin: 4.5rem 0 0 -4rem;
-          // }
-
           @include bq(sm-x) {
             margin: -0.5rem 0 0 3em;
             width: auto;
@@ -1513,7 +1496,7 @@ li {
 
       .headline-under {
         th {
-          border-right: 0.2rem solid lighten($accent, 15%);
+          border-right: 0.2rem solid lighten($accent, 20%);
           font-size: 1rem;
           font-weight: 400;
           height: 2.5rem;
@@ -1532,7 +1515,7 @@ li {
 
       .num {
         td {
-          background-color: lighten($accent, 15%);
+          background-color: lighten($accent, 20%);
           border-right: 0.2rem solid $base;
           border-bottom: 0.2rem solid $base;
           color: $sub;
@@ -1637,6 +1620,7 @@ li {
 
       &__img {
         width: 45%;
+        // height: 21vw;
 
         @include bq(tb-x) {
           width: 45%;
@@ -1688,7 +1672,7 @@ li {
           }
 
           &::before {
-            color: lighten($main, 2%);
+            color: lighten($main, 5%);
             font-size: 2.9rem;/*58px*/
             font-weight: 700;
 
