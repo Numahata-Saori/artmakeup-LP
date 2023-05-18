@@ -204,7 +204,7 @@
               <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_artmake_3d' ,true)); ?>" alt="">
             </div>
             <div class="art-make__technique__wrap__item__text">
-              値段は少々高めだが、眉毛を一本一本丁寧に描いていく今主流の毛並み眉。まるで本物の眉毛を再現できます。
+              値段は少々高めだが、眉毛を一本一本丁寧に描いていく今主流の毛並み眉。<br>まるで本物の眉毛を再現できます。
             </div>
           </li>
 
@@ -281,7 +281,7 @@
             <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_eyeblow_natural' ,true)); ?>" alt="">
           </div>
           <div class="ideal-eyeblow__wrap__item__text">
-            ご自身の自眉を生かして、自然な眉ラインを再現したデザインです。女性らしい柔らかな印象を与えます。
+            ご自身の自眉を生かして、自然な眉ラインを再現したデザインです。<br>女性らしい柔らかな印象を与えます。
           </div>
         </li>
 
@@ -291,7 +291,7 @@
             <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_eyeblow_arch' ,true)); ?>" alt="">
           </div>
           <div class="ideal-eyeblow__wrap__item__text">
-            眉山を黒目の中心にもってきて目尻を長めにしたアーチ型のデザインです。優しくフェミニンな印象に。
+            眉山を黒目の中心にもってきて目尻を長めにしたアーチ型のデザインです。<br>優しくフェミニンな印象に。
           </div>
         </li>
 
@@ -301,7 +301,7 @@
             <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_eyeblow_straight' ,true)); ?>" alt="">
           </div>
           <div class="ideal-eyeblow__wrap__item__text">
-            まるで韓流スターのような太いストレートな眉デザインです。幼く凜々しい印象を与え、小顔効果も期待できます。
+            まるで韓流スターのような太いストレートな眉デザインです。<br>幼く凜々しい印象を与え、小顔効果も期待できます。
           </div>
         </li>
 
@@ -311,7 +311,7 @@
             <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_eyeblow_handsome' ,true)); ?>" alt="">
           </div>
           <div class="ideal-eyeblow__wrap__item__text">
-            眉山を黒目の外側高めにもってきて、目尻は細く短めのデザインです。キリッとしたクールな印象を与えます。
+            眉山を黒目の外側高めにもってきて、目尻は細く短めのデザインです。<br>キリッとしたクールな印象を与えます。
           </div>
         </li>
       </ul>
@@ -933,40 +933,76 @@
 
       <div class="gallery__inner swiper-container">
         <ul class="gallery__wrap swiper-wrapper">
-          <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery1' ,true)); ?>" alt=""></a>
+          <li class="gallery__wrap__item swiper-slide zoomIn">
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/">
+              <span class="mask">
+                <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery1' ,true)); ?>" alt="">
+              </span>
+            </a>
           </li>
 
-          <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery2' ,true)); ?>" alt=""></a>
+          <li class="gallery__wrap__item swiper-slide zoomIn">
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/">
+              <span class="mask">
+                <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery2' ,true)); ?>" alt="">
+              </span>
+            </a>
           </li>
 
-          <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery3' ,true)); ?>" alt=""></a>
+          <li class="gallery__wrap__item swiper-slide zoomIn">
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/">
+              <span class="mask">
+                <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery3' ,true)); ?>" alt="">
+              </span>
+            </a>
           </li>
 
-          <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery4' ,true)); ?>" alt=""></a>
+          <li class="gallery__wrap__item swiper-slide zoomIn">
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/">
+              <span class="mask">
+                <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery4' ,true)); ?>" alt="">
+              </span>
+            </a>
           </li>
 
-          <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery5' ,true)); ?>" alt=""></a>
+          <li class="gallery__wrap__item swiper-slide zoomIn">
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/">
+              <span class="mask">
+                <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery5' ,true)); ?>" alt="">
+              </span>
+            </a>
           </li>
 
-          <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery6' ,true)); ?>" alt=""></a>
+          <li class="gallery__wrap__item swiper-slide zoomIn">
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/">
+              <span class="mask">
+                <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery6' ,true)); ?>" alt="">
+              </span>
+            </a>
           </li>
 
-          <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery7' ,true)); ?>" alt=""></a>
+          <li class="gallery__wrap__item swiper-slide zoomIn">
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/">
+              <span class="mask">
+                <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery7' ,true)); ?>" alt="">
+              </span>
+            </a>
           </li>
 
-          <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery8' ,true)); ?>" alt=""></a>
+          <li class="gallery__wrap__item swiper-slide zoomIn">
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/">
+              <span class="mask">
+                <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery8' ,true)); ?>" alt="">
+              </span>
+            </a>
           </li>
 
-          <li class="gallery__wrap__item swiper-slide">
-            <a href="https://www.instagram.com/mieux.sapporo_casephoto/"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery9' ,true)); ?>" alt=""></a>
+          <li class="gallery__wrap__item swiper-slide zoomIn">
+            <a href="https://www.instagram.com/mieux.sapporo_casephoto/">
+              <span class="mask">
+                <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_gallery9' ,true)); ?>" alt="">
+              </span>
+            </a>
           </li>
         </ul>
 
@@ -1003,12 +1039,15 @@
           <p>↓LINE追加はこちら↓</p>
         </div>
 
-        <div class="contact__info__btn">
-          <a href="https://line.me/R/ti/p/@726sxdkz"><img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_line' ,true)); ?>" alt=""></a>
+        <div class="contact__info__btn flipY">
+          <a href="https://line.me/R/ti/p/@726sxdkz">
+            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_line' ,true)); ?>" alt="">
+            <span class="cap">LINE追加</span>
+          </a>
         </div>
       </div>
 
-      <a class="contact__hp-btn" href="https://miuexbeautymedical.jp/">公式HPはこちら</a>
+      <a class="contact__hp-btn bgcentery" href="https://miuexbeautymedical.jp/"><span>公式HPはこちら</span></a>
     </div>
 
     <?php endwhile; // 投稿のループ終了 ?>

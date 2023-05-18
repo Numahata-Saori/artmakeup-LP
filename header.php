@@ -32,7 +32,7 @@
 
       <?php
         $args = array(
-          'post_type' => 'custom', // 投稿タイプ
+          'post_type' => 'post', // 投稿タイプ
           'category_name' => 'storeinfo-setup', //カテゴリ
         );
         $the_query = new WP_Query($args); // カスタムフィールドを取得
@@ -40,7 +40,6 @@
       ?>
       <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
 
-      <!-- WordPressで店名変更可 -->
       <h1 class="header__wrap__logo">
         <span class="header__wrap__logo__upper"><?php bloginfo('name') ?></span>
         <span class="header__wrap__logo__lower">-<?php the_field('store_name'); ?>-</span>

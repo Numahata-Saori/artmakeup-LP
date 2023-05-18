@@ -89,7 +89,13 @@ function my_custom_base_color() {
         .flow__wrap__item {
           background-color: ' . $base_color . ' ;
         }
-        .contact__hp-btn {
+        .contact__info .flipY .cap {
+          color: ' . $base_color . ' ;
+        }
+        .contact__hp-btn:hover span {
+          color: ' . $base_color . ' ;
+        }
+        .contact .bgcentery {
           background-color: ' . $base_color . ' ;
         }
         .footer {
@@ -109,6 +115,20 @@ function my_custom_main_color() {
         /* 以下のセレクターは、対象となる要素を指定してください。 */
         .header {
           background-color: ' . $main_color . ' ;
+        }
+        .mv__text__catch__main {
+          text-shadow: 3px 3px 0 ' . $main_color . ' ;
+        }
+        @media screen and (max-width: 430px) {
+          .mv__text__catch__main {
+            text-shadow: 1px 1px 0 ' . $main_color . ' ;
+          }
+        }
+        .mv__text__strength__fix {
+          box-shadow: 0 0 10px 2px ' . $main_color . ' inset;
+        }
+        .mv__text__strength__list__item {
+          box-shadow: 0 0 10px 5px ' . $main_color . ' inset;
         }
         .art-make {
           background-color: ' . $main_color . ' ;
@@ -161,12 +181,7 @@ function my_custom_sub_color() {
         .header__menu__nav {
           background-color: ' . $sub_color . ' ;
         }
-        .mv__text__catch__main {
-          text-shadow: 3px 3px 0 ' . $sub_color . ' ;
-        }
-        @media screen and (max-width: 430px) {
-          text-shadow: 1px 1px 0 ' . $sub_color . ' ;
-        }
+
         .mv__text__catch__sub {
           text-shadow: 1px 1px 0 ' . $sub_color . ', -1px -1px 0 ' . $sub_color . ', -1px 1px 0 ' . $sub_color . ', 1px -1px 0 ' . $sub_color . ', 0px 1px 0 ' . $sub_color . ', -1px 0 ' . $sub_color . ', -1px 0 0 ' . $sub_color . ', 1px 0 0 ' . $sub_color . ';
         }
@@ -200,6 +215,18 @@ function my_custom_sub_color() {
         }
         .price__table03__item02 .num td {
           color: ' . $sub_color . ' ;
+        }
+        .contact__info .flipY .cap {
+          background-color: ' . $sub_color . ' ;
+        }
+        .contact__hp-btn {
+          border: 1px solid ' . $sub_color . ' ;
+        }
+        .contact__hp-btn span {
+          color ' . $sub_color . ' ;
+        }
+        .contact .bgcentery:before {
+          background-color: ' . $sub_color . ' ;
         }
         .footer {
           background-color: ' . $sub_color . ' ;

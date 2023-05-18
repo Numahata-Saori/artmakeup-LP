@@ -291,12 +291,12 @@ li {
   color: #CF9F96;
   font-size: 4.5vw;
   font-weight: bold;
-  text-shadow: 3px 3px 0 #716A67;
+  text-shadow: 3px 3px 0 #EAD7CC;
 }
 @media screen and (max-width: 430px) {
   .mv__text__catch__main {
     font-size: 8.5vw;
-    text-shadow: 1px 1px 0 #716A67;
+    text-shadow: 1px 1px 0 #EAD7CC;
   }
 }
 .mv__text__catch__sub {
@@ -326,7 +326,8 @@ li {
   }
 }
 .mv__text__strength__fix {
-  width: 80%;
+  width: 100%;
+  box-shadow: 0 0 10px 2px #EAD7CC inset;
   background: #716A67;
   color: #fff;
   font-size: 1.6vw;
@@ -357,6 +358,7 @@ li {
 .mv__text__strength__list__item {
   background: #716A67;
   border-radius: 50%;
+  box-shadow: 0 0 10px 5px #EAD7CC inset;
   color: #fff;
   font-size: 1.6vw;
   font-weight: normal;
@@ -612,7 +614,7 @@ li {
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 100%;
-  margin-bottom: 2.5rem;
+  margin-bottom: 5rem;
 }
 @media screen and (max-width: 768px) {
   .art-make__technique__wrap {
@@ -636,6 +638,7 @@ li {
   font-size: 1rem; /*20px*/
   font-family: "Noto Sans JP", sans-serif;
   line-height: 1.6;
+  text-align: left;
 }
 .art-make__wrap {
   display: flex;
@@ -884,7 +887,7 @@ li {
   }
 }
 .strength__wrap__item__text__num {
-  font-size: 3rem; /*60px*/
+  font-size: 3.2rem; /*64px*/
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
   line-height: 1;
@@ -902,7 +905,7 @@ li {
 }
 
 .price {
-  padding: 5rem 0;
+  padding-bottom: 5rem;
   width: 100%;
 }
 .price__text {
@@ -1215,9 +1218,9 @@ li {
 .price__table03__item02 .headline-upper th {
   background-color: #CF9F96;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  height: 2.5rem;
+  height: 3rem;
   padding: 0.5rem; /*10px*/
   white-space: nowrap;
 }
@@ -1225,7 +1228,8 @@ li {
   border-right: 0.2rem solid #efdfdc;
   font-size: 1rem;
   font-weight: 400;
-  height: 2.5rem;
+  height: 2rem;
+  line-height: 1;
   padding: 0.5rem; /*10px*/
 }
 .price__table03__item02 .headline-under th:last-child {
@@ -1400,6 +1404,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  /* 画像を拡大 */
 }
 @media screen and (max-width: 430px) {
   .gallery__wrap {
@@ -1419,6 +1424,18 @@ li {
 .gallery__wrap__item img {
   width: auto;
   height: auto;
+}
+.gallery__wrap .zoomIn a:hover img {
+  transform: scale(1.2);
+}
+.gallery__wrap .zoomIn img {
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+.gallery__wrap .zoomIn .mask {
+  display: block;
+  line-height: 0;
+  overflow: hidden;
 }
 
 .contact {
@@ -1450,30 +1467,100 @@ li {
   height: 100%;
   width: 100%;
 }
+.contact__info .flipY {
+  font-size: 1.2rem;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.contact__info .flipY a {
+  position: relative; /*テキストの基点となる位置を定義*/
+  display: block;
+}
+.contact__info .flipY a:hover img {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+.contact__info .flipY a:hover .cap {
+  transform: rotateY(0); /*横軸に回転*/
+  opacity: 1;
+  transition-delay: 0.15s;
+}
+.contact__info .flipY img {
+  transition: all 0.35s ease; /*移り変わる速さを変更したい場合はこの数値を変更*/
+  ackface-visibility: hidden; /*三次元になった際に裏面を可視化させない*/
+}
+.contact__info .flipY .cap {
+  background: #716A67;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute; /*ここからエリアの絶対配置の指定*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.35s ease; /*移り変わる速さを変更したい場合はこの数値を変更*/
+  transform: rotateY(90deg); /*横軸に回転*/
+  transform-origin: 50% 0%; /*回転する基点*/
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .contact__hp-btn {
-  background-color: #fff;
-  border-radius: 2.5rem;
+  border: 1px solid #716A67;
+  border-radius: 9999px;
+  display: inline-block;
   font-size: 1.6rem; /*32px*/
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
-  height: 5rem;
+  height: 100%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  text-decoration: none;
+  padding: 1.3rem 5rem;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  outline: none;
+  /*アニメーションの起点とするためrelativeを指定*/
+  position: relative;
+  overflow: hidden;
+  /*アニメーションの指定*/
+  transition: ease 0.2s;
+}
+.contact__hp-btn:hover span {
+  color: #fff;
 }
 @media screen and (max-width: 430px) {
   .contact__hp-btn {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+}
+.contact__hp-btn span {
+  position: relative;
+  z-index: 30; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+  color: #716A67;
+}
+.contact .bgcentery {
+  background-color: #fff;
+}
+.contact .bgcentery:before {
+  content: "";
+  position: absolute; /*絶対配置で位置を指定*/
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #716A67;
+  width: 100%;
+  height: 100%;
+  /*アニメーション*/
+  transition: transform 0.3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(1, 0);
+  transform-origin: center;
+}
+.contact .bgcentery:hover:before {
+  transform: scale(1, 1);
 }
 
 .store-info {
@@ -1502,8 +1589,8 @@ li {
   }
 }
 .store-info__wrap__info__img {
-  width: 45%;
-  height: 100%;
+  width: 40%;
+  height: auto;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
@@ -1518,7 +1605,7 @@ li {
 }
 .store-info__wrap__info__text {
   font-size: 1.2rem; /*24px*/
-  width: 55%;
+  width: 60%;
   padding-left: 1.5rem;
 }
 @media screen and (max-width: 768px) {
