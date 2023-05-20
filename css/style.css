@@ -263,7 +263,7 @@ li {
 }
 @media screen and (max-width: 430px) {
   .mv {
-    height: 125.51vw;
+    height: 138.5vw;
     margin-top: 60px;
   }
 }
@@ -321,7 +321,7 @@ li {
     align-content: center;
     justify-content: center;
     width: 100%;
-    margin-top: 40vw;
+    margin-top: 50vw;
   }
 }
 .mv__text__strength__fix {
@@ -384,7 +384,7 @@ li {
 }
 @media screen and (max-width: 430px) {
   .mv__img {
-    height: 125.51vw;
+    height: 100%;
   }
 }
 .mv__img img {

@@ -341,7 +341,7 @@ li {
   z-index: 10;
 
   @include bq(sm-x) {
-    height: 125.51vw;
+    height: 138.5vw;
     margin-top: 60px;
   }
 
@@ -409,7 +409,7 @@ li {
         justify-content: center;
 
         width: 100%;
-        margin-top: 40vw;
+        margin-top: 50vw;
       }
 
       &__fix {
@@ -478,7 +478,7 @@ li {
     height: 50vw;
 
     @include bq(sm-x) {
-      height: 125.51vw;
+      height: 100%;
       // top: 60px;
     }
 
