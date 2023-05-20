@@ -269,6 +269,7 @@ li {
   }
 }
 .mv__text {
+  font-family: "Noto Serif JP", serif;
   width: 100%;
   height: 100%;
   padding: 5vw;
@@ -281,8 +282,6 @@ li {
   }
 }
 .mv__text__catch {
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 50%;
   padding: 1rem 1.2rem;
   z-index: 888;
 }
@@ -293,10 +292,10 @@ li {
   }
 }
 .mv__text__catch__main {
-  color: #CF9F96;
-  font-size: 3.8vw;
+  color: #c78f85;
+  font-size: 4vw;
   font-weight: bold;
-  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, 0px 1px 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff, 1px 0 0 #fff;
+  text-shadow: 1px 1px 0 #EAD7CC, -1px -1px 0 #EAD7CC, -1px 1px 0 #EAD7CC, 1px -1px 0 #EAD7CC, 0px 1px 0 #EAD7CC, 0 -1px 0 #EAD7CC, -1px 0 0 #EAD7CC, 1px 0 0 #EAD7CC;
 }
 @media screen and (max-width: 430px) {
   .mv__text__catch__main {
@@ -550,8 +549,8 @@ li {
 }
 
 .sec-title {
-  font-size: 2.4rem; /*48px*/
   font-family: "Fredericka the Great", serif;
+  font-size: 2.4rem; /*48px*/
   font-weight: 400;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
@@ -561,6 +560,7 @@ li {
   margin-bottom: 0.5rem; /*10px*/
 }
 .sec-title__sub {
+  font-family: "Noto Serif JP", serif;
   font-size: 1.2rem; /*24px*/
   letter-spacing: 0.1em;
   line-height: 1.6;
@@ -598,6 +598,7 @@ li {
   }
 }
 .worries__wrap__item__text {
+  font-family: "Noto Serif JP", serif;
   font-size: 1.2rem; /*24px*/
   font-weight: 700;
   line-height: 1.6;
@@ -1587,7 +1588,7 @@ li {
   padding: 5rem 0;
 }
 .store-info__wrap {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Sawarabi Gothic", sans-serif;
   width: 100%;
   margin-bottom: 5rem;
 }
