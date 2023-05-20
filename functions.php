@@ -2,7 +2,16 @@
 
 add_theme_support( 'post-thumbnails' );
 
-// add_theme_support( 'menus' );
+add_theme_support( 'menus' );
+
+// ウィジェットの登録
+function theme_slug_widgets_init() {
+    register_sidebar( array(
+        'name' => 'サイドバー', //ウィジェットの名前を入力
+        'id' => 'sidebar', //ウィジェットに付けるid名を入力
+    ) );
+}
+add_action( 'widgets_init', 'theme_slug_widgets_init' );
 
 function my_custom_base_color() {
     global $post;
@@ -28,9 +37,7 @@ function my_custom_base_color() {
         .header__menu__nav__list__item a {
           color: ' . $base_color . ' ;
         }
-        .mv__text__catch__sub {
-          color: ' . $base_color . ' ;
-        }
+
         .mv__text__strength__fix {
           color: ' . $base_color . ' ;
         }
@@ -181,10 +188,12 @@ function my_custom_sub_color() {
         .header__menu__nav {
           background-color: ' . $sub_color . ' ;
         }
-
         .mv__text__catch__sub {
-          text-shadow: 1px 1px 0 ' . $sub_color . ', -1px -1px 0 ' . $sub_color . ', -1px 1px 0 ' . $sub_color . ', 1px -1px 0 ' . $sub_color . ', 0px 1px 0 ' . $sub_color . ', -1px 0 ' . $sub_color . ', -1px 0 0 ' . $sub_color . ', 1px 0 0 ' . $sub_color . ';
+          color: ' . $sub_color . ' ;
         }
+        // .mv__text__catch__sub {
+        //   text-shadow: 1px 1px 0 ' . $sub_color . ', -1px -1px 0 ' . $sub_color . ', -1px 1px 0 ' . $sub_color . ', 1px -1px 0 ' . $sub_color . ', 0px 1px 0 ' . $sub_color . ', -1px 0 ' . $sub_color . ', -1px 0 0 ' . $sub_color . ', 1px 0 0 ' . $sub_color . ';
+        // }
         .mv__text__strength__fix {
           background-color: ' . $sub_color . ' ;
         }

@@ -300,10 +300,9 @@ li {
   }
 }
 .mv__text__catch__sub {
-  color: #fff;
+  color: #716A67;
   font-size: 2.3vw;
   font-weight: bold;
-  text-shadow: 1px 1px 0 #716A67, -1px -1px 0 #716A67, -1px 1px 0 #716A67, 1px -1px 0 #716A67, 0px 1px 0 #716A67, -1px 0 #716A67, -1px 0 0 #716A67, 1px 0 0 #716A67;
 }
 @media screen and (max-width: 430px) {
   .mv__text__catch__sub {

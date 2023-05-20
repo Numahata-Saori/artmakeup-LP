@@ -92,7 +92,7 @@
 
   </section>
 
-  <section class="worries">
+  <section class="worries" id="worries">
 
     <?php
       $args = array(

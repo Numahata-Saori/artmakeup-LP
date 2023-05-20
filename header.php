@@ -21,6 +21,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Montserrat:wght@400;700;800&family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@400;700;900&display=swap" rel="stylesheet">
 
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
   <?php wp_head(); ?>
 
 </head>
@@ -71,14 +77,14 @@
       <!-- navメニュー -->
       <nav class="header__menu__nav" id="g-nav">
         <ul class="header__menu__nav__list">
-          <li class="header__menu__nav__list__item"><a href="">眉のお悩み</a></li>
-          <li class="header__menu__nav__list__item"><a href="">3Dアートメイク</a></li>
-          <li class="header__menu__nav__list__item"><a href="">理想の眉</a></li>
-          <li class="header__menu__nav__list__item"><a href="">当院の特徴</a></li>
-          <li class="header__menu__nav__list__item"><a href="">料金/他社比較</a></li>
-          <li class="header__menu__nav__list__item"><a href="">施術の流れ</a></li>
-          <li class="header__menu__nav__list__item"><a href="">お問い合わせ</a></li>
-          <li class="header__menu__nav__list__item"><a href="">店舗情報</a></li>
+          <li class="header__menu__nav__list__item"><a href="#worries">眉のお悩み</a></li>
+          <li class="header__menu__nav__list__item"><a href="#art-make">3Dアートメイク</a></li>
+          <li class="header__menu__nav__list__item"><a href="#ideal-eyeblow">理想の眉</a></li>
+          <li class="header__menu__nav__list__item"><a href="#strength">当院の特徴</a></li>
+          <li class="header__menu__nav__list__item"><a href="#price">料金/他社比較</a></li>
+          <li class="header__menu__nav__list__item"><a href="#flow">施術の流れ</a></li>
+          <li class="header__menu__nav__list__item"><a href="#contact">お問い合わせ</a></li>
+          <li class="header__menu__nav__list__item"><a href="#store-info">店舗情報</a></li>
         </ul>
       </nav>
 

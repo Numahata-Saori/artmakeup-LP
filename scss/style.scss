@@ -382,13 +382,13 @@ li {
       }
 
       &__sub {
-        color: $base;
+        color: $sub;
         font-size: 2.3vw;
         font-weight: bold;
-        text-shadow: 1px 1px 0 $sub, -1px -1px 0 $sub,
-                    -1px 1px 0 $sub, 1px -1px 0 $sub,
-                    0px 1px 0 $sub,  0-1px 0 $sub,
-                    -1px 0 0 $sub, 1px 0 0 $sub;
+        // text-shadow: 1px 1px 0 $sub, -1px -1px 0 $sub,
+        //             -1px 1px 0 $sub, 1px -1px 0 $sub,
+        //             0px 1px 0 $sub,  0-1px 0 $sub,
+        //             -1px 0 0 $sub, 1px 0 0 $sub;
 
         @include bq(sm-x) {
           font-size: 5.5vw;
