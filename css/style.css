@@ -21,6 +21,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-family: "Noto Sans JP", sans-serif;
   font-family: "Noto Serif JP", serif;
+  font-family: "Sawarabi Gothic", sans-serif;
 }
 
 a {
@@ -280,23 +281,26 @@ li {
   }
 }
 .mv__text__catch {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 50%;
+  padding: 1rem 1.2rem;
   z-index: 888;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
   .mv__text__catch {
+    width: 100%;
     top: 65px;
   }
 }
 .mv__text__catch__main {
   color: #CF9F96;
-  font-size: 4.5vw;
+  font-size: 3.8vw;
   font-weight: bold;
-  text-shadow: 3px 3px 0 #EAD7CC;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff, 0px 1px 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff, 1px 0 0 #fff;
 }
 @media screen and (max-width: 430px) {
   .mv__text__catch__main {
-    font-size: 8.5vw;
-    text-shadow: 1px 1px 0 #EAD7CC;
+    font-size: 7.5vw;
   }
 }
 .mv__text__catch__sub {
@@ -306,7 +310,7 @@ li {
 }
 @media screen and (max-width: 430px) {
   .mv__text__catch__sub {
-    font-size: 5.5vw;
+    font-size: 5vw;
   }
 }
 .mv__text__strength {
@@ -422,6 +426,7 @@ li {
 }
 .coupon__inner {
   background: #efdfdc;
+  font-family: "Noto Serif JP", serif;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
@@ -597,6 +602,13 @@ li {
   font-weight: 700;
   line-height: 1.6;
 }
+.worries__title {
+  font-size: 1.2rem; /*24px*/
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
 
 .art-make {
   background-color: #EAD7CC;
@@ -613,7 +625,7 @@ li {
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
 }
 @media screen and (max-width: 768px) {
   .art-make__technique__wrap {
@@ -635,7 +647,7 @@ li {
 }
 .art-make__technique__wrap__item__text {
   font-size: 1rem; /*20px*/
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Sawarabi Gothic", sans-serif;
   line-height: 1.6;
   text-align: left;
 }
@@ -645,7 +657,7 @@ li {
   flex-wrap: wrap;
   font-family: "Noto Sans JP", sans-serif;
   max-width: 100%;
-  padding-bottom: 5rem;
+  padding-bottom: 2.5rem;
 }
 @media screen and (max-width: 768px) {
   .art-make__wrap {
@@ -688,12 +700,14 @@ li {
   }
 }
 .art-make__wrap__text__title {
+  font-family: "Noto Serif JP", serif;
   font-size: 1.6rem; /*32px*/
   font-weight: 900;
   line-height: 1.6;
   padding-bottom: 1rem;
 }
 .art-make__wrap__text__info {
+  font-family: "Sawarabi Gothic", sans-serif;
   font-size: 1rem; /*20px*/
   line-height: 1.6;
 }
@@ -729,7 +743,9 @@ li {
   }
 }
 .ideal-eyeblow__wrap__item__title {
+  font-family: "Noto Serif JP", serif;
   font-size: 1.2rem; /*24px*/
+  font-weight: 700;
   line-height: 1.6;
   padding-bottom: 1rem;
 }
@@ -737,6 +753,7 @@ li {
   padding-bottom: 1rem;
 }
 .ideal-eyeblow__wrap__item__text {
+  font-family: "Sawarabi Gothic", sans-serif;
   font-size: 1rem; /*20px*/
   line-height: 1.6;
   text-align: start;
@@ -778,7 +795,7 @@ li {
   display: -ms-flexbox;
   -ms-align-items: start;
   align-items: flex-start;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
 }
 @media screen and (max-width: 430px) {
   .strength__wrap__item {
@@ -837,7 +854,7 @@ li {
   z-index: 1;
 }
 .strength__wrap__item__text.strength-long {
-  height: 22rem;
+  height: 18rem;
 }
 @media screen and (max-width: 430px) {
   .strength__wrap__item__text.strength-long {
@@ -845,7 +862,7 @@ li {
   }
 }
 .strength__wrap__item__text.strength-short {
-  height: 18.5rem;
+  height: 16.5rem;
 }
 @media screen and (max-width: 430px) {
   .strength__wrap__item__text.strength-short {
@@ -894,12 +911,14 @@ li {
   top: -1.5rem;
 }
 .strength__wrap__item__text__title {
+  font-family: "Noto Serif JP", serif;
   font-size: 1.2rem; /*24px*/
   font-weight: 600;
   line-height: 1.6;
   margin-bottom: 1em;
 }
 .strength__wrap__item__text p {
+  font-family: "Sawarabi Gothic", sans-serif;
   font-size: 1rem;
 }
 
@@ -1302,10 +1321,10 @@ li {
 .flow__wrap__item {
   background-color: #fff;
   display: flex;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
   padding: 2.5rem; /*50px*/
   width: 100%;
-  height: 25vw;
+  height: 22vw;
 }
 @media screen and (max-width: 1024px) {
   .flow__wrap__item {
@@ -1355,6 +1374,7 @@ li {
   }
 }
 .flow__wrap__item__text__title {
+  font-family: "Noto Serif JP", serif;
   font-size: 1.6rem; /*32px*/
   font-weight: 700;
   padding: 1em;
@@ -1371,7 +1391,7 @@ li {
   z-index: 80;
 }
 .flow__wrap__item__text__title::before {
-  color: #f1e5de;
+  color: #d7afa8;
   font-size: 2.9rem; /*58px*/
   font-weight: 700;
   content: attr(data-number);
@@ -1381,6 +1401,7 @@ li {
   z-index: 70;
 }
 .flow__wrap__item__text p {
+  font-family: "Sawarabi Gothic", sans-serif;
   font-size: 1.2rem; /*24px*/
   text-align: start;
 }
@@ -1452,11 +1473,11 @@ li {
   margin-bottom: 2rem;
 }
 .contact__info__text p {
-  font-size: 1.2rem; /*24px*/
+  font-size: 1.4rem; /*24px*/
 }
 .contact__info__btn {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5rem;
@@ -1467,8 +1488,8 @@ li {
   width: 100%;
 }
 .contact__info .flipY {
-  font-size: 1.2rem;
-  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.4rem;
+  font-family: "Sawarabi Gothic", sans-serif;
 }
 .contact__info .flipY a {
   position: relative; /*テキストの基点となる位置を定義*/
@@ -1616,6 +1637,9 @@ li {
 .store-info__wrap__info__text .address {
   padding: 1rem;
 }
+.store-info__wrap__info__text .address p span {
+  font-weight: bold;
+}
 .store-info__wrap__info__text .address p:not(:first-child) {
   text-indent: 3em;
 }
@@ -1627,8 +1651,14 @@ li {
 .store-info__wrap__info__text .tel {
   padding: 1rem;
 }
+.store-info__wrap__info__text .tel p span {
+  font-weight: bold;
+}
 .store-info__wrap__info__text .time {
   padding: 1rem;
+}
+.store-info__wrap__info__text .time p span {
+  font-weight: bold;
 }
 .store-info__wrap__info__text .time p:not(:first-child) {
   text-indent: 5em;
@@ -1640,6 +1670,9 @@ li {
 }
 .store-info__wrap__info__text .access {
   padding: 1rem;
+}
+.store-info__wrap__info__text .access p span {
+  font-weight: bold;
 }
 .store-info__wrap__info__text .access p:not(:first-child) {
   text-indent: 7em;

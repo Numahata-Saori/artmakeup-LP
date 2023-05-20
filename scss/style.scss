@@ -56,6 +56,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-family: 'Noto Sans JP', sans-serif;
   font-family: 'Noto Serif JP', serif;
+  font-family: 'Sawarabi Gothic', sans-serif;
 }
 
 a {
@@ -358,26 +359,32 @@ li {
     }
 
     &__catch {
+      background-color: rgba(255,255,255,0.8);
+      width: 50%;
+      padding: 1rem 1.2rem;
+
       z-index: 888;
 
-      @include bq(sm) {
+      @include bq(sm-x) {
+        width: 100%;
         top: 65px;
       }
 
       &__main {
         // border: 1px solid $sub;
         color: $accent;
-        font-size: 4.5vw;
+        font-size: 3.8vw;
         font-weight: bold;
-        text-shadow: 3px 3px 0 $main;
-        // text-shadow: 1px 1px 0 $sub, -1px -1px 0 $sub,
-        //             -1px 1px 0 $sub, 1px -1px 0 $sub,
-        //             0px 1px 0 $sub,  0-1px 0 $sub,
-        //             -1px 0 0 $sub, 1px 0 0 $sub;
+        // text-shadow: 3px 3px 0 $accent;
+        // text-stroke: 1px $base;
+        text-shadow: 1px 1px 0 $base, -1px -1px 0 $base,
+                    -1px 1px 0 $base, 1px -1px 0 $base,
+                    0px 1px 0 $base,  0 -1px 0 $base,
+                    -1px 0 0 $base, 1px 0 0 $base;
 
         @include bq(sm-x) {
-          font-size: 8.5vw;
-          text-shadow: 1px 1px 0 $main;
+          font-size: 7.5vw;
+          // text-shadow: 1px 1px 0 $main;
         }
       }
 
@@ -391,7 +398,7 @@ li {
         //             -1px 0 0 $sub, 1px 0 0 $sub;
 
         @include bq(sm-x) {
-          font-size: 5.5vw;
+          font-size: 5vw;
         }
       }
     }
@@ -517,6 +524,8 @@ li {
 
   &__inner {
     background: lighten($color: $accent, $amount: 20%);
+    font-family: 'Noto Serif JP', serif;
+
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
@@ -711,6 +720,14 @@ li {
       }
     }
   }
+
+  &__title {
+    font-size: 1.2rem;/*24px*/
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
 }
 
 .art-make {
@@ -734,7 +751,7 @@ li {
       justify-content: space-between;
       flex-wrap: wrap;
       max-width: 100%;
-      margin-bottom: 5rem;
+      margin-bottom: 2.5rem;
 
       @include bq(tb-s) {
         // flex-direction: column;
@@ -763,7 +780,7 @@ li {
 
         &__text {
           font-size: 1rem;/*20px*/
-          font-family: 'Noto Sans JP', sans-serif;
+          font-family: 'Sawarabi Gothic', sans-serif;
           line-height: 1.6;
           text-align: left;
         }
@@ -777,8 +794,7 @@ li {
     flex-wrap: wrap;
     font-family: 'Noto Sans JP', sans-serif;
     max-width: 100%;
-    padding-bottom: 5rem;
-    // height: 30.13vw;
+    padding-bottom: 2.5rem;
 
     @include bq(tb-s) {
       margin-bottom: 1rem;
@@ -820,6 +836,7 @@ li {
       }
 
       &__title {
+        font-family: 'Noto Serif JP', serif;
         font-size: 1.6rem;/*32px*/
         font-weight: 900;
         line-height: 1.6;
@@ -828,6 +845,7 @@ li {
       }
 
       &__info {
+        font-family: 'Sawarabi Gothic', sans-serif;
         font-size: 1rem;/*20px*/
         line-height: 1.6;
       }
@@ -870,7 +888,9 @@ li {
       }
 
       &__title {
+        font-family: 'Noto Serif JP', serif;
         font-size: 1.2rem;/*24px*/
+        font-weight: 700;
         line-height: 1.6;
         padding-bottom: 1rem;
       }
@@ -880,6 +900,7 @@ li {
       }
 
       &__text {
+        font-family: 'Sawarabi Gothic', sans-serif;
         font-size: 1rem;/*20px*/
         line-height: 1.6;
         text-align: start;
@@ -936,7 +957,7 @@ li {
       -ms-align-items: start;
       align-items: flex-start;
       // align-items: center;
-      margin-bottom: 5rem;
+      margin-bottom: 2.5rem;
 
       @include bq(sm-x) {
         display: block;
@@ -1006,7 +1027,7 @@ li {
         z-index: 1;
 
         &.strength-long {
-          height: 22rem;
+          height: 18rem;
 
           @include bq(sm-x) {
             height: auto;
@@ -1014,7 +1035,7 @@ li {
         }
 
         &.strength-short {
-          height: 18.5rem;
+          height: 16.5rem;
 
           @include bq(sm-x) {
             height: auto;
@@ -1066,6 +1087,7 @@ li {
         }
 
         &__title {
+          font-family: 'Noto Serif JP', serif;
           font-size: 1.2rem;/*24px*/
           font-weight: 600;
           line-height: 1.6;
@@ -1074,6 +1096,7 @@ li {
         }
 
         p {
+          font-family: 'Sawarabi Gothic', sans-serif;
           font-size: 1rem;
         }
       }
@@ -1601,10 +1624,10 @@ li {
     &__item {
       background-color: $base;
       display: flex;
-      margin-bottom: 5rem;
+      margin-bottom: 2.5rem;
       padding: 2.5rem;/*50px*/
       width: 100%;
-      height: 25vw;
+      height: 22vw;
 
       @include bq(tb-x) {
         height: 50vw;
@@ -1658,6 +1681,7 @@ li {
         }
 
         &__title {
+          font-family: 'Noto Serif JP', serif;
           font-size: 1.6rem;/*32px*/
           font-weight: 700;
           // margin-bottom: 1rem;/*20px*/
@@ -1671,12 +1695,14 @@ li {
           }
 
           span {
+            // padding-left: 2rem;
             position: relative;
             z-index: 80;
           }
 
           &::before {
-            color: lighten($main, 5%);
+            color: lighten($accent, 5%);
+            // color: $accent;
             font-size: 2.9rem;/*58px*/
             font-weight: 700;
 
@@ -1689,6 +1715,7 @@ li {
         }
 
         p {
+          font-family: 'Sawarabi Gothic', sans-serif;
           font-size: 1.2rem;/*24px*/
           text-align: start;
         }
@@ -1786,13 +1813,13 @@ li {
       margin-bottom: 2rem;
 
       p {
-        font-size: 1.2rem;/*24px*/
+        font-size: 1.4rem;/*24px*/
       }
     }
 
     &__btn {
-      height: 150px;
-      width: 150px;
+      height: 200px;
+      width: 200px;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 5rem;
@@ -1805,8 +1832,8 @@ li {
     }
 
     .flipY {
-      font-size: 1.2rem;
-      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 1.4rem;
+      font-family: 'Sawarabi Gothic', sans-serif;
 
       a {
         position: relative; /*テキストの基点となる位置を定義*/
@@ -1989,6 +2016,10 @@ li {
           padding: 1rem;
 
           p {
+            span {
+              font-weight: bold;
+            }
+
             &:not(:first-child) {
               text-indent: 3em;
 
@@ -2001,12 +2032,23 @@ li {
 
         .tel {
           padding: 1rem;
+
+          p {
+            span {
+              font-weight: bold;
+            }
+
+          }
         }
 
         .time {
           padding: 1rem;
 
           p {
+            span {
+              font-weight: bold;
+            }
+
             &:not(:first-child) {
               text-indent: 5em;
 
@@ -2021,6 +2063,10 @@ li {
           padding: 1rem;
 
           p {
+            span {
+              font-weight: bold;
+            }
+            
             &:not(:first-child) {
               text-indent: 7em;
 
