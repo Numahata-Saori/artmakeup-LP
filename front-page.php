@@ -1059,7 +1059,7 @@
 
           <div class="store-info__wrap__info__text">
             <div class="address">
-              <p><span>住所：</span></p>
+              <p><span>住所</span></p>
               <p>〒060-0062</p>
               <p>北海道札幌市中央区南2条西6丁目5土肥ビル3階</p>
               <p>Fmedical beauty salon IDO内</p>
@@ -1067,18 +1067,18 @@
             </div>
 
             <div class="tel">
-              <p><span>電話番号：</p>
+              <p><span>電話番号</p>
               <p>050-3160-6810</p>
             </div>
 
             <div class="time">
-              <p><span>営業時間：</span></p>
+              <p><span>営業時間</span></p>
               <p>10：00～22：00</p>
               <p>土日・祝日営業</p>
             </div>
 
             <div class="access">
-              <p><span>アクセス方法：</span></p>
+              <p><span>アクセス方法</span></p>
               <p>南北線/東西線/東豊線 大通り駅 徒歩5分</p>
               <p>バス停「北1条西7丁目」徒歩7分</p>
             </div>
