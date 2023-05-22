@@ -794,7 +794,7 @@
             </div>
           </li>
 
-          <li class="flow__wrap__item swiper-slide">
+          <li class="flow__wrap__item swiper-slide wow animate__animated animate__fadeInLeft">
             <div class="flow__wrap__item__img">
               <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow2' ,true)); ?>" alt="">
             </div>
@@ -806,7 +806,7 @@
             </div>
           </li>
 
-          <li class="flow__wrap__item swiper-slide">
+          <li class="flow__wrap__item swiper-slide wow animate__animated animate__fadeInLeft">
             <div class="flow__wrap__item__img">
               <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow3' ,true)); ?>" alt="">
             </div>
@@ -818,7 +818,7 @@
             </div>
           </li>
 
-          <li class="flow__wrap__item swiper-slide">
+          <li class="flow__wrap__item swiper-slide wow animate__animated animate__fadeInLeft">
             <div class="flow__wrap__item__img">
               <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow4' ,true)); ?>" alt="">
             </div>
@@ -829,7 +829,7 @@
             </div>
           </li>
 
-          <li class="flow__wrap__item swiper-slide">
+          <li class="flow__wrap__item swiper-slide wow animate__animated animate__fadeInLeft">
             <div class="flow__wrap__item__img">
               <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow5' ,true)); ?>" alt="">
             </div>
@@ -839,7 +839,7 @@
             </div>
           </li>
 
-          <li class="flow__wrap__item swiper-slide">
+          <li class="flow__wrap__item swiper-slide wow animate__animated animate__fadeInLeft">
             <div class="flow__wrap__item__img">
               <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow6' ,true)); ?>" alt="">
             </div>
@@ -849,7 +849,7 @@
             </div>
           </li>
 
-          <li class="flow__wrap__item swiper-slide">
+          <li class="flow__wrap__item swiper-slide wow animate__animated animate__fadeInLeft">
             <div class="flow__wrap__item__img">
               <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow7' ,true)); ?>" alt="">
             </div>
@@ -859,7 +859,7 @@
             </div>
           </li>
 
-          <li class="flow__wrap__item swiper-slide">
+          <li class="flow__wrap__item swiper-slide wow animate__animated animate__fadeInLeft">
             <div class="flow__wrap__item__img">
               <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow8' ,true)); ?>" alt="">
             </div>
@@ -871,7 +871,7 @@
             </div>
           </li>
 
-          <li class="flow__wrap__item swiper-slide">
+          <li class="flow__wrap__item swiper-slide wow animate__animated animate__fadeInLeft">
             <div class="flow__wrap__item__img">
               <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow9' ,true)); ?>" alt="">
             </div>
