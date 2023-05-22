@@ -55,35 +55,7 @@
     <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
 
     <div class="coupon__inner">
-      <div class="coupon__inner__img">
-        <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_coupon' ,true)); ?>" alt="">
-      </div>
-
-      <div class="coupon__inner__content">
-        <div class="coupon__inner__content__headline">
-          <span><?php the_field('coupon_headline'); ?></span>
-        </div>
-
-        <div class="coupon__inner__content__detail">
-          <div class="period">
-            <span><?php the_field('coupon_period'); ?>までに</span>
-            <span>ご予約の方限定</span>
-          </div>
-          <div class="coupon__inner__content__detail__discount">
-            <span class="price"><?php the_field('coupon_discount'); ?></span>
-            <span class="coupon__inner__content__detail__discount__fix">OFF</span>
-          </div>
-        </div>
-
-        <div class="coupon__inner__content__code">
-          <span class="coupon__inner__content__code__fix">クーボンコード：</span>
-          <span class="code"><?php the_field('coupon_code'); ?></span>
-        </div>
-
-        <div class="coupon__inner__content__lead">
-          <span>申込時にこのクーポン番号を入力してください。</span>
-        </div>
-      </div>
+      <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_coupon' ,true)); ?>" alt="">
     </div>
 
     <?php endwhile; // 投稿のループ終了 ?>
@@ -110,25 +82,25 @@
 
       <ul class="worries__wrap">
         <li class="worries__wrap__item">
-          <div class="worries__wrap__item__img">
+          <div class="worries__wrap__item__img dark-img">
             <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries1' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">眉メイクが苦手</div>
         </li>
         <li class="worries__wrap__item">
-          <div class="worries__wrap__item__img">
+          <div class="worries__wrap__item__img dark-img">
             <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries2' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">自分に合う<br>眉デザインが<br>わからない</div>
         </li>
         <li class="worries__wrap__item">
-          <div class="worries__wrap__item__img">
+          <div class="worries__wrap__item__img dark-img">
             <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries3' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">すっぴんに<br>自身が持てない…</div>
         </li>
         <li class="worries__wrap__item">
-          <div class="worries__wrap__item__img">
+          <div class="worries__wrap__item__img dark-img">
             <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries4' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">温泉やプールが<br>おっくう…</div>
@@ -139,25 +111,25 @@
 
       <ul class="worries__wrap">
         <li class="worries__wrap__item">
-          <div class="worries__wrap__item__img">
+          <div class="worries__wrap__item__img bright-img">
             <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries_solving1' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">朝メイクの<br>時短に</div>
         </li>
         <li class="worries__wrap__item">
-          <div class="worries__wrap__item__img">
+          <div class="worries__wrap__item__img bright-img">
             <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries_solving2' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">メイク直しが<br>簡単に！</div>
         </li>
         <li class="worries__wrap__item">
-          <div class="worries__wrap__item__img">
+          <div class="worries__wrap__item__img bright-img">
             <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries_solving3' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">すっぴんに<br>自身！</div>
         </li>
         <li class="worries__wrap__item">
-          <div class="worries__wrap__item__img">
+          <div class="worries__wrap__item__img bright-img">
             <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_worries_solving4' ,true)); ?>" alt="">
           </div>
           <div class="worries__wrap__item__text">汗をかいても<br>落ちない</div>
@@ -188,9 +160,10 @@
       <div class="sec-title__sub">3D眉アートメイク</div>
 
       <div class="art-make__technique">
-        <h5 class="art-make__technique__title">Technique</h5>
+        <!-- <h5 class="art-make__technique__title">Technique</h5> -->
         <ul class="art-make__technique__wrap">
           <li class="art-make__technique__wrap__item">
+            <div class="art-make__technique__wrap__item__title">2D</div>
             <div class="art-make__technique__wrap__item__img">
               <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_artmake_2d' ,true)); ?>" alt="">
             </div>
@@ -200,6 +173,7 @@
           </li>
 
           <li class="art-make__technique__wrap__item">
+            <div class="art-make__technique__wrap__item__title">3D</div>
             <div class="art-make__technique__wrap__item__img">
               <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_artmake_3d' ,true)); ?>" alt="">
             </div>
@@ -209,6 +183,7 @@
           </li>
 
           <li class="art-make__technique__wrap__item">
+            <div class="art-make__technique__wrap__item__title">4D</div>
             <div class="art-make__technique__wrap__item__img">
               <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_artmake_4d' ,true)); ?>" alt="">
             </div>
@@ -540,6 +515,8 @@
       </div>
 
       <div class="price__table01">
+        <h5 class="price__table01__title">ハイクラスアーティスト</h5>
+
         <table class="price__table01__headline">
           <thead>
             <th colspan="4">デザイン・料金(税込)</th>
@@ -674,7 +651,7 @@
           <div class="price__table03__title__text">
             <p>アートメイクは定着させる為に2回以上の施術が必要と言われています。</p>
             <p>せっかく綺麗になった眉毛の維持をする為にリタッチを行うことをお勧めします。</p>
-            <p>他店で行ったアートメイクをリタッチする場合は高い技術が必要ですので、受け入れをしないところも多くみられます。</p>
+            <p>他店で行ったアートメイクをリタッチする場合は高い技術が必要ですので、<br>受け入れをしないところも多くみられます。</p>
           </div>
         </div>
 
@@ -807,7 +784,7 @@
 
       <div class="swiper-container">
         <ul class="flow__wrap swiper-wrapper">
-          <li class="flow__wrap__item swiper-slide">
+          <li class="flow__wrap__item swiper-slide wow animate__animated animate__fadeInLeft">
             <div class="flow__wrap__item__img">
               <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_flow1' ,true)); ?>" alt="">
             </div>
@@ -1035,8 +1012,9 @@
 
       <div class="contact__info">
         <div class="contact__info__text">
-          <p>まずは気軽にお問い合わせください！</p>
-          <p>↓LINE追加はこちら↓</p>
+          <p><span class="emphasis">まずは気軽にお問い合わせください！</span></p>
+          <p>↓<span class="emphasis">LINE追加はこちら</span>↓</p>
+
         </div>
 
         <div class="contact__info__btn flipY">
@@ -1081,25 +1059,27 @@
 
           <div class="store-info__wrap__info__text">
             <div class="address">
-              <p><span>住所：</span><br class="sp_br">〒060-0062</p>
-              <p>北海道札幌市中央区南2条西6丁目5</p>
-              <p>土肥ビル3階</p>
+              <p><span>住所：</span></p>
+              <p>〒060-0062</p>
+              <p>北海道札幌市中央区南2条西6丁目5土肥ビル3階</p>
               <p>Fmedical beauty salon IDO内</p>
               <p>(miuex札幌中央)</p>
             </div>
 
             <div class="tel">
-              <p><span>電話番号：</span><br class="sp_br">050-3160-6810</p>
+              <p><span>電話番号：</p>
+              <p>050-3160-6810</p>
             </div>
 
             <div class="time">
-              <p><span>営業時間：</span><br class="sp_br">10：00～22：00</p>
+              <p><span>営業時間：</span></p>
+              <p>10：00～22：00</p>
               <p>土日・祝日営業</p>
             </div>
 
             <div class="access">
-              <p><span>アクセス方法：</span><br class="sp_br">南北線/東西線/東豊線 大通り駅</p>
-              <p>徒歩5分</p>
+              <p><span>アクセス方法：</span></p>
+              <p>南北線/東西線/東豊線 大通り駅 徒歩5分</p>
               <p>バス停「北1条西7丁目」徒歩7分</p>
             </div>
           </div>

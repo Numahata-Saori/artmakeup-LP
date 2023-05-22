@@ -7,6 +7,11 @@
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 
+<script src="<?php echo get_template_directory_uri(); ?>/js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+
 <?php wp_footer(); ?>
 
 </body>

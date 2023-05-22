@@ -56,24 +56,28 @@ li {
 
 .header {
   background: #EAD7CC;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   font-family: "Noto Sans JP", sans-serif;
-  height: 12vw;
-  width: 100vw;
-  padding: 0 12vw;
+  height: 6rem;
+  width: 100%;
+  padding: 0 6rem;
   min-height: 60px;
   position: fixed;
   top: 0;
   z-index: 999;
   /*ハンバーガーメニュー*/
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .header {
-    padding-right: 12vw;
+    padding-left: 0.2rem;
+    padding-right: 6rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
   .header {
-    padding-right: 60px;
+    padding-left: 0.1rem;
+    padding-right: 6rem;
+    width: 100vw;
   }
 }
 .header__wrap {
@@ -82,7 +86,7 @@ li {
   justify-content: space-between;
   height: 100%;
   margin: 0 5%;
-  padding: 2vw 0;
+  padding: 1rem 0;
 }
 .header__wrap__logo {
   display: flex;
@@ -93,7 +97,7 @@ li {
 .header__wrap__logo__upper {
   font-size: 2rem; /*40px*/
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 2.5rem;
 }
 @media screen and (max-width: 834px) {
   .header__wrap__logo__upper {
@@ -113,13 +117,22 @@ li {
 .header__wrap__logo__lower {
   font-size: 1.2rem; /*24px*/
   font-weight: bold;
+  line-height: 1.5rem;
+}
+@media screen and (max-width: 430px) {
+  .header__wrap__logo__lower {
+    font-size: 1rem;
+  }
 }
 .header__wrap__btn {
   background: #CF9F96;
+  box-shadow: 0 4px 15px 0 #fff;
   font-size: 1.2rem;
+  font-weight: 700;
   height: 100%;
   text-align: center;
-  padding: 2% 4%;
+  line-height: 1.2;
+  padding: 0.2rem 4%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -135,7 +148,7 @@ li {
     font-size: 0.8rem;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
   .header__wrap__btn {
     font-size: 0.6rem;
     padding: 1% 2%;
@@ -154,8 +167,8 @@ li {
 }
 .header__menu__openbtn {
   background: #716A67;
-  width: 12vw;
-  height: 12vw;
+  width: 6rem;
+  height: 6rem;
   min-width: 60px;
   min-height: 60px;
   cursor: pointer;
@@ -166,9 +179,9 @@ li {
 }
 .header__menu__openbtn__item {
   display: block;
-  margin: 20%;
-  width: 60%;
-  height: 60%;
+  margin: 1rem;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
   position: absolute;
   z-index: 9999;
 }
@@ -181,20 +194,20 @@ li {
 }
 .header__menu__openbtn__item span:nth-of-type(1) {
   background: #fff;
-  border-radius: 0.5vw;
+  border-radius: 9999px;
   display: block;
-  height: 1vw;
+  height: 0.5rem;
   top: 0;
 }
 .header__menu__openbtn__item span:nth-of-type(3) {
   background: #fff;
-  border-radius: 0.5vw;
+  border-radius: 9999px;
   display: block;
-  height: 1vw;
+  height: 0.5rem;
   bottom: 0;
 }
 .header__menu__openbtn__item span:nth-of-type(2) {
-  font-size: 2vw;
+  font-size: 1.1rem;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   text-align: center;
@@ -256,7 +269,7 @@ li {
 }
 
 .mv {
-  margin-top: 12vw;
+  margin-top: 6rem;
   width: 100%;
   height: 50vw;
   position: relative;
@@ -265,7 +278,6 @@ li {
 @media screen and (max-width: 430px) {
   .mv {
     height: 138.5vw;
-    margin-top: 60px;
   }
 }
 .mv__text {
@@ -329,8 +341,8 @@ li {
 }
 .mv__text__strength__fix {
   width: 100%;
-  box-shadow: 0 0 10px 2px #EAD7CC inset;
-  background: #716A67;
+  background-image: linear-gradient(to right, #dfbfb9, #CF9F96, #c78f85, #dbbba8);
+  box-shadow: 0 0 10px 5px #EAD7CC inset;
   color: #fff;
   font-size: 1.6vw;
   font-weight: normal;
@@ -358,9 +370,9 @@ li {
   }
 }
 .mv__text__strength__list__item {
-  background: #716A67;
+  background-image: linear-gradient(to right, #dfbfb9, #CF9F96, #c78f85, #dbbba8);
   border-radius: 50%;
-  box-shadow: 0 0 10px 5px #EAD7CC inset;
+  box-shadow: 0 0 10px 15px #EAD7CC inset;
   color: #fff;
   font-size: 1.6vw;
   font-weight: normal;
@@ -424,8 +436,6 @@ li {
   }
 }
 .coupon__inner {
-  background: #efdfdc;
-  font-family: "Noto Serif JP", serif;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
@@ -439,112 +449,6 @@ li {
 @media screen and (max-width: 430px) {
   .coupon__inner {
     height: auto;
-  }
-}
-.coupon__inner__img {
-  width: 30%;
-  height: auto;
-}
-.coupon__inner__img img {
-  width: 100%;
-  height: 100%;
-}
-.coupon__inner__content {
-  color: #CF9F96;
-  width: 70%;
-  height: auto;
-  padding: 1.25vw 2.5vw;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-between;
-}
-@media screen and (max-width: 1024px) {
-  .coupon__inner__content {
-    padding: 2vw 6vw;
-  }
-}
-@media screen and (max-width: 375px) {
-  .coupon__inner__content {
-    padding: 2vw 2vw;
-  }
-}
-.coupon__inner__content__headline {
-  font-size: 2.4rem; /*48px*/
-  text-align: center;
-}
-@media screen and (max-width: 1024px) {
-  .coupon__inner__content__headline {
-    font-size: 4vw;
-  }
-}
-.coupon__inner__content__detail {
-  display: flex;
-  justify-content: space-between;
-}
-.coupon__inner__content__detail .period {
-  font-size: 1rem; /*20px*/
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  text-align: center;
-}
-@media screen and (max-width: 768px) {
-  .coupon__inner__content__detail .period {
-    font-size: 2vw;
-  }
-}
-.coupon__inner__content__detail .period span:first-child {
-  border-top: 1px solid #CF9F96;
-}
-.coupon__inner__content__detail .period span:last-child {
-  border-bottom: 1px solid #CF9F96;
-}
-.coupon__inner__content__detail__discount .price {
-  font-size: 2.4rem; /*48px*/
-  font-weight: bold;
-}
-@media screen and (max-width: 430px) {
-  .coupon__inner__content__detail__discount .price {
-    font-size: 4vw;
-  }
-}
-.coupon__inner__content__detail__discount__fix {
-  font-size: 1.2rem; /*24px*/
-  font-weight: bold;
-}
-@media screen and (max-width: 430px) {
-  .coupon__inner__content__detail__discount__fix {
-    font-size: 2.5vw;
-  }
-}
-.coupon__inner__content__code__fix {
-  font-size: 1.2rem; /*24px*/
-  font-weight: bold;
-}
-@media screen and (max-width: 768px) {
-  .coupon__inner__content__code__fix {
-    font-size: 2.5vw;
-  }
-}
-.coupon__inner__content__code .code {
-  font-size: 2.4rem; /*48px*/
-  font-weight: bold;
-}
-@media screen and (max-width: 430px) {
-  .coupon__inner__content__code .code {
-    font-size: 4vw;
-  }
-}
-.coupon__inner__content__lead span {
-  font-size: 1rem; /*20px*/
-}
-@media screen and (max-width: 430px) {
-  .coupon__inner__content__lead span {
-    font-size: 2.5vw;
   }
 }
 
@@ -565,7 +469,7 @@ li {
   letter-spacing: 0.1em;
   line-height: 1.6;
   text-align: center;
-  margin-bottom: 5rem; /*100px*/
+  margin-bottom: 2.5rem; /*50px*/
 }
 
 .worries {
@@ -590,12 +494,26 @@ li {
   }
 }
 .worries__wrap__item__img {
+  height: 180px;
   margin-bottom: 1rem;
+}
+.worries__wrap__item__img img {
+  height: 100%;
 }
 @media screen and (max-width: 768px) {
   .worries__wrap__item__img {
     margin-bottom: 15px;
   }
+}
+.worries__wrap__item .dark-img {
+  background-color: #aaabab;
+  box-shadow: inset 0 0 10px 5px #fff;
+  padding: 0.6rem;
+}
+.worries__wrap__item .bright-img {
+  background-color: #fcf7b0;
+  box-shadow: inset 0 0 10px 5px #fff;
+  padding: 0.6rem;
 }
 .worries__wrap__item__text {
   font-family: "Noto Serif JP", serif;
@@ -605,6 +523,7 @@ li {
 }
 .worries__title {
   font-size: 1.2rem; /*24px*/
+  font-weight: 700;
   letter-spacing: 0.1em;
   line-height: 1.6;
   text-align: center;
@@ -614,12 +533,6 @@ li {
 .art-make {
   background-color: #EAD7CC;
   padding: 5rem 0;
-}
-.art-make__technique__title {
-  font-size: 2.4rem; /*48px*/
-  font-family: "Montserrat", sans-serif;
-  line-height: 1.6;
-  margin-bottom: 2rem;
 }
 .art-make__technique__wrap {
   display: flex;
@@ -637,7 +550,7 @@ li {
   background: #fff;
   width: 32%;
   margin-bottom: 0;
-  padding: 1rem 2rem 2rem 2rem; /*20px,40px,40px,40px*/
+  padding: 2rem; /*40px*/
   text-align: center;
 }
 @media screen and (max-width: 768px) {
@@ -645,6 +558,11 @@ li {
     width: 100%;
     margin-bottom: 1rem;
   }
+}
+.art-make__technique__wrap__item__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
 }
 .art-make__technique__wrap__item__text {
   font-size: 1rem; /*20px*/
@@ -930,7 +848,9 @@ li {
 .price__text {
   font-size: 1rem; /*20px*/
   font-family: "Noto Sans JP", sans-serif;
-  margin-bottom: 5rem;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
 }
 .price table {
   border-spacing: 0;
@@ -994,7 +914,15 @@ li {
   }
 }
 .price__table01 {
-  margin-bottom: 5rem; /*100px*/
+  margin-bottom: 2.5rem; /*50px*/
+}
+.price__table01__title {
+  margin-bottom: 1rem; /*20px*/
+  font-size: 1.6rem; /*32px*/
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
 }
 .price__table01__headline {
   width: 100%;
@@ -1032,7 +960,7 @@ li {
   margin-top: 2rem; /*40px*/
 }
 .price__table02 {
-  margin-bottom: 5rem; /*100px*/
+  margin-bottom: 2.5rem; /*50px*/
 }
 .price__table02__title {
   text-align: center;
@@ -1104,7 +1032,8 @@ li {
 .price__table03__title__text {
   font-size: 1rem; /*20px*/
   font-family: "Noto Sans JP", sans-serif;
-  line-height: 1.6;
+  line-height: 1.8;
+  text-align: center;
 }
 .price__table03__wrap {
   font-family: "Noto Sans JP", sans-serif;
@@ -1388,6 +1317,7 @@ li {
   }
 }
 .flow__wrap__item__text__title span {
+  padding-left: 2.5rem;
   position: relative;
   z-index: 80;
 }
@@ -1475,6 +1405,10 @@ li {
 }
 .contact__info__text p {
   font-size: 1.4rem; /*24px*/
+  font-weight: 700;
+}
+.contact__info__text .emphasis {
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, #CF9F96 70%);
 }
 .contact__info__btn {
   height: 200px;
@@ -1484,7 +1418,9 @@ li {
   margin-bottom: 5rem;
 }
 .contact__info__btn img {
-  border-radius: 50%;
+  border: 3px solid #CF9F96;
+  border-radius: 9999px;
+  box-shadow: 0 4px 15px 0 #CF9F96;
   height: 100%;
   width: 100%;
 }
@@ -1510,7 +1446,7 @@ li {
   ackface-visibility: hidden; /*三次元になった際に裏面を可視化させない*/
 }
 .contact__info .flipY .cap {
-  background: #716A67;
+  background-color: #CF9F96;
   color: #fff;
   border-radius: 50%;
   position: absolute; /*ここからエリアの絶対配置の指定*/
@@ -1527,8 +1463,9 @@ li {
   align-items: center;
 }
 .contact__hp-btn {
-  border: 1px solid #716A67;
+  border: 3px solid #CF9F96;
   border-radius: 9999px;
+  box-shadow: 0 5px 25px 0 #fff;
   display: inline-block;
   font-size: 1.6rem; /*32px*/
   font-family: "Noto Sans JP", sans-serif;
@@ -1561,10 +1498,10 @@ li {
 .contact__hp-btn span {
   position: relative;
   z-index: 30; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
-  color: #716A67;
+  color: #fff;
 }
 .contact .bgcentery {
-  background-color: #fff;
+  background-image: linear-gradient(to right, #dfbfb9, #CF9F96, #bf7f73, #dbbba8);
 }
 .contact .bgcentery:before {
   content: "";
@@ -1601,7 +1538,7 @@ li {
   display: flex;
   margin-bottom: 5rem; /*100px*/
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .store-info__wrap__info {
     align-content: center;
     flex-direction: column;
@@ -1614,7 +1551,7 @@ li {
   height: auto;
   text-align: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .store-info__wrap__info__img {
     width: auto;
     height: 50vw;
@@ -1629,7 +1566,7 @@ li {
   width: 60%;
   padding-left: 1.5rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .store-info__wrap__info__text {
     width: auto;
     padding-left: 0;
@@ -1640,9 +1577,6 @@ li {
 }
 .store-info__wrap__info__text .address p span {
   font-weight: bold;
-}
-.store-info__wrap__info__text .address p:not(:first-child) {
-  text-indent: 3em;
 }
 @media screen and (max-width: 430px) {
   .store-info__wrap__info__text .address p:not(:first-child) {
@@ -1655,14 +1589,16 @@ li {
 .store-info__wrap__info__text .tel p span {
   font-weight: bold;
 }
+@media screen and (max-width: 430px) {
+  .store-info__wrap__info__text .tel p:not(:first-child) {
+    text-indent: 0;
+  }
+}
 .store-info__wrap__info__text .time {
   padding: 1rem;
 }
 .store-info__wrap__info__text .time p span {
   font-weight: bold;
-}
-.store-info__wrap__info__text .time p:not(:first-child) {
-  text-indent: 5em;
 }
 @media screen and (max-width: 430px) {
   .store-info__wrap__info__text .time p:not(:first-child) {
@@ -1674,9 +1610,6 @@ li {
 }
 .store-info__wrap__info__text .access p span {
   font-weight: bold;
-}
-.store-info__wrap__info__text .access p:not(:first-child) {
-  text-indent: 7em;
 }
 @media screen and (max-width: 430px) {
   .store-info__wrap__info__text .access p:not(:first-child) {
@@ -1719,5 +1652,14 @@ li {
 @media screen and (max-width: 430px) {
   .sp_br {
     display: block;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .animate__fadeInLeft {
+    -webkit-animation: none;
+            animation: none;
+    transform: none;
+    transition: unset;
   }
 }
