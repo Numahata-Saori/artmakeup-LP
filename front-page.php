@@ -455,35 +455,7 @@
     <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
 
     <div class="coupon__inner">
-      <div class="coupon__inner__img">
-        <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_coupon' ,true)); ?>" alt="">
-      </div>
-
-      <div class="coupon__inner__content">
-        <div class="coupon__inner__content__headline">
-          <span><?php the_field('coupon_headline'); ?></span>
-        </div>
-
-        <div class="coupon__inner__content__detail">
-          <div class="period">
-            <span><?php the_field('coupon_period'); ?>までに</span>
-            <span>ご予約の方限定</span>
-          </div>
-          <div class="coupon__inner__content__detail__discount">
-            <span class="price"><?php the_field('coupon_discount'); ?></span>
-            <span class="coupon__inner__content__detail__discount__fix">OFF</span>
-          </div>
-        </div>
-
-        <div class="coupon__inner__content__code">
-          <span class="coupon__inner__content__code__fix">クーボンコード：</span>
-          <span class="code"><?php the_field('coupon_code'); ?></span>
-        </div>
-
-        <div class="coupon__inner__content__lead">
-          <span>申込時にこのクーポン番号を入力してください。</span>
-        </div>
-      </div>
+      <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_coupon' ,true)); ?>" alt="">
     </div>
 
     <?php endwhile; // 投稿のループ終了 ?>

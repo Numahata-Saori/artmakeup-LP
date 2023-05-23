@@ -13,6 +13,7 @@ function theme_slug_widgets_init() {
 }
 add_action( 'widgets_init', 'theme_slug_widgets_init' );
 
+#fff
 function my_custom_base_color() {
     global $post;
     $base_color = get_post_meta($post->ID, 'base_color', true);
@@ -21,6 +22,9 @@ function my_custom_base_color() {
         /* 以下のセレクターは、対象となる要素を指定してください。 */
         body {
           background-color: ' . $base_color . ' ;
+        }
+        .header__wrap__btn {
+          box-shadow: 0 4px 15px 0 ' . $base_color . ' ;
         }
         .header__wrap__btn a {
           color: ' . $base_color . ' ;
@@ -43,6 +47,12 @@ function my_custom_base_color() {
         }
         .mv__text__strength__list__item {
           color: ' . $base_color . ' ;
+        }
+        .worries__wrap__item .dark-img {
+          box-shadow: inset 0 0 10px 5px ' . $base_color . ' ;
+        }
+        .worries__wrap__item .bright-img {
+          box-shadow: inset 0 0 10px 5px ' . $base_color . ' ;
         }
         .art-make__technique__wrap__item {
           background-color: ' . $base_color . ' ;
@@ -99,11 +109,11 @@ function my_custom_base_color() {
         .contact__info .flipY .cap {
           color: ' . $base_color . ' ;
         }
+        .contact__hp-btn {
+          box-shadow: 0 5px 25px 0 ' . $base_color . ' ;
+        }
         .contact__hp-btn:hover span {
           color: ' . $base_color . ' ;
-        }
-        .contact .bgcentery {
-          background-color: ' . $base_color . ' ;
         }
         .footer {
           color: ' . $base_color . ' ;
@@ -124,12 +134,7 @@ function my_custom_main_color() {
           background-color: ' . $main_color . ' ;
         }
         .mv__text__catch__main {
-          text-shadow: 3px 3px 0 ' . $main_color . ' ;
-        }
-        @media screen and (max-width: 430px) {
-          .mv__text__catch__main {
-            text-shadow: 1px 1px 0 ' . $main_color . ' ;
-          }
+          text-shadow: 1px 1px 0 ' . $main_color . ' , -1px -1px 0 ' . $main_color . ' , -1px 1px 0 ' . $main_color . ' , 1px -1px 0 ' . $main_color . ' , 0px 1px 0 ' . $main_color . ' , 0 -1px 0 ' . $main_color . ' , -1px 0 0 ' . $main_color . ' , 1px 0 0 ' . $main_color . ' ;
         }
         .mv__text__strength__fix {
           box-shadow: 0 0 10px 2px ' . $main_color . ' inset;
@@ -191,15 +196,6 @@ function my_custom_sub_color() {
         .mv__text__catch__sub {
           color: ' . $sub_color . ' ;
         }
-        // .mv__text__catch__sub {
-        //   text-shadow: 1px 1px 0 ' . $sub_color . ', -1px -1px 0 ' . $sub_color . ', -1px 1px 0 ' . $sub_color . ', 1px -1px 0 ' . $sub_color . ', 0px 1px 0 ' . $sub_color . ', -1px 0 ' . $sub_color . ', -1px 0 0 ' . $sub_color . ', 1px 0 0 ' . $sub_color . ';
-        // }
-        .mv__text__strength__fix {
-          background-color: ' . $sub_color . ' ;
-        }
-        .mv__text__strength__list__item {
-          background-color: ' . $sub_color . ' ;
-        }
         .ideal-eyeblow__wrap__item {
           border: 1px solid ' . $sub_color . ' ;
         }
@@ -225,15 +221,6 @@ function my_custom_sub_color() {
         .price__table03__item02 .num td {
           color: ' . $sub_color . ' ;
         }
-        .contact__info .flipY .cap {
-          background-color: ' . $sub_color . ' ;
-        }
-        .contact__hp-btn {
-          border: 1px solid ' . $sub_color . ' ;
-        }
-        .contact__hp-btn span {
-          color ' . $sub_color . ' ;
-        }
         .contact .bgcentery:before {
           background-color: ' . $sub_color . ' ;
         }
@@ -255,18 +242,6 @@ function my_custom_accent_color() {
         .header__wrap__btn {
           background-color: ' . $accent_color . ' ;
         }
-        .mv__text__catch__main {
-          color: ' . $accent_color . ' ;
-        }
-        .coupon__inner__content {
-          color: ' . $accent_color . ' ;
-        }
-        .coupon__inner__content__detail .period span:first-child {
-          border-top: 1px solid ' . $accent_color . ' ;
-        }
-        .coupon__inner__content__detail .period span:last-child {
-          border-bottom: 1px solid ' . $accent_color . ' ;
-        }
         .price__table03__item02 {
           border-left: 0.4rem solid ' . $accent_color . ' ;
           border-right: 0.4rem solid ' . $accent_color . ' ;
@@ -274,6 +249,19 @@ function my_custom_accent_color() {
         }
         .price__table03__item02 .headline-upper th {
           background-color: ' . $accent_color . ' ;
+        }
+        .contact__info__text .emphasis {
+          background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, ' . $accent_color . ' 70%);
+        }
+        .contact__info__btn img {
+          border: 3px solid ' . $accent_color . ' ;
+          box-shadow: 0 4px 15px 0 ' . $accent_color . ' ;
+        }
+        .contact__info .flipY .cap {
+          background-color: ' . $accent_color . ' ;
+        }
+        .contact__hp-btn {
+          border: 3px solid ' . $accent_color . ' ;
         }
         </style>';
     }
@@ -325,9 +313,6 @@ function my_custom_accent_sub_color() {
     if (!empty($accent_sub_color)) {
         echo '<style>
         /* 以下のセレクターは、対象となる要素を指定してください。 */
-        .coupon__inner {
-          background-color: ' . $accent_sub_color . ' ;
-        }
         .price__table03__item02 .headline-under th {
           border-right: 0.2rem solid ' . $accent_sub_color . ' ;
         }
@@ -339,5 +324,30 @@ function my_custom_accent_sub_color() {
 }
 add_action('wp_head', 'my_custom_accent_sub_color');
 
+// #c78f85
+function my_custom_accent_sub2_color() {
+    global $post;
+    $accent_sub2_color = get_post_meta($post->ID, 'accent_sub2_color', true);
+    if (!empty($accent_sub2_color)) {
+        echo '<style>
+        /* 以下のセレクターは、対象となる要素を指定してください。 */
+        .mv__text__catch__main {
+          color: ' . $accent_sub2_color . ' ;
+        }
+        </style>';
+    }
+}
+add_action('wp_head', 'my_custom_accent_sub2_color');
+
+
+// .mv__text__strength__fix {
+//   background-image: linear-gradient(to right, #dfbfb9, #CF9F96, #c78f85, #dbbba8);
+// }
+// .mv__text__strength__list__item {
+//   background-image: linear-gradient(to right, #dfbfb9, #CF9F96, #c78f85, #dbbba8);
+// }
+// .contact .bgcentery {
+//   background-image: linear-gradient(to right, #dfbfb9, #CF9F96, #bf7f73, #dbbba8);
+// }
 
 ?>
