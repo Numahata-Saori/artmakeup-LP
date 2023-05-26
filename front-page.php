@@ -725,8 +725,10 @@
         </div>
 
         <div class="price__table03__text">
-          <p>※全国のアートメイクの相場は、1回￥66,000円です。</p>
-          <p>※トレーニープランとは、施術事例が50名未満のアーティストの価格です</p>
+          <p>◆トレーニーランクについて◆</p>
+          <p>梅：1カ月以内のアーティスト</p>
+          <p>竹：国内外のディプロマ保有の認定講師から合格をもらったアーティスト</p>
+          <p>松：竹の条件をクリアした後にお客様から好評を3以上まはた、指名顧客が3名以上いるアーティスト</p>
         </div>
       </div>
 
@@ -986,18 +988,14 @@
         <div class="contact__info__text">
           <p><span class="emphasis">まずは気軽にお問い合わせください！</span></p>
           <p>↓<span class="emphasis">LINE追加はこちら</span>↓</p>
-
         </div>
 
-        <div class="contact__info__btn flipY">
+        <div class="contact__info__btn">
           <a href="https://line.me/R/ti/p/@726sxdkz">
             <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_line' ,true)); ?>" alt="">
-            <span class="cap">LINE追加</span>
           </a>
         </div>
       </div>
-
-      <a class="contact__hp-btn bgcentery" href="https://miuexbeautymedical.jp/"><span>公式HPはこちら</span></a>
     </div>
 
     <?php endwhile; // 投稿のループ終了 ?>

@@ -217,11 +217,11 @@ li {
 }
 .header__menu__openbtn.active2 span:nth-of-type(1) {
   opacity: 1;
-  transform: translateY(3.25vw) rotate(-45deg);
+  transform: translateY(2rem) rotate(-45deg);
 }
 .header__menu__openbtn.active2 span:nth-of-type(3) {
   opacity: 1;
-  transform: translateY(-3vw) rotate(45deg);
+  transform: translateY(-1.5rem) rotate(45deg);
 }
 .header__menu__openbtn.active2 span:nth-of-type(2) {
   opacity: 0;
@@ -1411,114 +1411,12 @@ li {
   background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, #CF9F96 70%);
 }
 .contact__info__btn {
-  height: 200px;
-  width: 200px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5rem;
 }
 .contact__info__btn img {
-  border: 3px solid #CF9F96;
   border-radius: 9999px;
   box-shadow: 0 4px 15px 0 #CF9F96;
-  height: 100%;
-  width: 100%;
-}
-.contact__info .flipY {
-  font-size: 1.4rem;
-  font-family: "Sawarabi Gothic", sans-serif;
-}
-.contact__info .flipY a {
-  position: relative; /*テキストの基点となる位置を定義*/
-  display: block;
-}
-.contact__info .flipY a:hover img {
-  transform: rotateY(-180deg);
-  opacity: 0;
-}
-.contact__info .flipY a:hover .cap {
-  transform: rotateY(0); /*横軸に回転*/
-  opacity: 1;
-  transition-delay: 0.15s;
-}
-.contact__info .flipY img {
-  transition: all 0.35s ease; /*移り変わる速さを変更したい場合はこの数値を変更*/
-  ackface-visibility: hidden; /*三次元になった際に裏面を可視化させない*/
-}
-.contact__info .flipY .cap {
-  background-color: #CF9F96;
-  color: #fff;
-  border-radius: 50%;
-  position: absolute; /*ここからエリアの絶対配置の指定*/
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transition: all 0.35s ease; /*移り変わる速さを変更したい場合はこの数値を変更*/
-  transform: rotateY(90deg); /*横軸に回転*/
-  transform-origin: 50% 0%; /*回転する基点*/
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contact__hp-btn {
-  border: 3px solid #CF9F96;
-  border-radius: 9999px;
-  box-shadow: 0 5px 25px 0 #fff;
-  display: inline-block;
-  font-size: 1.6rem; /*32px*/
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 500;
-  height: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  text-align: center;
-  text-decoration: none;
-  padding: 1.3rem 5rem;
-  margin-left: auto;
-  margin-right: auto;
-  outline: none;
-  /*アニメーションの起点とするためrelativeを指定*/
-  position: relative;
-  overflow: hidden;
-  /*アニメーションの指定*/
-  transition: ease 0.2s;
-}
-.contact__hp-btn:hover span {
-  color: #fff;
-}
-@media screen and (max-width: 430px) {
-  .contact__hp-btn {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-}
-.contact__hp-btn span {
-  position: relative;
-  z-index: 30; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
-  color: #fff;
-}
-.contact .bgcentery {
-  background-image: linear-gradient(to right, #dfbfb9, #CF9F96, #bf7f73, #dbbba8);
-}
-.contact .bgcentery:before {
-  content: "";
-  position: absolute; /*絶対配置で位置を指定*/
-  top: 0;
-  left: 0;
-  z-index: 2;
-  background-color: #716A67;
-  width: 100%;
-  height: 100%;
-  /*アニメーション*/
-  transition: transform 0.3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
-  transform: scale(1, 0);
-  transform-origin: center;
-}
-.contact .bgcentery:hover:before {
-  transform: scale(1, 1);
 }
 
 .store-info {

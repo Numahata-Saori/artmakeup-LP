@@ -61,8 +61,8 @@
       <!-- LINE追加ボタン -->
       <div class="header__wrap__btn">
         <a href="https://line.me/R/ti/p/@726sxdkz">
-          <span>Web予約</span><br>
-          <span>お問い合わせ</span>
+          <span>LINE問合せ</span><br>
+          <!-- <span>お問い合わせ</span> -->
         </a>
       </div>
     </div>

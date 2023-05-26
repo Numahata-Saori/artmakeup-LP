@@ -106,15 +106,6 @@ function my_custom_base_color() {
         .flow__wrap__item {
           background-color: ' . $base_color . ' ;
         }
-        .contact__info .flipY .cap {
-          color: ' . $base_color . ' ;
-        }
-        .contact__hp-btn {
-          box-shadow: 0 5px 25px 0 ' . $base_color . ' ;
-        }
-        .contact__hp-btn:hover span {
-          color: ' . $base_color . ' ;
-        }
         .footer {
           color: ' . $base_color . ' ;
         }
@@ -254,14 +245,7 @@ function my_custom_accent_color() {
           background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, ' . $accent_color . ' 70%);
         }
         .contact__info__btn img {
-          border: 3px solid ' . $accent_color . ' ;
           box-shadow: 0 4px 15px 0 ' . $accent_color . ' ;
-        }
-        .contact__info .flipY .cap {
-          background-color: ' . $accent_color . ' ;
-        }
-        .contact__hp-btn {
-          border: 3px solid ' . $accent_color . ' ;
         }
         </style>';
     }
