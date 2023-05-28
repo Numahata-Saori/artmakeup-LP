@@ -106,6 +106,12 @@ function my_custom_base_color() {
         .flow__wrap__item {
           background-color: ' . $base_color . ' ;
         }
+        .contact__info__btn:hover span {
+          color: ' . $base_color . ' ;
+        }
+        .contact__info__btn span {
+          color: ' . $base_color . ' ;
+        }
         .footer {
           color: ' . $base_color . ' ;
         }
@@ -244,7 +250,8 @@ function my_custom_accent_color() {
         .contact__info__text .emphasis {
           background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, ' . $accent_color . ' 70%);
         }
-        .contact__info__btn img {
+        .contact__info__btn {
+          border: 3px solid ' . $accent_color . ' ;
           box-shadow: 0 4px 15px 0 ' . $accent_color . ' ;
         }
         </style>';
@@ -323,15 +330,27 @@ function my_custom_accent_sub2_color() {
 }
 add_action('wp_head', 'my_custom_accent_sub2_color');
 
-
-// .mv__text__strength__fix {
-//   background-image: linear-gradient(to right, #dfbfb9, #CF9F96, #c78f85, #dbbba8);
-// }
-// .mv__text__strength__list__item {
-//   background-image: linear-gradient(to right, #dfbfb9, #CF9F96, #c78f85, #dbbba8);
-// }
-// .contact .bgcentery {
-//   background-image: linear-gradient(to right, #dfbfb9, #CF9F96, #bf7f73, #dbbba8);
-// }
+function my_custom_gradation_color() {
+  global $post;
+    $gradation1_color = get_post_meta($post->ID, 'gradation1_color', true); //#dfbfb9
+    $gradation2_color = get_post_meta($post->ID, 'gradation2_color', true); //#CF9F96
+    $gradation3_color = get_post_meta($post->ID, 'gradation3_color', true); //#c78f85
+    $gradation4_color = get_post_meta($post->ID, 'gradation4_color', true); //#dbbba8
+    if (!empty($gradation1_color) && !empty($gradation2_color) && !empty($gradation3_color) && !empty($gradation4_color)) {
+        echo '<style>
+        /* 以下のセレクターは、対象となる要素を指定してください。 */
+        .mv__text__strength__fix {
+          background-image: linear-gradient(to right, ' . $gradation1_color . ', ' . $gradation2_color . ', ' . $gradation3_color . ', ' . $gradation4_color . ');
+        }
+        .mv__text__strength__list__item {
+          background-image: linear-gradient(to right, ' . $gradation1_color . ', ' . $gradation2_color . ', ' . $gradation3_color . ', ' . $gradation4_color . ');
+        }
+        .contact .bgcentery {
+          background-image: linear-gradient(to right, ' . $gradation1_color . ', ' . $gradation2_color . ', ' . $gradation3_color . ', ' . $gradation4_color . ');
+        }
+        </style>';
+    }
+}
+add_action('wp_head', 'my_custom_gradation_color');
 
 ?>

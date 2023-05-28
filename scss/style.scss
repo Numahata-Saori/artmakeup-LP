@@ -1892,12 +1892,45 @@ li {
     }
 
     &__btn {
+      border: 3px solid $accent;
+      border-radius: 9999px;
+      box-shadow: 0 4px 15px 0 $accent;
+      display: inline-block;
+      font-size: 1.4rem;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      height: 100%;
+      width: fit-content;
+      text-align: center;
+      text-decoration: none;
+      padding: 1rem 5rem;
+      outline: none;
+
       margin-left: auto;
       margin-right: auto;
 
-      img {
-        border-radius: 9999px;
-        box-shadow: 0 4px 15px 0 $accent;
+      /*アニメーションの起点とするためrelativeを指定*/
+      position: relative;
+      overflow: hidden;
+
+      /*アニメーションの指定*/
+      transition: ease .2s;
+
+      &:hover {
+        span {
+          color:$base;
+        }
+      }
+
+      @include bq(sm-x) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+
+      span {
+        position: relative;
+        z-index: 30; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+        color: $base;
       }
     }
 
@@ -2001,34 +2034,34 @@ li {
   //   }
   // }
 
-  // .bgcentery {
-  //   // background-color: $base;
-  //   // background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
-  //   background-image: linear-gradient(to right, lighten($accent, 10%), $accent, darken($accent, 10%) , darken($main, 10%));
-  //   // box-shadow: 0 4px 15px 0 $accent;
+  .bgcentery {
+    // background-color: $base;
+    // background-image: linear-gradient(to right, #ed6ea0, #ec8c69, #f7186a , #FBB03B);
+    background-image: linear-gradient(to right, lighten($accent, 10%), $accent, darken($accent, 5%) , darken($main, 10%));
+    // box-shadow: 0 4px 15px 0 $accent;
 
-  //   &:before {
-  //     content: '';
-  //     position: absolute;  /*絶対配置で位置を指定*/
-  //     top: 0;
-  //     left: 0;
-  //     z-index: 2;
-  //     background-color: $sub;
-  //     width: 100%;
-  //     height: 100%;
+    &:before {
+      content: '';
+      position: absolute;  /*絶対配置で位置を指定*/
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background-color: $sub;
+      width: 100%;
+      height: 100%;
 
-  //     /*アニメーション*/
-  //     transition: transform .3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
-  //     transform: scale(1, 0);
-  //     transform-origin:center;
-  //   }
+      /*アニメーション*/
+      transition: transform .3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+      transform: scale(1, 0);
+      transform-origin:center;
+    }
 
-  //   &:hover {
-  //     &:before {
-  //       transform:scale(1, 1);
-  //     }
-  //   }
-  // }
+    &:hover {
+      &:before {
+        transform:scale(1, 1);
+      }
+    }
+  }
 }
 
 .store-info {

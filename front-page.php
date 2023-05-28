@@ -990,12 +990,18 @@
           <p>↓<span class="emphasis">LINE追加はこちら</span>↓</p>
         </div>
 
-        <div class="contact__info__btn">
+            <!-- <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_line' ,true)); ?>" alt=""> -->
+
           <a href="https://line.me/R/ti/p/@726sxdkz">
-            <img src="<?php echo wp_get_attachment_url(get_post_meta($post->ID , 'img_line' ,true)); ?>" alt="">
+            <div class="contact__info__btn bgcentery">
+              <p><span>無料カウンセリング</span></p>
+              <p><span>ご予約はこちら</span></p>
+              <p><span>24時間365日対応</span></p>
+            </div>
           </a>
-        </div>
+
       </div>
+
     </div>
 
     <?php endwhile; // 投稿のループ終了 ?>
