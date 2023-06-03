@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/swiper.css">
+
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
 
   <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
@@ -28,7 +29,12 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
   <!-- animate -->
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/animate.css">
+  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/animate.css"> -->
+
+  <!-- <script src="<?php echo get_template_directory_uri(); ?>/js/wow.min.js"></script> -->
+  <script>
+    // new WOW().init();
+  </script>
 
   <?php wp_head(); ?>
 
@@ -61,7 +67,7 @@
       <!-- LINE追加ボタン -->
       <div class="header__wrap__btn">
         <a href="https://line.me/R/ti/p/@726sxdkz">
-          <span>LINE問合せ</span><br>
+          <span>LINE<br>問合せ</span><br>
           <!-- <span>お問い合わせ</span> -->
         </a>
       </div>

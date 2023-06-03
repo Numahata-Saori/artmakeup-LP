@@ -481,9 +481,9 @@
       <div class="sec-title__sub">料金表</div>
 
       <div class="price__text">
-        <p>アートメイクは通常2回以上で完成する施術になります。</p>
+        <p>アートメイクは通常2回以上で<br class="sp_br">完成する施術になります。</p>
         <p>1回めは土台作りで定着率は50％前後です。</p>
-        <p>2回めの施術の際にデザインや色の変更、長さや足りない箇所の修正をさせていただきます。</p>
+        <p>2回めの施術の際にデザインや<br class="sp_br">色の変更、長さや足りない箇所の<br class="sp_br">修正をさせていただきます。</p>
       </div>
 
       <div class="price__table01">
@@ -543,7 +543,7 @@
 
       <div class="price__table02">
         <div class="price__table02__title">
-          <h5 class="price__table02__title__trainee">トレーニープラン～eyeblow 3D～</h5>
+          <h5 class="price__table02__title__trainee">トレーニープラン<br class="sp_br">～eyeblow 3D～</h5>
           <p class="price__table02__title__text">※施術事例が50名未満のアーティストの価格です</p>
         </div>
 
@@ -621,8 +621,8 @@
         <div class="price__table03__title">
           <h5 class="price__table03__title__trainee">他店との比較</h5>
           <div class="price__table03__title__text">
-            <p>アートメイクは定着させる為に2回以上の施術が必要と言われています。</p>
-            <p>せっかく綺麗になった眉毛の維持をする為にリタッチを行うことをお勧めします。</p>
+            <p>アートメイクは定着させる為に<br class="sp_br">2回以上の施術が必要と言われています。</p>
+            <p>せっかく綺麗になった眉毛の維持をする為に<br class="sp_br">リタッチを行うことをお勧めします。</p>
             <p>他店で行ったアートメイクをリタッチする場合は高い技術が必要ですので、<br>受け入れをしないところも多くみられます。</p>
           </div>
         </div>
@@ -1010,7 +1010,7 @@
 
   </section>
 
-  <section class="store-info" id="store-info">
+  <!-- <section class="store-info" id="store-info"> -->
 
     <?php
       $args = array(
@@ -1022,7 +1022,7 @@
     ?>
     <?php while($the_query->have_posts()) : $the_query->the_post(); //投稿のループ開始 ?>
 
-    <div class="ly-cont">
+    <!-- <div class="ly-cont">
       <h4 class="sec-title">STORE INFORMATION</h4>
       <div class="sec-title__sub">店舗情報</div>
 
@@ -1063,16 +1063,15 @@
       </div>
 
       <div class="store-info__map">
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.255706194112!2d141.34615547627257!3d43.05708929078106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b298529441193%3A0x3b6cf756452ecc15!2z44CSMDYwLTAwNjIg5YyX5rW36YGT5pyt5bmM5biC5Lit5aSu5Yy65Y2X77yS5p2h6KW_77yW5LiB55uu77yVIOWcn-iCpeODk-ODqw!5e0!3m2!1sja!2sjp!4v1683131686561!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.255892541824!2d141.34615547618898!3d43.05708537113655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b298529441193%3A0x3b6cf756452ecc15!2z44CSMDYwLTAwNjIg5YyX5rW36YGT5pyt5bmM5biC5Lit5aSu5Yy65Y2X77yS5p2h6KW_77yW5LiB55uu77yVIOWcn-iCpeODk-ODqw!5e0!3m2!1sja!2sjp!4v1684596819874!5m2!1sja!2sjp" width="1024" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-    </div>
+    </div> -->
 
     <?php endwhile; // 投稿のループ終了 ?>
     <?php endif; // 投稿の条件分岐を終了 ?>
     <?php wp_reset_postdata(); // 使用した投稿データをリセット ?>
 
-  </section>
+  <!-- </section> -->
 </main>
 
 <?php get_footer(); ?>

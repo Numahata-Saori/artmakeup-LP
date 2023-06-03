@@ -1,15 +1,18 @@
-@media screen and (max-width: 430px) {
+@charset "UTF-8";
+@media screen and (max-width: 768px) {
   .swiper-container {
+    padding-bottom: 50px;
     position: relative;
+    overflow: hidden; /* パディングボックスに合わせて切り取られる */
   }
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 768px) {
   .swiper-container .swiper-wrapper {
     display: flex;
     width: 100%;
   }
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 768px) {
   .swiper-container .swiper-wrapper .swiper-slide {
     height: auto;
     text-align: center;
@@ -24,7 +27,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -20px;
+    bottom: 0;
     text-align: center;
   }
 }

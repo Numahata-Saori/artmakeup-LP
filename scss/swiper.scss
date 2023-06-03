@@ -17,22 +17,28 @@ $breakpoints: (
 
 .swiper-container {
 
-  @include bq(sm-x){
+  @include bq(tb-s){
+    padding-bottom: 50px;
     position: relative;
+    overflow: hidden; /* パディングボックスに合わせて切り取られる */
   }
 
   .swiper-wrapper {
 
-    @include bq(sm-x) {
+    @include bq(tb-s) {
       display: flex;
       width:100%;
     }
 
     .swiper-slide {
 
-      @include bq(sm-x) {
+      @include bq(tb-s) {
         height: auto;
         text-align: center;
+
+        // img {
+        //   max-width: 100%;
+        // }
       }
     }
   }
@@ -48,7 +54,7 @@ $breakpoints: (
       position: absolute;
       left: 0;
       right: 0;
-      bottom: -20px;
+      bottom: 0;
       text-align: center;
     }
   }

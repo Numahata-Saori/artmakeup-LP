@@ -5,6 +5,7 @@ $breakpoints: (
   "tb-x": "screen and (max-width: 1024px)",
   "tb": "screen and (max-width: 834px)",
   "tb-s": "screen and (max-width: 768px)",
+  "sm-xx": "screen and (max-width: 600px)",
   "sm-x": "screen and (max-width: 430px)",
   "sm": "screen and (max-width: 375px)",
   "sm-s": "screen and (max-width: 320px)",
@@ -87,6 +88,10 @@ li {
     padding: 0 3em;
   }
 
+  @include bq(sm-x) {
+    padding: 0 1em;
+  }
+
 }
 
 .header {
@@ -135,6 +140,7 @@ li {
       &__upper {
         font-size: 2rem;/*40px*/
         font-weight: bold;
+        letter-spacing: -0.1em;
         line-height: 2.5rem;
 
         @include bq(tb) {
@@ -143,9 +149,12 @@ li {
         @include bq(tb-s) {
           font-size: 1.4rem;
         }
-        @include bq(sm-x) {
-          font-size: 1.2rem;
-        }
+        // @include bq(sm-x) {
+        //   font-size: 1.2rem;
+        // }
+        // @include bq(sm) {
+        //   font-size: 1rem;
+        // }
       }
 
       &__lower {
@@ -182,7 +191,7 @@ li {
       }
       @include bq(sm-x) {
         font-size: 0.6rem;
-        padding: 1% 2%;
+        // padding: 1% 2%;
       }
 
       a {
@@ -699,6 +708,10 @@ li {
   text-align: center;
   margin-bottom: 0.5rem;/*10px*/
 
+  @include bq(sm-x) {
+    font-size: 1.8rem;
+  }
+
   &__sub {
     font-family: 'Noto Serif JP', serif;
     font-size: 1.2rem;/*24px*/
@@ -706,6 +719,10 @@ li {
     line-height: 1.6;
     text-align: center;
     margin-bottom: 2.5rem;/*50px*/
+
+    @include bq(sm-x) {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -816,6 +833,9 @@ li {
           width: 100%;
           margin-bottom: 1rem;
         }
+        // @include bq(sm-x) {
+        //   padding: 1.5rem;
+        // }
 
         &__img {
           // margin-bottom: 20px;
@@ -896,6 +916,10 @@ li {
         line-height: 1.6;
 
         padding-bottom: 1rem;
+
+        @include bq(sm-x) {
+          font-size: 1.2rem;
+        }
       }
 
       &__info {
@@ -930,7 +954,13 @@ li {
       padding: 1.5rem;
       text-align: center;
 
-      @include bq(tb-s) {
+
+      @include bq(tb) {
+        width: 47%;
+        margin-bottom: 1rem;
+      }
+
+      @include bq(sm-x) {
         width: 100%;
         margin-bottom: 1rem;
       }
@@ -967,9 +997,6 @@ li {
   background-color: $main;
   padding: 5rem 0;
 
-  @include bq(sm-x) {
-    // margin: 2.5rem 0;
-  }
 
   &__inner {
     max-width: 1024px;
@@ -980,7 +1007,7 @@ li {
       margin-right: 5%;
     }
 
-    @include bq(sm-x) {
+    @include bq(tb-s) {
       margin-left: auto;
       margin-right: auto;
     }
@@ -992,14 +1019,14 @@ li {
     flex-wrap: wrap;
     max-width: 100%;
 
-    @include bq(sm-x) {
+    @include bq(tb-s) {
       flex-wrap: nowrap;
       // overflow-x: scroll;
       // overflow-x: auto !important;
       // -webkit-overflow-scrolling: touch;
       // overflow: auto;
       // scroll-snap-type: x;/*横方向にスクロール*/
-      // width: 100vw;
+      width: 100vw;
     }
 
     &__item {
@@ -1013,12 +1040,13 @@ li {
       // align-items: center;
       margin-bottom: 2.5rem;
 
-      @include bq(sm-x) {
+      @include bq(tb-s) {
         display: block;
         margin-bottom: 1rem;
         text-align: left;
 
         // scroll-snap-align: start;/*横方向にスクロール、スナップポイント*/
+        // width: auto;
         width: 100%;
         flex: none;
       }
@@ -1033,29 +1061,39 @@ li {
         //   width: 50%;
         // }
 
-        @include bq(sm-x) {
-          width: calc(100vw - 3em);
+        @include bq(tb-s) {
+          // width: calc(100vw - 3em);
+          width: 100%;
+          // width: auto;
           height: 50vw;
         }
 
         &.odd-img {
           // height: auto;
+          display: flex;
           order: 1;
+
+          @include bq(tb-s) {
+            margin-right: 3em;
+            width: 100%;
+          }
         }
 
         &.even-img {
           // height: auto;
+          display: flex;
           order: 2;
 
-          @include bq(sm-x) {
+          @include bq(tb-s) {
             margin-left: 3em;
+            width: 100%;
           }
         }
 
         &.org-01 {
           text-align: right;
 
-          @include bq(sm-x) {
+          @include bq(tb-s) {
             width: 60vw;
             height: auto;
           }
@@ -1063,7 +1101,7 @@ li {
 
         img {
           max-height: 100%;
-          width: auto;
+          width: 100%;
           height: auto;
           height: -webkit-fill-available;
         }
@@ -1081,22 +1119,24 @@ li {
         z-index: 1;
 
         &.strength-long {
-          height: 18rem;
+          min-height: 18rem;
+          height: auto;
 
-          @include bq(sm-x) {
-            height: auto;
-          }
+          // @include bq(sm-x) {
+          //   height: auto;
+          // }
         }
 
         &.strength-short {
-          height: 16.5rem;
+          min-height: 16.5rem;
+          height: auto;
 
-          @include bq(sm-x) {
-            height: auto;
-          }
+          // @include bq(tb-s) {
+          //   height: auto;
+          // }
         }
 
-        @include bq(sm-x) {
+        @include bq(tb-s) {
           width: calc(100vw - 3em);
         }
 
@@ -1104,7 +1144,7 @@ li {
           margin: 4.5rem 0 0 -5rem;/*90px,0,0,-100px*/
           order: 2;
 
-          @include bq(sm-x) {
+          @include bq(tb-s) {
             margin: -0.5rem 0 0 3em;
             width: auto;
             // text-align: left;
@@ -1114,7 +1154,7 @@ li {
         &.odd-text-first {
           margin: 4.5rem 0 0 -2rem;
 
-          @include bq(sm-x) {
+          @include bq(tb-s) {
             margin: -0.5rem 0 0 3em;
           }
         }
@@ -1123,7 +1163,7 @@ li {
           margin: 4.5rem -5rem 0 0;/*90px,-100px,0,0*/
           order: 1;
 
-          @include bq(sm-x) {
+          @include bq(tb-s) {
             margin: -0.5rem 3em 0 0;
             width: auto;
             // text-align: right;
@@ -1138,6 +1178,10 @@ li {
 
           position: absolute;
           top: -1.5rem;
+
+          @include bq(sm-x) {
+            left: 1.9rem;
+          }
         }
 
         &__title {
@@ -1147,6 +1191,7 @@ li {
           line-height: 1.6;
 
           margin-bottom: 1em;
+
         }
 
         p {
@@ -1173,6 +1218,10 @@ li {
     text-align: center;
     line-height: 1.8;
     margin-bottom: 2.5rem;
+
+    @include bq(sm-x) {
+      font-size: 0.8rem;
+    }
   }
 
   table {
@@ -1213,7 +1262,7 @@ li {
           width: 25%;
 
           @include bq(sm-x) {
-            padding: 1.5rem 0;
+            padding: 1rem 0;
             width: 100%;
           }
 
@@ -1252,6 +1301,9 @@ li {
           @include bq(sm-x) {
             font-size: 1.2rem;
           }
+          // @include bq(sm) {
+          //   font-size: 1rem;
+          // }
         }
       }
     }
@@ -1267,6 +1319,10 @@ li {
       font-weight: 700;
       line-height: 1.6;
       text-align: center;
+
+      @include bq(sm-x) {
+        font-size: 1.2rem;
+      }
     }
 
     &__headline {
@@ -1319,6 +1375,10 @@ li {
       font-size: 1rem;/*20px*/
       line-height: 1.6;
       margin-top: 2rem;/*40px*/
+
+      @include bq(sm-x) {
+        font-size: 0.8rem;
+      }
     }
   }
 
@@ -1338,7 +1398,7 @@ li {
         margin-bottom: 1rem;/*20px*/
 
         @include bq(sm-x) {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
         }
       }
 
@@ -1346,6 +1406,10 @@ li {
         font-size: 1rem;/*20px*/
         font-family: 'Noto Sans JP', sans-serif;
         line-height: 1.6;
+
+        @include bq(sm-x) {
+          font-size: 0.8rem;
+        }
       }
     }
 
@@ -1415,6 +1479,10 @@ li {
 
         margin-bottom: 2rem;/*40px*/
         text-align: center;
+
+        @include bq(sm-x) {
+          font-size: 1.2rem;
+        }
       }
 
       &__text {
@@ -1422,6 +1490,10 @@ li {
         font-family: 'Noto Sans JP', sans-serif;
         line-height: 1.8;
         text-align: center;
+
+        @include bq(sm-x) {
+          font-size: 0.8rem;
+        }
       }
     }
 
@@ -1660,6 +1732,10 @@ li {
       line-height: 1.6;
 
       margin-top: 2rem;/*40px*/
+
+      @include bq(sm-x) {
+        font-size: 0.8rem;
+      }
     }
   }
 }
@@ -1668,23 +1744,21 @@ li {
   background-color: $main;
   padding: 5rem 0;
 
-  @include bq(sm-x) {
-    // margin: 2.5rem 0;
-  }
-
   &__wrap {
     font-family: 'Noto Sans JP', sans-serif;
     display: block;
 
     @include bq(tb) {
-      width: calc(100% - 5rem) !important;
+      // width: calc(100% - 5rem) !important;
+      width: 100%;
     }
 
-    @include bq(sm-x) {
+    @include bq(tb-s) {
       display: flex;
       flex-wrap: nowrap;
-      // width: 100%;
-      width: calc(100% - 2rem) !important;
+      // width: 100vw;
+      // width: calc(100% - 2rem) !important;
+      // width: auto;
     }
 
     &__item {
@@ -1692,20 +1766,25 @@ li {
       display: flex;
       margin-bottom: 2.5rem;
       padding: 2.5rem;/*50px*/
-      width: 100%;
-      height: 22vw;
+      width: auto;
+      height: auto;
+      min-height: 22vw;
 
       @include bq(tb-x) {
-        height: 50vw;
+        height: auto;
+        min-height: 50vw;
+        padding: 1.5rem;
       }
 
-      @include bq(sm-x) {
+      @include bq(tb-s) {
         display: block;
-        height: 140vw !important;
+        // height: 120vw !important;
+        min-height: 120vw;
+        width: calc(100% - 3em);
         // flex: 1;
         // flex-basis: 100%;
         // flex-shrink: 1 !important;
-        padding: 1rem;/*20px*/
+        // padding: 1rem;/*20px*/
         // width: calc(100% - 3em);
         margin-right: 3em !important;
         margin-bottom: 1rem;
@@ -1720,13 +1799,13 @@ li {
           // height: 100%;
         }
 
-        @include bq(sm-x) {
+        @include bq(tb-s) {
           width: 100%;
           // height: 45vw;
         }
 
         img {
-          width: 100%;
+          width: auto;
           height: 100%;
         }
       }
@@ -1735,12 +1814,12 @@ li {
         padding-left: 1rem;
         width: 50%;
 
-        @include bq(tb-x) {
+        @include bq(tb-s) {
           width: 50%;
 
         }
 
-        @include bq(sm-x) {
+        @include bq(tb-s) {
           padding-top: 1rem;
           padding-left: 0;
           width: 100%;
@@ -1755,15 +1834,23 @@ li {
 
           position: relative;
 
-          @include bq(sm-x) {
+          @include bq(tb-s) {
             padding: 20px 0;
             width: auto;
+          }
+
+          @include bq(sm-x) {
+            font-size: 1.2rem;
           }
 
           span {
             padding-left: 2.5rem;
             position: relative;
             z-index: 80;
+
+            @include bq(sm-x) {
+              padding-left: 0;
+            }
           }
 
           &::before {
@@ -1777,6 +1864,11 @@ li {
             top: 0;
             left: 0;
             z-index: 70;
+
+            @include bq(sm-x) {
+              font-size: 2.2rem;
+
+            }
           }
         }
 
@@ -1784,6 +1876,10 @@ li {
           font-family: 'Sawarabi Gothic', sans-serif;
           font-size: 1.2rem;/*24px*/
           text-align: start;
+
+          @include bq(sm-x) {
+            font-size: 1rem;
+          }
         }
       }
     }
@@ -1793,16 +1889,12 @@ li {
 .gallery {
   padding: 5rem 0;
 
-  @include bq(sm-x) {
-    // margin: 2.5rem 0;
-  }
-
   &__inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
-    @include bq(sm-x) {
+    @include bq(tb-s) {
       display: block;
       flex-wrap: nowrap;
     }
@@ -1812,8 +1904,10 @@ li {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100vw;
 
-    @include bq(sm-x) {
+    @include bq(tb-s) {
+      width: 100vw;
       display: block;
       flex-wrap: nowrap;
       justify-content:start
@@ -1826,7 +1920,7 @@ li {
     &__item {
       width: 30%;
 
-      @include bq(sm-x) {
+      @include bq(tb-s) {
         width: 100%;
       }
 
@@ -1923,6 +2017,8 @@ li {
       }
 
       @include bq(sm-x) {
+        font-size: 1rem;
+
         padding-left: 3rem;
         padding-right: 3rem;
       }
@@ -2241,7 +2337,7 @@ li {
 }
 
 .animate__fadeInLeft {
-  @include bq(sm-x) {
+  @include bq(tb-x) {
     animation: none;
     transform: none;
     transition: unset;
