@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
       waitForTransition: false, // アニメーションの間も自動再生を止めない
     },
 
-    allowTouchMove: false, //ドラッグ（スワイプ）でのスライド切り替えを無効
+    allowTouchMove: true, //ドラッグ（スワイプ）でのスライド切り替えを無効
   }
 
   const breakPoint = 768; //ブレークポイント

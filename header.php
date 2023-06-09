@@ -93,7 +93,7 @@
           <li class="header__menu__nav__list__item"><a href="#price">料金/他社比較</a></li>
           <li class="header__menu__nav__list__item"><a href="#flow">施術の流れ</a></li>
           <li class="header__menu__nav__list__item"><a href="#contact">お問い合わせ</a></li>
-          <li class="header__menu__nav__list__item"><a href="#store-info">店舗情報</a></li>
+          <!-- <li class="header__menu__nav__list__item"><a href="#store-info">店舗情報</a></li> -->
         </ul>
       </nav>
 

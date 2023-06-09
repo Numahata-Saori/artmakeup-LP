@@ -986,7 +986,7 @@
 
       <div class="contact__info">
         <div class="contact__info__text">
-          <p><span class="emphasis">まずは気軽にお問い合わせください！</span></p>
+          <p><span class="emphasis">まずは気軽に<br class="sp_br">お問い合わせください！</span></p>
           <p>↓<span class="emphasis">LINE追加はこちら</span>↓</p>
         </div>
 
